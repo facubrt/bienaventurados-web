@@ -46,8 +46,9 @@
 
 .title {
   margin: 0;
+  padding: 100px 100px 100px 100px;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 6rem;
 }
 
 .title,
@@ -90,6 +91,7 @@
   width: 45%;
 }
 
+
 .card:hover,
 .card:focus,
 .card:active {
@@ -112,6 +114,8 @@
   height: 1em;
   margin-left: 0.5rem;
 }
+
+
 
 @media (max-width: 600px) {
   .grid {

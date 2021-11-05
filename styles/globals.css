@@ -1,16 +1,237 @@
-html,
-body {
-  padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+:root {
+  --primary: #A2B29F;
+  --dark: #232733;
+  --light: #F9FAFE;
+  --grey: #F4F4F8;
+}
+
+@font-face {
+  font-family: Gotham-Black;
+  src: url('../public/font/Gotham-Black.otf') format('opentype');
+}
+@font-face {
+  font-family: Gotham-Book;
+  src: url('../public/font/Gotham-Book.ttf') format('truetype');
+}
+@font-face {
+  font-family: Gotham-Medium;
+  src: url('../public/font/Gotham-Medium.ttf') format('truetype');
+}
+
+.bg-primario {
+  background-color: #A2B29F;
+  color: #F9FAFE; 
+}
+/* 
+primary color day #F9FAFE
+primary color night #232733
+accent color #A2B29F */
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0;
+}
+
+body {
+  font-family: 'Gotham-Book', sans-serif;
+  background-color: #F9FAFE;
+}
+
+main {
+  padding-top: 0;
+}
+
+nav {
+  background-color: #F9FAFE;
+}
+
+h1 {
+  font-family: 'Gotham-Black', sans-serif;
+  font-size: 6rem;
+}
+
+h1.post {
+  font-family: 'Gotham-Black', sans-serif;
+  font-size: 36pt;
+}
+
+
+h2 {
+  font-family: 'Gotham-Black', sans-serif;
+  font-size: 2rem;
+}
+
+h2.post {
+  font-family: 'Gotham-Medium', sans-serif;
+  font-size: 20pt;
+  color: #7A7D84
+}
+
+h2.hero {
+  font-family: 'Gotham-Black', sans-serif;
+  font-size: 3rem;
+}
+
+h3 {
+  font-family: 'Gotham-Black', sans-serif;
+  font-size: 1.5rem;
+}
+
+h4.descripcion {
+  font-family: 'Gotham-Black', sans-serif;
+  font-size: 1.5rem;
+}
+
+blockquote {
+  font-family: 'Gotham-Black', sans-serif;
+  font-size: 2rem;
+}
+
+figcaption {
+  font-family: 'Gotham-Book', sans-serif;
+  font-size: 1.5rem;
+}
+
+p {
+  font-family: 'Gotham-Book', sans-serif;
+  margin: 15px 0;
+  font-size: 14pt;
+  line-height: 1.8;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: #333;
 }
 
-* {
-  box-sizing: border-box;
+img.post {
+  width: 100%;
+  border-radius: 10px;
+}
+img.badge {
+  max-width: 340px;
+  width: 100%;
+}
+
+img.post-hero {
+  border-radius: 10px;
+}
+
+img.presentacion {
+  width: 100%;
+  max-width: 340px;
+}
+
+header {
+  background: #F9FAFE;
+  color: #232733;
+  padding: 2.5rem;
+  margin-bottom: 40px;
+}
+
+header a {
+  color: #fff;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  overflow: auto;
+  padding: 0 10px;
+}
+
+.container-blog {
+  max-width: 800px;
+  margin: auto;
+  overflow: auto;
+  padding: 0 10px;
+}
+
+.btn {
+  display: inline-block;
+  background: steelblue;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+}
+
+.btn-back {
+  background: #f4f4f4;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 360px;
+  max-height: auto;
+  border: none;
+  color: #F9FAFE;
+}
+
+.hero {
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 600px;
+  max-height: auto;
+}
+
+img.img-hero {
+  width: 100%;
+}
+
+.card-page {
+  padding: 15px 30px;
+}
+
+.post-title {
+  margin: 10px 0;
+}
+
+.post-date {
+  margin-bottom: 20px;
+  padding: 3px 10px;
+}
+
+.post-body ul,
+ol {
+  font-size: 110%;
+  line-height: 2.3;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.post-body pre {
+  background: #f4f4f4;
+  padding: 20px;
+  margin: 20px 0;
+  line-height: 2.3;
+}
+
+@media (max-width: 500px) {
+  .posts {
+    grid-template-columns: 1fr;
+  }
 }

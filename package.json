@@ -1,10 +1,13 @@
 {
   "name": "bienaventurados-web",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Página web de Bienaventurados",
+  "author": "Facundo Barreto",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },

@@ -1,22 +1,29 @@
 import { MDXRemote } from 'next-mdx-remote'
 import { getFileBySlug, getFiles } from "../../lib/mdx"
 import MDXComponents from '../../components/MDXComponents'
+import { Image, Box, Flex, VStack, HStack } from '@chakra-ui/react'
 
 
 export default function Post({ source, frontmatter }) {
     return (
-        <div>
-        <img className="img-hero" src={frontmatter.imagen}/>
-        <div className="container-blog"> 
-            <h1 className="post mt-5">{frontmatter.titulo}</h1>
-            <h2 className="post mt-2">{frontmatter.subtitulo}</h2>
-            <div className="d-flex g-0 h-100">
-                <p className="small fw-bolder me-4">{frontmatter.autor}</p>
-                <p className=" small text-muted">{frontmatter.fecha}</p>
-            </div>
+        <Box>
+            <Box>
+                <Image alt="" className="img-hero" src={frontmatter.imagen}/>
+            </Box>
+        <Box className="container-blog">
+            <VStack alignItems="flex-start">
+                <h1 className="post mt-5">{frontmatter.titulo}</h1>
+                <h2 className="post mt-2">{frontmatter.subtitulo}</h2>
+                <HStack alignItems="flex-start" py={5}>
+                    <p className="small fw-bolder me-4">{frontmatter.autor}</p>
+                    <p className=" small text-muted">{frontmatter.fecha}</p>
+                </HStack>
+            </VStack> 
+            <Box py={10}>
             <MDXRemote {...source} components={MDXComponents}/>
-        </div>
-        </div>
+            </Box>
+        </Box>
+        </Box>
     )
 }
 

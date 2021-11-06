@@ -1,5 +1,7 @@
+import Image from 'next/image'
+
 export default function PostImagen({slug}) {
     return (
-        <img className="img-fluid" src={slug} />
+        <Image width= "340" height= "200" objectFit="cover" alt="" className="img-fluid" src={slug} />
     )
 }

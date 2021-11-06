@@ -4,39 +4,41 @@ import { getAllFilesMetadata} from '../lib/mdx'
 
 import Post from '../components/Post'
 import HeroPost from '../components/HeroPost'
+import { Box, Grid, Container, Flex } from '@chakra-ui/react'
 
 export default function Blog({ allPosts }) {
     const heroPost = allPosts[0]
     const morePosts = allPosts.slice(1)
     return (
-        <>
+        <Container maxW="container.lg">
             <HeaderBlog/>
-            <section className="container d-flex">
+            <Box>
                 {heroPost && (
-                    <HeroPost post={heroPost}/>
-                    )}
-            </section>
-            <section className="container d-flex mt-5 mb-2">
-                <h4>Notas recientes</h4>
-            </section>
-            <section className="container d-flex my-4">
-                {morePosts.length > 0 && (
-                <div className='posts'>
-                {morePosts.map((post, index) => (
-                    <Post post={post}/>
-                ))}
-                </div>
-                // <Post posts={morePosts} />
+                    <HeroPost key="heroPost.slug" post={heroPost}/>
                 )}
-            </section>
-        </>
+            </Box>
+            <Box py={5}>
+                <h2>Notas recientes</h2>
+            </Box>
+            <Box>
+                {morePosts.length > 0 && (
+                    <Grid templateColumns="repeat(4, 1fr)" gap={6}>
+                        <Box>
+                            {morePosts.map((post, index) => (
+                                <Post key="post.slug" post={post}/>
+                            ))}
+                        </Box>
+                    </Grid>
+                )}
+            </Box>
+        </Container>
         
     )
 }
 
 export async function getStaticProps() {
   
-    const allPosts = await getAllFilesMetadata()
+    const allPosts = getAllFilesMetadata()
   
     return {
       props: {allPosts},

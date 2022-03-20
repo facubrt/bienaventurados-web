@@ -1,0 +1,308 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Poppins';
+}
+
+
+
+/* INICIO PROPIEDADES DEL HEADER */
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 10px 60px 10px 80px;
+    align-items: center;
+    
+    z-index: 1;
+}
+
+.navBar img {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li{
+    margin: 10px 20px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color:#372256;
+}
+
+.presentation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.presentationLeft {
+    padding: 200px 80px;
+}
+
+.presentationLeft .subtitle {
+    margin-top: 40px;
+}
+
+h1 {
+    color: #372256;
+    font-size: 4.4rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+h2 {
+    color: #372256;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.presentationRight{
+    background-color: #F9F9FA;
+    padding: 140px 20px 140px 0px;
+}
+
+.presentationRight img {
+    border-radius: 12px;
+    height: 160px;
+    margin: 14px;
+    position: relative;
+    right: 40px;
+    z-index: 0;
+}
+/* FIN PROPIEDADES DEL HEADER */
+
+/* INICIO PROPIEDADES DEL MAIN */
+
+h3 {
+    color: #372256;
+    margin-top: 40px;
+    font-weight: 900;
+    font-size: 2.6rem;
+    line-height: 1;
+}
+
+h4 {
+    color: #372256;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.featuresSection {
+    display: flex;
+}
+
+.featuresSection .leftSide {
+    width: 50%;
+    padding: 140px 60px;
+}
+
+.subtitleSection{
+    margin-top: 40px;
+}
+
+.featuresSection .leftSide img {
+    height: 500px;
+    border-radius: 20px;
+}
+
+.featuresSection .rightSide {
+    width: 50%;
+    padding: 140px 60px;
+}
+
+.featuresSectionAlt {
+    display: flex;
+    background-color: #F9F9FA;
+}
+
+.featuresSectionAlt .leftSide {
+    width: 50%;
+    padding: 140px 60px;
+}
+.featuresSectionAlt .rightSide img {
+    height: 500px;
+    border-radius: 20px;
+}
+
+.featuresSectionAlt .rightSide {
+    width: 50%;
+    padding: 140px 60px;
+}
+
+.downloadContainer {
+    display: flex;
+    background-color: #A171D3;
+    margin: 80px;
+    border-radius: 16px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.downloadApp {
+    padding: 60px;
+}
+
+.downloadApp h3 {
+    color: #FFFFFF;
+    line-height: 1;
+}
+
+.downloadImage {
+    display: flex;
+}
+
+.downloadButton {
+    margin-top: 40px;
+}
+
+.downloadImage img {
+    height: 260px;
+    border-radius: 0px 0px 16px 0px;
+}
+
+.blogSection {
+    padding: 40px 80px 140px 80px;
+}
+
+.blogSection h4 {
+    font-weight: 700;
+}
+
+.blogSection h3 {
+    margin: 10px 0px;
+}
+
+.posts {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post1{
+    width: 40%;
+}
+
+.titlePost {
+    margin: 20px 0px;
+}
+
+.post2{
+    width: 40%;
+}
+
+.posts img {
+    height: 320px;
+    border-radius: 16px;
+}
+
+/* FIN PROPIEDADES DEL MAIN */
+
+/* INICIO PROPIEDADES FOOTER */
+
+footer {
+    background-color: #372256;
+    padding: 80px;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color:#FFFFFF;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    margin: 12px 0px;
+    color: #FFFFFF;
+}
+
+footer li a {
+    font-size: 0.8rem;
+}
+
+.footerInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerInfoLogo img {
+    height: 200px;
+}
+
+.footerInfoOthers {
+    display: flex;
+    align-items: flex-start;
+    justify-content:space-between;
+    
+}
+
+h5 {
+    font-size: 0.8rem;
+    color: #FFFFFF;
+    font-weight:700;
+}
+
+
+.footerInfoPages {
+    margin: 0px 40px;
+}
+
+.footerInfoSocial {
+    padding-top: 16px;
+    margin: 0px 40px;
+}
+
+.footerInfoProjects {
+    padding-top: 16px;
+    margin: 0px 40px;
+}
+
+.footerInfoDownload {
+    padding-top: 16px;
+}
+
+.footerInfoDownload img{
+    padding-top: 20px;
+}
+
+.footerLegal {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    align-items: center;
+}
+
+.footerLegal ul {
+    display: flex;
+}
+
+.footerLegal li {
+    font-size: 0.8rem;
+    margin: 0px 0px 0px 20px;
+}
+
+
+h6 {
+    font-size: 0.8rem;
+    font-weight: normal;
+    color: #FFFFFF;
+}
+
+/* FIN DE PROPIEDADES FOOTER */

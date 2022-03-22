@@ -47,6 +47,19 @@ nav a {
     align-items: center;
 }
 
+.presentationPage {
+    padding: 200px 400px;
+    align-items: center;
+    text-align: center;
+
+}
+
+.presentationPage .subtitle {
+    margin: 40px 0px;
+    text-align: center;
+}
+
+
 .presentationLeft {
     padding: 200px 80px;
 }
@@ -58,7 +71,7 @@ nav a {
 h1 {
     color: #372256;
     font-size: 4.4rem;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 1;
 }
 
@@ -88,7 +101,7 @@ h2 {
 h3 {
     color: #372256;
     margin-top: 40px;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 2.6rem;
     line-height: 1;
 }
@@ -97,6 +110,107 @@ h4 {
     color: #372256;
     font-weight: 400;
     font-size: 1.4rem;
+}
+
+.aboutSE {
+    background-color: #F9F9FA;
+    display: flex;
+    justify-content: space-around;
+    padding: 140px 60px;
+}
+
+.aboutSE .tagline {
+    margin: 10px 0px 40px 0px;
+}
+
+.aboutSE .leftSide img {
+    height: 260px;
+}
+
+.aboutSE .rightSide  {
+    width: 50%;
+}
+
+.instructions {
+    padding: 60px;
+    justify-content: center;
+}
+
+.instructionsAlt {
+    background-color: #F9F9FA;
+    padding: 60px;
+}
+
+.titleInstructions {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0px 60px 60px 60px;
+}
+
+.titleInstructionsAlt {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0px 60px 60px 60px;
+}
+
+.containerTitleInstructions {
+    width: 45%;
+}
+
+.containerTitleInstructions h3 {
+    margin-top: 10px;
+}
+
+.containerTitleInstructions h4 {
+    font-weight: 700;
+}
+
+.stepsInstructions h4 {
+    font-weight: 700;
+}
+
+.stepsInstructions .rightSide ol li {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.lastPost {
+    display: flex;
+    background-color: #F9F9FA;
+}
+
+.lastPost .leftSide {
+    padding: 140px 60px;
+}
+
+.lastPost .rightSide img {
+    width: 600px;
+    border-radius: 20px;
+}
+
+.lastPost .rightSide {
+    padding: 140px 60px;
+}
+
+.ourStory {
+    display: flex;
+}
+
+.ourStory .leftSide {
+    padding: 140px 60px;
+}
+
+.ourStory .leftSide .subtitle {
+    margin-top: 40px;
+}
+
+.ourStory .rightSide img {
+    width: 600px;
+    border-radius: 20px;
+}
+
+.ourStory .rightSide {
+    padding: 140px 60px;
 }
 
 .featuresSection {
@@ -122,6 +236,25 @@ h4 {
     padding: 140px 60px;
 }
 
+.stepsInstructions {
+    display: flex;
+}
+
+.stepsInstructions .leftSide {
+    width: 50%;
+    padding: 0px 60px;
+}
+
+.stepsInstructions .leftSide img {
+    height: 500px;
+    border-radius: 20px;
+}
+
+.stepsInstructions .rightSide {
+    width: 50%;
+    padding: 0px 60px;
+}
+
 .featuresSectionAlt {
     display: flex;
     background-color: #F9F9FA;
@@ -141,6 +274,31 @@ h4 {
     padding: 140px 60px;
 }
 
+.othersSections {
+    background-color: #F9F9FA;
+    padding: 60px;
+    text-align: center;
+}
+
+.othersSections .features {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px;
+}
+
+.feature {
+    width: 25%;
+}
+
+.feature .description {
+    margin-top: 20px ;
+}
+
+.feature img {
+    height: 200px;
+    border-radius: 16px ;
+}
+
 .downloadContainer {
     display: flex;
     background-color: #A171D3;
@@ -148,10 +306,16 @@ h4 {
     border-radius: 16px;
     justify-content: space-between;
     align-items: flex-end;
+    background-image: url('../../assets/images/comienza-tu-aventura.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 4px solid #372256;
 }
 
 .downloadApp {
     padding: 60px;
+    width: 60%;
 }
 
 .downloadApp h3 {
@@ -173,7 +337,7 @@ h4 {
 }
 
 .blogSection {
-    padding: 40px 80px 140px 80px;
+    padding: 80px 80px 140px 80px;
 }
 
 .blogSection h4 {
@@ -184,8 +348,28 @@ h4 {
     margin: 10px 0px;
 }
 
+.morePosts {
+    display: flex;
+    justify-content: center;
+    margin: 0px 0px 40px 0px;
+}
+
+.morePosts h4 {
+    font-weight: 700;
+}
+
+.buttonMorePosts {
+    margin: 20px 200px;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    border: 4px solid #372256;
+    border-radius: 100px;
+    padding: 10px;
+}
+
 .posts {
-    margin-top: 80px;
+    margin-top: 40px;
     display: flex;
     justify-content: space-between;
 }
@@ -205,6 +389,25 @@ h4 {
 .posts img {
     height: 320px;
     border-radius: 16px;
+}
+
+.bienaventuradosSection {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 140px;
+}
+
+.containerBienaventuradosSection {
+    width: 40%;
+}
+
+.quote {
+    margin: 40px 0px;
+}
+
+.isoBienaventurados {
+    height: 160px;
 }
 
 /* FIN PROPIEDADES DEL MAIN */

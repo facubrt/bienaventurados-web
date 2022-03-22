@@ -1,3 +1,5 @@
+/* ----- PROPIEDADES GLOBALES  ----- */
+
 * {
     padding: 0;
     margin: 0;
@@ -5,11 +7,24 @@
     font-family:'Poppins';
 }
 
+/* ---------------------------------------- */
 
+/* ----- INICIO PROPIEDADES DEL HEADER  ----- */
 
-/* INICIO PROPIEDADES DEL HEADER */
+header h1 {
+    color: #372256;
+    font-size: 4.4rem;
+    font-weight: 700;
+    line-height: 1;
+}
 
-.navBar {
+header h2 {
+    color: #372256;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+header .navBar {
     display: flex;
     justify-content: space-between;
     position: fixed;
@@ -21,72 +36,47 @@
     z-index: 1;
 }
 
-.navBar img {
+header .navBar img {
     height: 50px;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav li{
-    margin: 10px 20px;
-}
-
-nav a {
+header .navBar a {
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
     color:#372256;
 }
 
-.presentation {
+header .navBar ul {
+    display: flex;
+    list-style: none;
+}
+
+header .navBar ul li{
+    margin: 10px 20px;
+}
+
+/* USADO EN PAGINA INICIO */
+header .presentation {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.presentationPage {
-    padding: 200px 400px;
-    align-items: center;
-    text-align: center;
-
-}
-
-.presentationPage .subtitle {
-    margin: 40px 0px;
-    text-align: center;
-}
-
-
-.presentationLeft {
+header .presentation .presentationLeft {
     padding: 200px 80px;
 }
 
-.presentationLeft .subtitle {
+header .presentation .presentationLeft .subtitle {
     margin-top: 40px;
 }
 
-h1 {
-    color: #372256;
-    font-size: 4.4rem;
-    font-weight: 700;
-    line-height: 1;
-}
-
-h2 {
-    color: #372256;
-    font-weight: 400;
-    font-size: 1.6rem;
-}
-
-.presentationRight{
+header .presentation .presentationRight{
     background-color: #F9F9FA;
     padding: 140px 20px 140px 0px;
 }
 
-.presentationRight img {
+header .presentation .presentationRight img {
     border-radius: 12px;
     height: 160px;
     margin: 14px;
@@ -94,11 +84,25 @@ h2 {
     right: 40px;
     z-index: 0;
 }
-/* FIN PROPIEDADES DEL HEADER */
 
-/* INICIO PROPIEDADES DEL MAIN */
+/* USADO EN OTRAS PAGINAS */
+header .presentationPage {
+    padding: 200px 400px;
+    align-items: center;
+    text-align: center;
 
-h3 {
+}
+
+header .presentationPage .subtitle {
+    margin: 40px 0px;
+    text-align: center;
+}
+
+/* ---------------------------------------- */
+
+/* -----  INICIO PROPIEDADES DEL MAIN ----- */
+
+main h3 {
     color: #372256;
     margin-top: 40px;
     font-weight: 700;
@@ -106,200 +110,212 @@ h3 {
     line-height: 1;
 }
 
-h4 {
+main h4 {
     color: #372256;
     font-weight: 400;
     font-size: 1.4rem;
 }
 
-.aboutSE {
+/* USADAS EN ACERCA DE */
+main .aboutSE {
     background-color: #F9F9FA;
     display: flex;
     justify-content: space-around;
     padding: 140px 60px;
 }
 
-.aboutSE .tagline {
-    margin: 10px 0px 40px 0px;
-}
-
-.aboutSE .leftSide img {
-    height: 260px;
-}
-
-.aboutSE .rightSide  {
+main .aboutSE .rightSide  {
     width: 50%;
 }
 
-.instructions {
+main .aboutSE .rightSide .tagline {
+    margin: 10px 0px 40px 0px;
+}
+
+main .aboutSE .leftSide img {
+    height: 260px;
+}
+
+main .ourStory {
+    display: flex;
+}
+
+main .ourStory .leftSide {
+    padding: 140px 60px;
+}
+
+main .ourStory .leftSide .description {
+    margin-top: 40px;
+}
+
+main .ourStory .rightSide {
+    padding: 140px 60px;
+}
+
+main .ourStory .rightSide img {
+    width: 600px;
+    border-radius: 20px;
+}
+
+/* USADAS EN INSTRUCCIONES */
+main .instructions {
     padding: 60px;
     justify-content: center;
 }
 
-.instructionsAlt {
-    background-color: #F9F9FA;
-    padding: 60px;
-}
-
-.titleInstructions {
+main .titleInstructions {
     display: flex;
     justify-content: flex-end;
     margin: 0px 60px 60px 60px;
 }
 
-.titleInstructionsAlt {
+main .containerTitleInstructions {
+    width: 45%;
+}
+
+main .containerTitleInstructions h3 {
+    margin-top: 10px;
+}
+
+main .containerTitleInstructions h4 {
+    font-weight: 700;
+}
+
+main .instructionsAlt {
+    background-color: #F9F9FA;
+    padding: 60px;
+}
+
+main .titleInstructionsAlt {
     display: flex;
     justify-content: flex-start;
     margin: 0px 60px 60px 60px;
 }
 
-.containerTitleInstructions {
-    width: 45%;
+main .stepsInstructions {
+    display: flex;
 }
 
-.containerTitleInstructions h3 {
-    margin-top: 10px;
-}
-
-.containerTitleInstructions h4 {
+main .stepsInstructions h4 {
     font-weight: 700;
 }
 
-.stepsInstructions h4 {
-    font-weight: 700;
+main .stepsInstructions .leftSide {
+    width: 50%;
+    padding: 0px 60px;
 }
 
-.stepsInstructions .rightSide ol li {
+main .stepsInstructions .leftSide img {
+    height: 500px;
+    border-radius: 20px;
+}
+
+main .stepsInstructions .rightSide {
+    width: 50%;
+    padding: 0px 60px;
+}
+
+main .stepsInstructions .rightSide ol li {
     list-style: none;
     margin-bottom: 20px;
 }
 
-.lastPost {
+/* USADAS EN BLOG */
+main .lastPost {
     display: flex;
     background-color: #F9F9FA;
 }
 
-.lastPost .leftSide {
+main .lastPost .leftSide {
     padding: 140px 60px;
 }
 
-.lastPost .rightSide img {
+main .lastPost .rightSide {
+    padding: 140px 60px;
+}
+
+main .lastPost .rightSide img {
     width: 600px;
     border-radius: 20px;
 }
 
-.lastPost .rightSide {
-    padding: 140px 60px;
+main .blogSection {
+    padding: 80px 80px 140px 80px;
 }
 
-.ourStory {
+main .blogSection h4 {
+    font-weight: 700;
+}
+
+main .blogSection h3 {
+    margin: 10px 0px;
+}
+
+main .morePosts {
+    display: flex;
+    justify-content: center;
+    margin: 0px 0px 40px 0px;
+}
+
+main .morePosts h4 {
+    font-weight: 700;
+}
+
+main .buttonMorePosts {
+    margin: 20px 200px;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    border: 4px solid #372256;
+    border-radius: 100px;
+    padding: 10px;
+}
+
+/* USADAS EN INICIO */
+main .featuresSection {
     display: flex;
 }
 
-.ourStory .leftSide {
-    padding: 140px 60px;
-}
-
-.ourStory .leftSide .subtitle {
-    margin-top: 40px;
-}
-
-.ourStory .rightSide img {
-    width: 600px;
-    border-radius: 20px;
-}
-
-.ourStory .rightSide {
-    padding: 140px 60px;
-}
-
-.featuresSection {
-    display: flex;
-}
-
-.featuresSection .leftSide {
+main .featuresSection .rightSide {
     width: 50%;
     padding: 140px 60px;
 }
 
-.subtitleSection{
-    margin-top: 40px;
+main .featuresSection .leftSide {
+    width: 50%;
+    padding: 140px 60px;
 }
 
-.featuresSection .leftSide img {
+main .featuresSection .leftSide img {
     height: 500px;
     border-radius: 20px;
 }
 
-.featuresSection .rightSide {
-    width: 50%;
-    padding: 140px 60px;
+main .subtitleSection{
+    margin-top: 40px;
 }
 
-.stepsInstructions {
-    display: flex;
-}
-
-.stepsInstructions .leftSide {
-    width: 50%;
-    padding: 0px 60px;
-}
-
-.stepsInstructions .leftSide img {
-    height: 500px;
-    border-radius: 20px;
-}
-
-.stepsInstructions .rightSide {
-    width: 50%;
-    padding: 0px 60px;
-}
-
-.featuresSectionAlt {
+main .featuresSectionAlt {
     display: flex;
     background-color: #F9F9FA;
 }
 
-.featuresSectionAlt .leftSide {
+main .featuresSectionAlt .leftSide {
     width: 50%;
     padding: 140px 60px;
 }
-.featuresSectionAlt .rightSide img {
+
+main .featuresSectionAlt .rightSide {
+    width: 50%;
+    padding: 140px 60px;
+}
+
+main .featuresSectionAlt .rightSide img {
     height: 500px;
     border-radius: 20px;
 }
 
-.featuresSectionAlt .rightSide {
-    width: 50%;
-    padding: 140px 60px;
-}
-
-.othersSections {
-    background-color: #F9F9FA;
-    padding: 60px;
-    text-align: center;
-}
-
-.othersSections .features {
-    display: flex;
-    justify-content: space-around;
-    padding: 60px;
-}
-
-.feature {
-    width: 25%;
-}
-
-.feature .description {
-    margin-top: 20px ;
-}
-
-.feature img {
-    height: 200px;
-    border-radius: 16px ;
-}
-
-.downloadContainer {
+main .downloadContainer {
     display: flex;
     background-color: #A171D3;
     margin: 80px;
@@ -313,116 +329,113 @@ h4 {
     border: 4px solid #372256;
 }
 
-.downloadApp {
+main .downloadApp {
     padding: 60px;
     width: 60%;
 }
 
-.downloadApp h3 {
+main .downloadApp h3 {
     color: #FFFFFF;
     line-height: 1;
 }
 
-.downloadImage {
-    display: flex;
-}
-
-.downloadButton {
+main .downloadButton {
     margin-top: 40px;
 }
 
-.downloadImage img {
-    height: 260px;
-    border-radius: 0px 0px 16px 0px;
-}
-
-.blogSection {
-    padding: 80px 80px 140px 80px;
-}
-
-.blogSection h4 {
-    font-weight: 700;
-}
-
-.blogSection h3 {
-    margin: 10px 0px;
-}
-
-.morePosts {
-    display: flex;
-    justify-content: center;
-    margin: 0px 0px 40px 0px;
-}
-
-.morePosts h4 {
-    font-weight: 700;
-}
-
-.buttonMorePosts {
-    margin: 20px 200px;
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    border: 4px solid #372256;
-    border-radius: 100px;
-    padding: 10px;
-}
-
-.posts {
+main .posts {
     margin-top: 40px;
     display: flex;
     justify-content: space-between;
 }
 
-.post1{
+main .post1{
     width: 40%;
 }
 
-.titlePost {
+main .titlePost {
     margin: 20px 0px;
 }
 
-.post2{
+main .post2{
     width: 40%;
 }
 
-.posts img {
+main .posts img {
     height: 320px;
     border-radius: 16px;
 }
 
-.bienaventuradosSection {
+/* USADAS EN NUESTRA APP */
+main .othersSections {
+    background-color: #F9F9FA;
+    padding: 60px;
+    text-align: center;
+}
+
+main .othersSections .features {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px;
+}
+
+main .feature {
+    width: 25%;
+}
+
+main .feature .description {
+    margin-top: 20px ;
+}
+
+main .feature img {
+    height: 200px;
+    border-radius: 16px ;
+}
+
+main .bienaventuradosSection {
     display: flex;
     justify-content: center;
     text-align: center;
     padding: 140px;
 }
 
-.containerBienaventuradosSection {
+main .containerBienaventuradosSection {
     width: 40%;
 }
 
-.quote {
+main .quote {
     margin: 40px 0px;
 }
 
-.isoBienaventurados {
+main .isoBienaventurados {
     height: 160px;
 }
 
-/* FIN PROPIEDADES DEL MAIN */
+/* ---------------------------------------- */
 
-/* INICIO PROPIEDADES FOOTER */
+/* -----  INICIO PROPIEDADES FOOTER -----  */
 
 footer {
     background-color: #372256;
-    padding: 80px;
+    padding: 80px 60px 40px 60px;
+}
+
+footer h5 {
+    font-size: 0.8rem;
+    color: #FFFFFF;
+    font-weight:700;
+}
+
+footer h6 {
+    font-size: 0.8rem;
+    font-weight: normal;
+    color: #FFFFFF;
 }
 
 footer a {
     text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 0.8rem;
+    font-weight: normal;
     color:#FFFFFF;
 }
 
@@ -430,13 +443,9 @@ footer ul {
     list-style: none;
 }
 
-footer li {
+footer ul li {
     margin: 12px 0px;
     color: #FFFFFF;
-}
-
-footer li a {
-    font-size: 0.8rem;
 }
 
 .footerInfo {
@@ -445,43 +454,36 @@ footer li a {
     align-items: center;
 }
 
-.footerInfoLogo img {
+.footerLogo img {
     height: 200px;
 }
 
-.footerInfoOthers {
+.footerLinks {
     display: flex;
     align-items: flex-start;
     justify-content:space-between;
     
 }
 
-h5 {
-    font-size: 0.8rem;
-    color: #FFFFFF;
-    font-weight:700;
-}
-
-
-.footerInfoPages {
+.footerPages {
     margin: 0px 40px;
 }
 
-.footerInfoSocial {
+.footerSocial {
     padding-top: 16px;
     margin: 0px 40px;
 }
 
-.footerInfoProjects {
+.footerProjects {
     padding-top: 16px;
     margin: 0px 40px;
 }
 
-.footerInfoDownload {
+.footerDownload {
     padding-top: 16px;
 }
 
-.footerInfoDownload img{
+.footerDownload img{
     padding-top: 20px;
 }
 
@@ -496,16 +498,9 @@ h5 {
     display: flex;
 }
 
-.footerLegal li {
+.footerLegal ul li {
     font-size: 0.8rem;
     margin: 0px 0px 0px 20px;
 }
 
-
-h6 {
-    font-size: 0.8rem;
-    font-weight: normal;
-    color: #FFFFFF;
-}
-
-/* FIN DE PROPIEDADES FOOTER */
+/* ---------------------------------------- */

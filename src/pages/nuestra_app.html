@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- LINK DE TIPOGRAFIA -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- FAVICON -->
     <link rel="shortcut icon" href="../../assets/images/favicon.svg">
     <!-- LINK CSS -->
@@ -13,26 +17,29 @@
 </head>
 
 <body>
-    <!-- HEADER -->
-    <header>
-        <!-- NAV + LOGO SE -->
-        <section class="navBar">
-            <!-- LOGO SE -->
-            <div>
-                <a href="../index.html">
-                    <img src="../../assets/images/se-logotipo.svg" alt="logotipo-ser-eucaristia">
-                </a>
-            </div>
-            <!-- NAV -->
-            <nav>
-                <ul>
-                    <li><a href="../pages/blog.html">Blog</a></li>
-                    <li><a href="../pages/instrucciones.html">Instrucciones</a></li>
-                    <li><a href="../pages/nuestra_app.html">Nuestra app</a></li>
-                    <li><a href="../pages/acerca_de.html">Acerca de</a></li>
-                </ul>
-            </nav>
-        </section>
+    <!-- MAIN -->
+    <main class="mainApp">
+        <!-- HEADER -->
+        <header>
+            <!-- NAV + LOGO SE -->
+            <section class="navBar">
+                <!-- LOGO SE -->
+                <div>
+                    <a href="../index.html">
+                        <img src="../../assets/images/se-logotipo.svg" alt="logotipo-ser-eucaristia">
+                    </a>
+                </div>
+                <!-- NAV -->
+                <nav>
+                    <ul>
+                        <li><a href="../pages/blog.html">Blog</a></li>
+                        <li><a href="../pages/instrucciones.html">Instrucciones</a></li>
+                        <li><a href="../pages/nuestra_app.html">Nuestra app</a></li>
+                        <li><a href="../pages/acerca_de.html">Acerca de</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </header>
         <!-- PRESENTACIÓN DE PÁGINA -->
         <section class="presentationPage">
             <div class="title">
@@ -50,61 +57,52 @@
                 </a>
             </div>
         </section>
-    </header>
-    <!-- MAIN -->
-    <main>
         <!-- ACA FALTA AGREGAR UNA SECCIÓN. DATOS DE CALIFICACIÓN, USUARIOS ACTIVOS Y AVIONCITOS COMPARTIDOS EN LA APP. SE AGREGARÁ A PROXIMAS ENTREGAS -->
         <!-- CARACTERÍSTICA -->
-        <section class="featuresSection">
-            <!-- IMAGEN -->
-            <div class="leftSide">
-                <!-- ESTAS IMAGENES NO SON FINALES -->
-                <img src="../../assets/images/av-front.png" alt="Avioncito de papel">
+        <!-- IMAGEN -->
+        <div class="featureImage">
+            <!-- ESTAS IMAGENES NO SON FINALES -->
+            <img src="../../assets/images/av-front.png" alt="Avioncito de papel">
+        </div>
+        <!-- DESCRIPCIÓN DE LA CARACTERÍSTICA -->
+        <div class="featureDescription">
+            <div class="titleSection">
+                <h3>Recibe avioncitos diarios con frases únicas</h3>
             </div>
-            <!-- DESCRIPCIÓN DE LA CARACTERÍSTICA -->
-            <div class="rightSide">
-                <div class="titleSection">
-                    <h3>Recibe avioncitos diarios con frases únicas</h3>
-                </div>
-                <div class="subtitleSection">
-                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolore qui accusantium porro totam fugit illum? Sit, similique.</h4>
-                </div>
+            <div class="subtitleSection">
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolore qui accusantium porro totam fugit illum? Sit, similique.</h4>
             </div>
-        </section>
+        </div>
         <!-- CARACTERÍSTICA VARIANTE -->
-        <section class="featuresSectionAlt">
-            <!-- DESCRIPCIÓN DE LA CARACTERÍSTICA -->
-            <div class="leftSide">
-                <div class="titleSection">
-                    <h3>Construye avioncitos de papel a tu medida y hazlos volar</h3>
-                </div>
-                <div class="subtitleSection">
-                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolore qui accusantium porro totam fugit illum? Sit, similique.</h4>
-                </div>
-                <!-- IMAGEN -->
+        <!-- DESCRIPCIÓN DE LA CARACTERÍSTICA -->
+        <div class="featureAltDescription">
+            <div class="titleSection">
+                <h3>Construye avioncitos de papel a tu medida y hazlos volar</h3>
             </div>
-            <div class="rightSide">
-                <!-- ESTAS IMAGENES NO SON FINALES -->
-                <img src="../../assets/images/av-back.png" alt="Avioncito de papel - frase">
+            <div class="subtitleSection">
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolore qui accusantium porro totam fugit illum? Sit, similique.</h4>
             </div>
-        </section>
-        <!-- CARACTERÍSTICA -->
-        <section class="featuresSection">
             <!-- IMAGEN -->
-            <div class="leftSide">
-                <!-- ESTAS IMAGENES NO SON FINALES -->
-                <img src="../../assets/images/av-front.png" alt="Avioncito de papel">
+        </div>
+        <div class="featureAltImage">
+            <!-- ESTAS IMAGENES NO SON FINALES -->
+            <img src="../../assets/images/av-back.png" alt="Avioncito de papel - frase">
+        </div>
+        <!-- CARACTERÍSTICA -->
+        <!-- IMAGEN -->
+        <div class="featureTwoImage">
+            <!-- ESTAS IMAGENES NO SON FINALES -->
+            <img src="../../assets/images/av-front.png" alt="Avioncito de papel">
+        </div>
+        <!-- DESCRIPCIÓN DE LA CARACTERÍSTICA -->
+        <div class="featureTwoDescription">
+            <div class="titleSection">
+                <h3>Redescubre sus palabras con un corazón renovado</h3>
             </div>
-            <!-- DESCRIPCIÓN DE LA CARACTERÍSTICA -->
-            <div class="rightSide">
-                <div class="titleSection">
-                    <h3>Redescubre sus palabras con un corazón renovado</h3>
-                </div>
-                <div class="subtitleSection">
-                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolore qui accusantium porro totam fugit illum? Sit, similique.</h4>
-                </div>
+            <div class="subtitleSection">
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolore qui accusantium porro totam fugit illum? Sit, similique.</h4>
             </div>
-        </section>
+        </div>
         <!-- OTRAS CARACTERÍSTICAS -->
         <section class="othersSections">
             <!-- TÍTULO -->
@@ -162,76 +160,79 @@
                 </div>
             </div>
         </section>
+        <!-- FOOTER -->
+        <footer>
+            <!-- ISOTIPO + PAGINAS + SOCIAL + PROYECTOS + DESCARGA -->
+            <section class="footerInfo">
+                <!-- ISOTIPO -->
+                <div class="footerLogo">
+                    <img src="../../assets/images/se-isotipo-claro.svg" alt="Isotipo de Ser Eucaristía">
+                </div>
+                <div class="footerLinks">
+                    <!-- PAGINAS -->
+                    <div class="footerPages">
+                        <ul>
+                            <li><a href="../index.html">Inicio</a></li>
+                            <li><a href="../pages/blog.html">Blog</a></li>
+                            <li><a href="../pages/instrucciones.html">Instrucciones</a></li>
+                            <li><a href="../pages/nuestra_app.html">Nuestra app</a></li>
+                            <li><a href="../pages/acerca_de.html">Acerca de</a></li>
+                        </ul>
+                    </div>
+                    <!-- SOCIAL -->
+                    <div class="footerSocial">
+                        <h5>Social</h5>
+                        <ul>
+                            <li>
+                                <a href="https://www.instagram.com/sereucaristia/" target="_blank">Instagram</a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/sereucaristia" target="_blank">Facebook</a>
+                            </li>
+                            <li>
+                                <a href="https://www.twitter.com/sereucaristia" target="_blank">Twitter</a>
+                            </li>
+                            <li>
+                                <a href="https://t.me/sereucaristia" target="_blank">Telegram</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- PROYECTOS  -->
+                    <div class="footerProjects">
+                        <h5>Proyectos</h5>
+                        <ul>
+                            <li>
+                                <a href="https://play.google.com/store/apps/details?id=com.sereucaristia" target="_blank">Bienaventurados</a>
+                            </li>
+                            <li><a href="https://open.spotify.com/show/7E8f2o8GWoTCz2wSguligJ?si=9c733f26077e40d4" target="_blank">Podcast</a></li>
+                            <li><a href="https://medium.com/sereucaristia" target="_blank">Cartas a vos</a></li>
+                        </ul>
+                    </div>
+                    <!-- DESCARGA -->
+                    <div class="footerDownload">
+                        <div class="tituloDescarga">
+                            <h5>Descarga</h5>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.sereucaristia" target="_blank">
+                            <img src="../../assets/images/google-play-badge-sm.png" alt="Descarga la app en Play Store">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- LEGAL -->
+            </section>
+            <section class="footerLegal">
+                <!-- AUTOR -->
+                <div class="author">
+                    <h6>&copy; 2022 Ser Eucaristía</h6>
+                </div>
+                <ul>
+                    <li>Politicas de privacidad</li>
+                    <li>Términos y condiciones</li>
+                </ul>
+            </section>
+        </footer>
     </main>
-    <!-- FOOTER -->
-    <footer>
-        <!-- ISOTIPO + PAGINAS + SOCIAL + PROYECTOS + DESCARGA -->
-        <section class="footerInfo">
-            <!-- ISOTIPO -->
-            <div class="footerLogo">
-                <img src="../../assets/images/se-isotipo-claro.svg" alt="Isotipo de Ser Eucaristía">
-            </div>
-            <div class="footerLinks">
-                <!-- PAGINAS -->
-                <div class="footerPages">
-                    <ul>
-                        <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="../pages/blog.html">Blog</a></li>
-                        <li><a href="../pages/instrucciones.html">Instrucciones</a></li>
-                        <li><a href="../pages/nuestra_app.html">Nuestra app</a></li>
-                        <li><a href="../pages/acerca_de.html">Acerca de</a></li>
-                    </ul>
-                </div>
-                <!-- SOCIAL -->
-                <div class="footerSocial">
-                    <h5>Social</h5>
-                    <ul>
-                        <li>
-                            <a href="https://www.instagram.com/sereucaristia/" target="_blank">Instagram</a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/sereucaristia" target="_blank">Facebook</a>
-                        </li>
-                        <li>
-                            <a href="https://www.twitter.com/sereucaristia" target="_blank">Twitter</a>
-                        </li>
-                        <li>
-                            <a href="https://t.me/sereucaristia" target="_blank">Telegram</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- PROYECTOS  -->
-                <div class="footerProjects">
-                    <h5>Proyectos</h5>
-                    <ul>
-                        <li>
-                            <a href="https://play.google.com/store/apps/details?id=com.sereucaristia" target="_blank">Bienaventurados</a>
-                        </li>
-                        <li><a href="https://open.spotify.com/show/7E8f2o8GWoTCz2wSguligJ?si=9c733f26077e40d4" target="_blank">Podcast</a></li>
-                        <li><a href="https://medium.com/sereucaristia" target="_blank">Cartas a vos</a></li>
-                    </ul>
-                </div>
-                <!-- DESCARGA -->
-                <div class="footerDownload">
-                    <h5>Descarga</h5>
-                    <a href="https://play.google.com/store/apps/details?id=com.sereucaristia" target="_blank">
-                        <img src="../../assets/images/google-play-badge-sm.png" alt="Descarga la app en Play Store">
-                    </a>
-                </div>
-            </div>
-        <!-- LEGAL -->
-        </section>
-        <section class="footerLegal">
-            <!-- AUTOR -->
-            <div class="author">
-                <h6>&copy; 2022 Ser Eucaristía</h6>
-            </div>
-            <ul>
-                <li>Politicas de privacidad</li>
-                <li>Términos y condiciones</li>
-            </ul>
-        </section>
-    </footer>
 </body>
 
 </html>

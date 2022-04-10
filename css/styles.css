@@ -487,8 +487,12 @@ main {
 
 /* USADAS EN NUESTRA APP */
 
-.mainDownloadButton {
+.downloadButton {
     margin-top: 2rem ;
+}
+
+.downloadButton img:hover {
+    transform: scale(1.02);
 }
 
 .othersSections {
@@ -1092,3 +1096,20 @@ footer ul li {
 }
 
 @media only screen and (min-width: 1024px) {}
+
+/* ANIMACIONES */
+
+.animated {
+    animation-name: fadeIn;
+    animation-iteration-count: unset;
+    animation-duration: 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

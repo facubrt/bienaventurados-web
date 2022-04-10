@@ -11,59 +11,59 @@
 
 /* ----- PROPIEDADES LAYOUT  ----- */
 
+body {
+    display: grid;
+    grid-template-areas: "header"
+        "main"
+        "footer";
+}
+
 .mainIndex {
     display: grid;
-    grid-template-areas: "nav nav"
-        "presentationDescription presentationImage"
+    grid-template-areas: "presentationDescription presentationImage"
         "featureImage featureDescription"
         "featureAltDescription featureAltImage"
         "download download"
-        "blog blog"
-        "footer footer";
-    grid-template-columns: 1fr 1fr;
-}
-
-.mainApp {
-    display: grid;
-    grid-template-areas: "nav nav"
-        "presentationPage presentationPage"
-        "featureImage featureDescription"
-        "featureAltDescription featureAltImage"
-        "featureTwoImage featureTwoDescription"
-        "moreFeatures moreFeatures"
-        "bienaventurados bienaventurados"
-        "footer footer";
-    grid-template-columns: 1fr 1fr;
-}
-
-.mainInstructions {
-    display: grid;
-    grid-template-areas: "nav nav"
-        "presentationPage presentationPage"
-        ". titleInstructions"
-        "instructionsImage instructionsSteps"
-        "titleInstructionsTwo ."
-        "instructionsStepsTwo instructionsImageTwo"
-        ". titleInstructionsThree"
-        "instructionsImageThree instructionsStepsThree"
-        "footer footer";
+        "blog blog";
     grid-template-columns: 1fr 1fr;
 }
 
 .mainBlog {
     display: grid;
-    grid-template-areas: "nav nav"
-        "presentationPage presentationPage"
+    grid-template-areas: "presentationPage presentationPage"
         "lastPostDescription lastPostImage"
         "blog blog"
-        "morePosts morePosts"
-        "footer footer";
+        "morePosts morePosts";
+    grid-template-columns: 1fr 1fr;
+}
+
+.mainApp {
+    display: grid;
+    grid-template-areas: "presentationPage presentationPage"
+        "featureImage featureDescription"
+        "featureAltDescription featureAltImage"
+        "featureTwoImage featureTwoDescription"
+        "moreFeatures moreFeatures"
+        "bienaventurados bienaventurados";
+    grid-template-columns: 1fr 1fr;
+}
+
+.mainInstructions {
+    display: grid;
+    grid-template-areas: "presentationPage presentationPage"
+        ". titleInstructions"
+        "instructionsImage instructionsSteps"
+        "titleInstructionsTwo ."
+        "instructionsStepsTwo instructionsImageTwo"
+        ". titleInstructionsThree"
+        "instructionsImageThree instructionsStepsThree";
     grid-template-columns: 1fr 1fr;
 }
 
 /* ---------------------------------------- */
 
-/* ----- INICIO PROPIEDADES DEL HEADER  ----- */
+/* ----- INICIO PROPIEDADES GENERALES  ----- */
+
 
 h1 {
     color: #372256;
@@ -101,8 +101,32 @@ h6 {
     font-weight: normal;
 }
 
+.presentationPage {
+    grid-area: presentationPage;
+    padding: 10rem 4rem;
+    align-items: center;
+    text-align: center;
+
+}
+
+.presentationPage .subtitle {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* ---------------------------------------- */
+
+/* ----- INICIO PROPIEDADES DEL HEADER  ----- */
+
+header {
+    grid-area: header;
+}
+
+.menuIcon {
+    display: none;
+}
+
 .navBar {
-    grid-area: nav;
     display: flex;
     justify-content: space-between;
     position: fixed;
@@ -134,7 +158,13 @@ h6 {
     margin: 1rem 1rem;
 }
 
-/* USADO EN PAGINA INICIO */
+/* ---------------------------------------- */
+
+/* -----  INICIO PROPIEDADES DEL MAIN ----- */
+
+main {
+    grid-area: main;
+}
 
 .presentationDescription {
     grid-area: presentationDescription;
@@ -159,26 +189,6 @@ h6 {
     right: 3rem;
     z-index: 0;
 }
-
-/* USADO EN OTRAS PAGINAS */
-.presentationPage {
-    grid-area: presentationPage;
-    padding: 10rem 4rem;
-    align-items: center;
-    text-align: center;
-
-}
-
-.presentationPage .subtitle {
-    margin-top: 2rem;
-    text-align: center;
-}
-
-/* ---------------------------------------- */
-
-/* -----  INICIO PROPIEDADES DEL MAIN ----- */
-
-/* USADAS EN INICIO */
 
 .featureDescription {
     grid-area: featureDescription;
@@ -265,7 +275,6 @@ h6 {
     margin-top: 2rem;
 }
 
-
 .posts {
     margin-top: 2rem;
     display: flex;
@@ -276,7 +285,6 @@ h6 {
     width: 40%;
 }
 
-
 .post2 {
     width: 40%;
 }
@@ -284,7 +292,6 @@ h6 {
 .titlePost {
     margin: 1rem 0px;
 }
-
 
 .posts img {
     width: 100%;
@@ -306,7 +313,7 @@ h6 {
 }
 
 .lastPostImage img {
-    width: 100%;
+    width: 600px;
     border-radius: 0.8rem;
 }
 
@@ -640,47 +647,17 @@ footer ul li {
 /* -----  INICIO PROPIEDADES MEDIA QUERYS -----  */
 @media only screen and (max-width: 600px) {
 
-    nav {
-        display: none;
-    }
-
-    h1 {
-        font-size: 2.4rem;
-    }
-
-    h2 {
-        font-size: 1.4rem;
-    }
-
-    h3 {
-        font-size: 1.4rem;
-    }
-
-    h4 {
-        font-size: 1rem;
-    }
-
-    h5 {
-        font-size: 0.8rem;
-    }
-
-    h6 {
-        font-size: 0.8rem;
-    }
-
     /* GRID LAYOUT */
     .mainIndex {
         display: grid;
-        grid-template-areas: "nav"
-            "presentationDescription"
+        grid-template-areas: "presentationDescription"
             "presentationImage"
             "featureDescription"
             "featureImage"
             "featureAltDescription"
             "featureAltImage"
             "download"
-            "blog"
-            "footer";
+            "blog";
         grid-template-columns: 1fr;
     }
 
@@ -710,14 +687,50 @@ footer ul li {
 
     .mainBlog {
         display: grid;
-        grid-template-areas: "nav"
-            "presentationPage"
+        grid-template-areas: "presentationPage"
             "lastPostDescription"
             "lastPostImage"
             "blog"
-            "morePosts"
-            "footer";
+            "morePosts";
         grid-template-columns: 1fr;
+    }
+    
+    /* GENERALES */
+
+    nav {
+        display: none;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    h5 {
+        font-size: 0.8rem;
+    }
+
+    h6 {
+        font-size: 0.8rem;
+    }
+
+    .menuIcon {
+        display: inline;
+    }
+
+    .menuIcon img {
+        width: 60%
     }
 
     .navBar {
@@ -728,6 +741,7 @@ footer ul li {
 
     .presentationDescription {
         padding: 8rem 3rem;
+        text-align: center;
     }
 
     .presentationImage {
@@ -747,9 +761,7 @@ footer ul li {
         margin: 0.8rem;
         bottom: 2rem;
         right: 0rem;
-    } 
-
-    /* USADAS EN INICIO */
+    }
 
     .featureDescription {
         padding: 4rem 3rem;
@@ -830,10 +842,12 @@ footer ul li {
         padding: 2rem 0rem;
     }
 
+    /* BLOG */
+    
+
     /* FOOTER */
 
     footer {
-        grid-area: footer;
         padding: 4rem 3rem;
     }
 

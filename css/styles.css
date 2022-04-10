@@ -365,7 +365,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    margin: 0rem 5rem 5rem 5rem;
+    margin: 10rem 5rem;
 }
 
 .titleInstructions h3 {
@@ -380,7 +380,7 @@ main {
     grid-area: titleInstructionsTwo;
     display: flex;
     justify-content: flex-end;
-    margin: 0rem 5rem 5rem 5rem;
+    margin: 10rem 5rem;
 }
 
 .titleInstructionsTwo h3 {
@@ -396,7 +396,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    margin: 0rem 5rem 5rem 5rem;
+    margin: 10rem 5rem;
 }
 
 .titleInstructionsThree h3 {
@@ -927,21 +927,21 @@ footer ul li {
         display: flex;
         justify-content: center;
         text-align: center;
-        margin: 0rem 3rem 4rem 3rem;
+        margin: 4rem 3rem;
     }
     
     .titleInstructionsTwo {
         display: flex;
         justify-content: center;
         text-align: center;
-        margin: 0rem 3rem 4rem 3rem;
+        margin: 4rem 3rem;
     }
     
     .titleInstructionsThree {
         display: flex;
         justify-content: center;
         text-align: center;
-        margin: 0rem 3rem 4rem 3rem;
+        margin: 4rem 3rem;
     }
     
     .instructionsImage {

@@ -103,10 +103,16 @@ h6 {
 
 .presentationPage {
     grid-area: presentationPage;
+    display: flex;
+    flex-direction: column;
     padding: 10rem 4rem;
     align-items: center;
     text-align: center;
 
+}
+
+.presentationPage .subtitle {
+    width: 60%;
 }
 
 .presentationPage .subtitle {
@@ -201,7 +207,7 @@ main {
 }
 
 .featureImage img {
-    width: 501px;
+    width: 26rem;
     border-radius: 1.2rem;
 }
 
@@ -216,7 +222,7 @@ main {
 }
 
 .featureTwoImage img {
-    height: 100%;
+    width: 26rem;
     border-radius: 1.2rem;
 }
 
@@ -240,6 +246,7 @@ main {
 }
 
 .featureAltImage img {
+    width: 26rem;
     border-radius: 1.2rem;
 }
 
@@ -313,8 +320,8 @@ main {
 }
 
 .lastPostImage img {
-    width: 600px;
-    border-radius: 0.8rem;
+    width: 40rem;
+    border-radius: 1.2rem;
 }
 
 .blogSection {
@@ -343,7 +350,6 @@ main {
 
 .buttonMorePosts {
     margin: 1.2rem 20rem;
-    width: 20%;
     display: flex;
     justify-content: center;
     border: 0.2rem solid #372256;
@@ -357,15 +363,16 @@ main {
 .titleInstructions {
     grid-area: titleInstructions;
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
     margin: 0rem 5rem 5rem 5rem;
 }
 
-.containerTitleInstructions h3 {
+.titleInstructions h3 {
     margin-top: 1rem;
 }
 
-.containerTitleInstructions h4 {
+.titleInstructions h4 {
     font-weight: 700;
 }
 
@@ -376,11 +383,28 @@ main {
     margin: 0rem 5rem 5rem 5rem;
 }
 
+.titleInstructionsTwo h3 {
+    margin-top: 1rem;
+}
+
+.titleInstructionsTwo h4 {
+    font-weight: 700;
+}
+
 .titleInstructionsThree {
     grid-area: titleInstructionsThree;
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
     margin: 0rem 5rem 5rem 5rem;
+}
+
+.titleInstructionsThree h3 {
+    margin-top: 1rem;
+}
+
+.titleInstructionsThree h4 {
+    font-weight: 700;
 }
 
 .instructionsSteps h4 {
@@ -462,6 +486,10 @@ main {
 
 
 /* USADAS EN NUESTRA APP */
+
+.mainDownloadButton {
+    margin-top: 2rem ;
+}
 
 .othersSections {
     grid-area: moreFeatures;
@@ -660,31 +688,7 @@ footer ul li {
             "blog";
         grid-template-columns: 1fr;
     }
-
-    .mainApp {
-        display: grid;
-        grid-template-areas: "nav nav"
-            "presentationPage presentationPage"
-            "featureImage featureDescription"
-            "featureAltDescription featureAltImage"
-            "featureTwoImage featureTwoDescription"
-            "moreFeatures moreFeatures"
-            "bienaventurados bienaventurados"
-            "footer footer";
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .mainInstructions {
-        display: grid;
-        grid-template-areas: "nav nav"
-            "presentationPage presentationPage"
-            "instructions instructions"
-            "instructionsTwo instructionsTwo"
-            "instructionsThree instructionsThree"
-            "footer footer";
-        grid-template-columns: 1fr 1fr;
-    }
-
+    
     .mainBlog {
         display: grid;
         grid-template-areas: "presentationPage"
@@ -694,7 +698,38 @@ footer ul li {
             "morePosts";
         grid-template-columns: 1fr;
     }
-    
+
+    .mainInstructions {
+        display: grid;
+        grid-template-areas: "presentationPage"
+            "titleInstructions"
+            "instructionsSteps"
+            "instructionsImage"
+            "titleInstructionsTwo"
+            "instructionsStepsTwo"
+            "instructionsImageTwo"
+            "titleInstructionsThree"
+            "instructionsStepsThree"
+            "instructionsImageThree";
+        grid-template-columns: 1fr;
+    }
+
+    .mainApp {
+        display: grid;
+        grid-template-areas: "presentationPage"
+            "featureDescription"
+            "featureImage"
+            "featureAltDescription" 
+            "featureAltImage"
+            "featureTwoDescription"
+            "featureTwoImage"
+            "moreFeatures"
+            "bienaventurados";
+        grid-template-columns: 1fr;
+    }
+
+    /* No se implementa grid y flex para Página Acerca de */
+
     /* GENERALES */
 
     nav {
@@ -735,6 +770,10 @@ footer ul li {
 
     .navBar {
         padding: 0.8rem 2rem 0.8rem 2rem;
+    }
+
+    .presentationPage .subtitle {
+        width: 100%;
     }
 
     /* USADO EN PAGINA INICIO */
@@ -778,15 +817,16 @@ footer ul li {
     }
 
     .featureTwoDescription {
-        padding: 2rem 3rem;
+        padding: 4rem 3rem;
     }
 
     .featureTwoImage {
-        padding: 2rem 3rem;
+        align-self: center;
+        padding: 4rem 3rem;
     }
 
     .featureTwoImage img {
-        width: 80%;
+        width: 100%;
         border-radius: 0.8rem;
     }
 
@@ -842,8 +882,157 @@ footer ul li {
         padding: 2rem 0rem;
     }
 
+    .post1 img,
+    .post2 img {
+        border-radius: 0.8rem;
+        min-width: 20rem;
+    }
+
     /* BLOG */
+
+    .presentationPage {
+        padding: 8rem 3rem;
+    }
+
+    .lastPostDescription {
+        padding: 4rem 3rem 0rem 3rem;
+    }
+
+    .lastPostImage {
+        padding: 4rem 3rem;
+    }
+
+    .lastPostImage img {
+        width: 100%;
+        min-width: 10rem;
+        border-radius: 0.8rem;
+    }
+
+    .blogSection {
+        padding: 3rem;
+    }
+
+    .morePosts {
+        margin-bottom: 4rem;
+    }
+
+    .buttonMorePosts {
+        margin: 1.2rem 0rem;
+        padding: 0.6rem;
+    }
+
+    /* INSTRUCCIONES */
+
+    .titleInstructions {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 0rem 3rem 4rem 3rem;
+    }
     
+    .titleInstructionsTwo {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 0rem 3rem 4rem 3rem;
+    }
+    
+    .titleInstructionsThree {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 0rem 3rem 4rem 3rem;
+    }
+    
+    .instructionsImage {
+        padding: 4rem 3rem 4rem 3rem;
+    }
+    
+    .instructionsImage img {
+        width: 100%;
+        border-radius: 0.8rem;
+    }
+    
+    .instructionsSteps {
+        padding: 0rem 3rem 0rem 3rem;
+    }
+    
+    .instructionsStepsTwo {
+        padding: 0rem 3rem 0rem 3rem;
+    }
+    
+    .instructionsImageTwo {
+        padding: 4rem 3rem 4rem 3rem;
+    }
+    
+    .instructionsImageTwo img {
+        width: 100%;
+        border-radius: 0.8rem;
+    }
+    
+    .instructionsStepsThree {
+        padding: 0rem 3rem 0rem 3rem;
+    }
+    
+    .instructionsImageThree {
+        padding: 4rem 3rem 4rem 3rem;
+    }
+    
+    .instructionsImageThree img {
+        width: 100%;
+        border-radius: 0.8rem;
+    }
+
+    /* NUESTRA APP */
+
+    .othersSections {
+        padding: 4rem 3rem;
+        text-align: center;
+    }
+    
+    .othersSections .features {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4rem 0rem;
+    }
+    
+    .feature {
+        width: 100%;
+    }
+    
+    .feature .description {
+        margin: 2rem;
+    }
+    
+    .feature img {
+        width: 100%;
+        min-width: 10rem;
+        border-radius: 0.8rem;
+    }
+    
+    .bienaventuradosSection {
+        grid-area: bienaventurados;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 4rem 3rem;
+    }
+    
+    .containerBienaventuradosSection {
+        width: 100%;
+    }
+    
+    .quote {
+        margin: 2rem;
+    }
+    
+    .isoBienaventurados {
+        height: 10rem;
+        margin-bottom: 4rem;
+    }
+
+    /* ACERCA DE */
 
     /* FOOTER */
 
@@ -858,7 +1047,6 @@ footer ul li {
     .footerLogo img {
         display: none;
     }
-
 
     .tituloDescarga {
         display: none;

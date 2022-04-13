@@ -113,9 +113,6 @@ h6 {
 
 .presentationPage .subtitle {
     width: 60%;
-}
-
-.presentationPage .subtitle {
     margin-top: 2rem;
     text-align: center;
 }
@@ -543,7 +540,8 @@ main {
 }
 
 /* USADAS EN ACERCA DE */
-.aboutSE {
+/* SE REEMPLAZAN POR BOOTSTRAP */
+/* .aboutSE {
     background-color: #F9F9FA;
     display: flex;
     justify-content: space-around;
@@ -577,10 +575,43 @@ main {
 .ourStory .rightSide {
     padding: 140px 60px;
 }
+*/
 
-.ourStory .rightSide img {
+.px-nav-6 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.imgStory img{
     width: 600px;
-    border-radius: 20px;
+    min-width: 300px;
+    border-radius: 1.2rem;
+}
+
+.isoImage img {
+    width: 10rem;
+}
+
+.px-6 {
+    padding-right: 4.2rem;
+    padding-left: 4.2rem;
+}
+
+.py-10 {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+.titlePage {
+    text-align: center;
+    width: 60%;
+    margin-top: 2rem;
+    text-align: center;
+
+}
+
+.subtitlePage {
+    width: 60%;
 }
 
 /* ---------------------------------------- */
@@ -610,10 +641,12 @@ footer a {
 
 footer ul {
     list-style: none;
+    padding: 0rem;
 }
 
 footer ul li {
     margin: 12px 0px;
+    padding: 0rem;
     color: #FFFFFF;
 }
 
@@ -1037,6 +1070,46 @@ footer ul li {
     }
 
     /* ACERCA DE */
+
+    .imgStory img{
+        width: 100%;
+        min-width: 20rem;
+        border-radius: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .px-6 {
+        padding-right: 3rem;
+        padding-left: 3rem;
+    }
+
+
+    .px-nav-6 {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+    
+    .py-10 {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .isoImage img {
+        width: 8rem;
+        margin-bottom: 2rem;
+    }
+    
+    .titlePage {
+        text-align: center;
+        width: 100%;
+        margin-top: 2rem;
+        text-align: center;
+    
+    }
+
+    .subtitlePage {
+        width: 100%;
+    }
 
     /* FOOTER */
 

@@ -60,6 +60,15 @@ body {
     grid-template-columns: 1fr 1fr;
 }
 
+.mainAbout {
+    display: grid;
+    grid-template-areas: "presentationPage presentationPage"
+        "imgSE descriptionSE"
+        "descriptionStory imgStory"
+        ;
+    grid-template-columns: 1fr 1fr;
+}
+
 /* ---------------------------------------- */
 
 /* ----- INICIO PROPIEDADES GENERALES  ----- */
@@ -540,78 +549,38 @@ main {
 }
 
 /* USADAS EN ACERCA DE */
-/* SE REEMPLAZAN POR BOOTSTRAP */
-/* .aboutSE {
+
+.descriptionSE {
     background-color: #F9F9FA;
-    display: flex;
-    justify-content: space-around;
     padding: 140px 60px;
+    grid-area: descriptionSE;
 }
-
-.aboutSE .rightSide {
-    width: 50%;
-}
-
-.aboutSE .rightSide .tagline {
+.descriptionSE .tagline {
     margin: 10px 0px 40px 0px;
 }
 
-.aboutSE .leftSide img {
+.imgSE {
+    grid-area: imgSE;
+    padding: 140px 60px;
+    background-color: #F9F9FA;
+}
+.imgSE img {
     height: 260px;
 }
-
-.ourStory {
-    display: flex;
-}
-
-.ourStory .leftSide {
+.descriptionStory {
+    grid-area: descriptionStory;
     padding: 140px 60px;
 }
-
-.ourStory .leftSide .description {
+.descriptionStory .description {
     margin-top: 40px;
 }
-
-.ourStory .rightSide {
+.imgStory {
+    grid-area: imgStory;
     padding: 140px 60px;
 }
-*/
-
-.px-nav-6 {
-    padding-left: 5rem;
-    padding-right: 5rem;
-}
-
-.imgStory img{
+.imgStory img {
     width: 600px;
-    min-width: 300px;
-    border-radius: 1.2rem;
-}
-
-.isoImage img {
-    width: 10rem;
-}
-
-.px-6 {
-    padding-right: 4.2rem;
-    padding-left: 4.2rem;
-}
-
-.py-10 {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-}
-
-.titlePage {
-    text-align: center;
-    width: 60%;
-    margin-top: 2rem;
-    text-align: center;
-
-}
-
-.subtitlePage {
-    width: 60%;
+    border-radius: 20px;
 }
 
 /* ---------------------------------------- */
@@ -762,6 +731,16 @@ footer ul li {
             "featureTwoImage"
             "moreFeatures"
             "bienaventurados";
+        grid-template-columns: 1fr;
+    }
+
+    .mainAbout {
+        display: grid;
+        grid-template-areas: "presentationPage"
+            "imgSE"
+            "descriptionSE"
+            "imgStory" 
+            "descriptionStory";
         grid-template-columns: 1fr;
     }
 
@@ -1071,44 +1050,39 @@ footer ul li {
 
     /* ACERCA DE */
 
-    .imgStory img{
+    .descriptionSE {
+        background-color: #F9F9FA;
+        padding: 4rem 3rem;
+        grid-area: descriptionSE;
+    }
+    .descriptionSE .tagline {
+        margin: 10px 0px 40px 0px;
+    }
+    
+    .imgSE {
+        grid-area: imgSE;
+        padding: 4rem 3rem 0rem 3rem;
+        background-color: #F9F9FA;
+        display: flex;
+        justify-content: center;
+    }
+    .imgSE img {
+        width: 40%;
+    }
+    .descriptionStory {
+        grid-area: descriptionStory;
+        padding: 4rem 3rem;
+    }
+    .descriptionStory .description {
+        margin-top: 40px;
+    }
+    .imgStory {
+        grid-area: imgStory;
+        padding: 4rem 3rem 0rem 3rem;
+    }
+    .imgStory img {
         width: 100%;
-        min-width: 20rem;
-        border-radius: 1.2rem;
-        margin-bottom: 2rem;
-    }
-    
-    .px-6 {
-        padding-right: 3rem;
-        padding-left: 3rem;
-    }
-
-
-    .px-nav-6 {
-        padding-right: 2rem;
-        padding-left: 2rem;
-    }
-    
-    .py-10 {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-    }
-
-    .isoImage img {
-        width: 8rem;
-        margin-bottom: 2rem;
-    }
-    
-    .titlePage {
-        text-align: center;
-        width: 100%;
-        margin-top: 2rem;
-        text-align: center;
-    
-    }
-
-    .subtitlePage {
-        width: 100%;
+        border-radius: 20px;
     }
 
     /* FOOTER */

@@ -1008,8 +1008,9 @@ footer ul li {
     
     .othersSections .features {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
         align-items: center;
+        justify-content: space-between;
         padding: 4rem 0rem;
     }
     

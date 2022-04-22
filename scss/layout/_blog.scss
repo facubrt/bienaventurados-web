@@ -1,0 +1,159 @@
+@import "../utilities/variables";
+
+/* -----  INICIO PROPIEDADES DEL MAIN ----- */
+
+.mainBlog {
+    display: grid;
+    grid-template-areas: "presentationPage presentationPage"
+        "lastPostDescription lastPostImage"
+        "blog blog"
+        "morePosts morePosts";
+    grid-template-columns: 1fr 1fr;
+
+    .presentationPage {
+        grid-area: presentationPage;
+        display: flex;
+        flex-direction: column;
+        padding: 10rem 4rem;
+        align-items: center;
+        text-align: center;
+
+        .subtitle {
+            width: 60%;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+    }
+
+    .lastPostDescription {
+        grid-area: lastPostDescription;
+        padding: 10rem 5rem;
+        background-color: #F9F9FA;
+    }
+
+    .lastPostImage {
+        grid-area: lastPostImage;
+        padding: 10rem 5rem;
+        background-color: #F9F9FA;
+
+        img {
+            width: 40rem;
+            border-radius: 1.2rem;
+        }
+    }
+
+    .blogSection {
+        grid-area: blog;
+        padding: 5rem;
+
+        h3 {
+            margin: 1rem 0rem;
+        }
+
+        h4 {
+            font-weight: 700;
+        }
+
+        .posts {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+
+            .post1,
+            .post2 {
+                width: 40%;
+
+                img {
+                    width: 100%;
+                    border-radius: 1.2rem;
+                }
+
+                .titlePost {
+                    margin: 1rem 0px;
+                }
+            }
+        }
+    }
+
+    .morePosts {
+        grid-area: morePosts;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 4rem;
+
+        .buttonMorePosts {
+            margin: 1.2rem 20rem;
+            display: flex;
+            justify-content: center;
+            border: 0.2rem solid #372256;
+            border-radius: 20rem;
+            padding: 0.6rem;
+
+            h4 {
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .mainBlog {
+        display: grid;
+        grid-template-areas: "presentationPage"
+            "lastPostDescription"
+            "lastPostImage"
+            "blog"
+            "morePosts";
+        grid-template-columns: 1fr;
+
+        /* BLOG */
+
+        .presentationPage {
+            padding: 8rem 3rem;
+        }
+
+        .lastPostDescription {
+            padding: 4rem 3rem 0rem 3rem;
+        }
+
+        .lastPostImage {
+            padding: 4rem 3rem;
+
+            img {
+                width: 100%;
+                border-radius: 0.8rem;
+            }
+        }
+
+        .blogSection {
+            padding: 3rem;
+
+            .posts {
+                flex-direction: column;
+
+                .post1,
+                .post2 {
+                    width: 100%;
+                    padding: 2rem 0rem;
+
+                    img {
+                        border-radius: 0.8rem;
+                        min-width: 20rem;
+                    }
+
+                }
+
+            }
+        }
+
+        .morePosts {
+            margin-bottom: 4rem;
+
+            .buttonMorePosts {
+                margin: 1.2rem 0rem;
+                padding: 0.6rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "sereucaristia",
+  "version": "1.0.0",
+  "description": "Página web del proyecto Ser Eucaristía, una nueva forma de compartir la fe a través de avioncitos de papeles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/styles.scss css/styles.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facubrt/sereucaristia-web.git"
+  },
+  "keywords": [
+    "catolico",
+    "avioncitos",
+    "de",
+    "papel",
+    "creativo",
+    "fe",
+    "dios",
+    "iglesia",
+    "jovenes"
+  ],
+  "author": "Facundo Barreto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/facubrt/sereucaristia-web/issues"
+  },
+  "homepage": "https://github.com/facubrt/sereucaristia-web#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.15"
+  }
+}

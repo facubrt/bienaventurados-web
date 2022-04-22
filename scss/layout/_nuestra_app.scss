@@ -1,0 +1,252 @@
+@import "../utilities/variables";
+
+.mainApp {
+    display: grid;
+    grid-template-areas: "presentationPage presentationPage"
+        "featureImage featureDescription"
+        "featureAltDescription featureAltImage"
+        "featureTwoImage featureTwoDescription"
+        "moreFeatures moreFeatures"
+        "bienaventurados bienaventurados";
+    grid-template-columns: 1fr 1fr;
+
+    .presentationPage {
+        grid-area: presentationPage;
+        display: flex;
+        flex-direction: column;
+        padding: 10rem 4rem;
+        align-items: center;
+        text-align: center;
+
+        .subtitle {
+            width: 60%;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+    }
+
+    /* USADAS EN NUESTRA APP */
+
+    .featureDescription {
+        grid-area: featureDescription;
+        padding: 10rem 5rem;
+    }
+
+    .featureImage {
+        grid-area: featureImage;
+        padding: 10rem 5rem;
+
+        img {
+            width: 26rem;
+            border-radius: 1.2rem;
+        }
+    }
+
+    .featureTwoDescription {
+        grid-area: featureTwoDescription;
+        padding: 10rem 5rem;
+    }
+
+    .featureTwoImage {
+        grid-area: featureTwoImage;
+        padding: 10rem 5rem;
+
+        img {
+            width: 26rem;
+            border-radius: 1.2rem;
+        }
+    }
+
+    .subtitleSection {
+        margin-top: 2rem;
+    }
+
+    .featureAltDescription {
+        grid-area: featureAltDescription;
+        padding: 10rem 5rem;
+        background-color: $color-claro;
+    }
+
+    .featureAltImage {
+        grid-area: featureAltImage;
+        display: flex;
+        justify-content: flex-end;
+        padding: 10rem 5rem;
+        background-color: $color-claro;
+
+        img {
+            width: 26rem;
+            border-radius: 1.2rem;
+        }
+    }
+
+    .downloadButton {
+        margin-top: 2rem;
+
+        img {
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    .othersSections {
+        grid-area: moreFeatures;
+        background-color: #F9F9FA;
+        padding: 5rem;
+        text-align: center;
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 5rem;
+
+            .feature {
+                width: 25%;
+
+                img {
+                    width: 80%;
+                    border-radius: 1rem;
+                }
+
+                .description {
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+
+    .bienaventuradosSection {
+        grid-area: bienaventurados;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 10rem;
+
+        .containerBienaventuradosSection {
+            width: 40%;
+
+            .quote {
+                margin: 2rem;
+            }
+
+            .isoBienaventurados {
+                height: 10rem;
+                margin-bottom: 4rem;
+            }
+        }
+    }
+
+}
+
+
+/* -----  INICIO PROPIEDADES MEDIA QUERYS -----  */
+
+@media only screen and (max-width: 600px) {
+    .mainApp {
+        display: grid;
+        grid-template-areas: "presentationPage"
+            "featureDescription"
+            "featureImage"
+            "featureAltDescription"
+            "featureAltImage"
+            "featureTwoDescription"
+            "featureTwoImage"
+            "moreFeatures"
+            "bienaventurados";
+        grid-template-columns: 1fr;
+
+        /* NUESTRA APP */
+
+        .featureDescription {
+            padding: 4rem 3rem;
+        }
+
+        .featureImage {
+            align-self: center;
+            padding: 4rem 3rem;
+
+            img {
+                width: 100%;
+                border-radius: 0.8rem;
+            }
+        }
+
+        .featureTwoDescription {
+            padding: 4rem 3rem;
+        }
+
+        .featureTwoImage {
+            align-self: center;
+            padding: 4rem 3rem;
+
+            img {
+                width: 100%;
+                border-radius: 0.8rem;
+            }
+        }
+
+        .featureAltDescription {
+            padding: 4rem 3rem;
+        }
+
+        .featureAltImage {
+            align-self: center;
+            padding: 4rem 3rem;
+
+            img {
+                width: 100%;
+                border-radius: 0.8rem;
+            }
+        }
+
+        .othersSections {
+            padding: 4rem 3rem;
+            text-align: center;
+
+            .features {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                padding: 4rem 0rem;
+
+                .feature {
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                        min-width: 10rem;
+                        border-radius: 0.8rem;
+                    }
+
+                    .description {
+                        margin: 2rem;
+                    }
+                }
+            }
+        }
+
+        .bienaventuradosSection {
+            grid-area: bienaventurados;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            padding: 4rem 3rem;
+
+            .containerBienaventuradosSection {
+                width: 100%;
+
+                .quote {
+                    margin: 2rem;
+                }
+
+                .isoBienaventurados {
+                    height: 10rem;
+                    margin-bottom: 4rem;
+                }
+            }
+        }
+    }
+}

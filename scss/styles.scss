@@ -1,0 +1,322 @@
+@import "utilities/variables";
+@import "layout/index";
+@import "layout/blog";
+@import "layout/instrucciones";
+@import "layout/instrucciones";
+@import "layout/nuestra_app";
+@import "layout/acerca_de";
+
+/* ----- PROPIEDADES GENERALES  ----- */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+h1 {
+    color: $color-principal;
+    font-size: $size-h1;
+    font-weight: bold;
+    line-height: 1;
+}
+
+h2 {
+    color: $color-principal;
+    font-weight: normal;
+    font-size: $size-h2;
+}
+
+h3 {
+    color: $color-principal;
+    font-weight: bold;
+    font-size: $size-h3;
+    line-height: 1;
+}
+
+h4 {
+    color: $color-principal;
+    font-weight: normal;
+    font-size: $size-h4;
+}
+
+h5 {
+    font-size: $size-h5;
+    font-weight: bold;
+}
+
+h6 {
+    font-size: $size-h6;
+    font-weight: normal;
+}
+
+/* ----- INICIO PROPIEDADES DEL BODY  ----- */
+
+body {
+    display: grid;
+    grid-template-areas: "header"
+                        "main"
+                        "footer";
+
+    header {
+        grid-area: header;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+}
+
+/* ----- INICIO PROPIEDADES DEL HEADER  ----- */
+
+header {
+    grid-area: header;
+
+    .menuIcon {
+        display: none;
+    }
+
+    .navBar {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        width: 100%;
+        background-color: #FFFFFF;
+        padding: 0.8rem 4rem 0.8rem 5rem;
+        align-items: center;
+    
+        z-index: 1;
+
+        img {
+            height: 3rem;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #372256;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+
+            li {
+                margin: 1rem 1rem;
+            }
+        }
+    }
+}
+
+/* ----- PROPIEDADES FOOTER -----  */
+
+footer {
+    grid-area: footer;
+    background-color: $color-principal;
+    padding: 80px 60px 40px 60px;
+
+    h5,
+    h6 {
+        color: $color-claro;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 0.8rem;
+        font-weight: normal;
+        color: $color-claro;
+
+        &:hover {
+            color: $color-claro;
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0rem;
+
+        li {
+            margin: 12px 0px;
+            padding: 0rem;
+            color: $color-claro;
+        }
+    }
+
+    .footerInfo {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .footerLogo {
+            img {
+                height: 200px;
+            }
+        }
+
+        .footerLinks {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            .footerPages {
+                margin: 0px 40px;
+            }
+        
+            .footerSocial {
+                padding-top: 16px;
+                margin: 0px 40px;
+            }
+        
+            .footerProjects {
+                padding-top: 16px;
+                margin: 0px 40px;
+            }
+        
+            .footerDownload {
+                padding-top: 16px;
+        
+                img {
+                    padding-top: 20px;
+                }
+            }
+        }    
+    }
+
+    .footerLegal {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 40px;
+        align-items: center;
+
+        ul {
+            display: flex;
+
+            li {
+                font-size: 0.8rem;
+                margin: 0px 0px 0px 20px;
+
+                &:hover {
+                    color: $color-claro;
+                }
+            }
+        }
+    }
+}
+
+/* ----- MEDIA QUERYS GENERALES ----- */
+
+@media only screen and (max-width: 600px) {
+
+    /* GENERALES */
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    h5 {
+        font-size: 0.8rem;
+    }
+
+    h6 {
+        font-size: 0.8rem;
+    }
+
+    /* FOOTER */
+
+    footer {
+        padding: 4rem 3rem;
+
+        ul {
+            list-style: none;
+        }
+
+        .footerInfo {
+            .footerLogo {
+                img {
+                    display: none;
+                }
+            }
+
+            .footerLinks {
+
+                .footerPages {
+                    margin: 2rem 2rem;
+                }
+            
+                .footerSocial {
+                    margin: 2rem 2rem;
+                }
+            
+                .footerProjects {
+                    margin: 2rem 2rem;
+                }
+            
+                .footerDownload {
+                    width: 100%;
+                    padding: 1rem;
+                    display: flex;
+                    justify-content: center;
+                    
+                    .tituloDescarga {
+                        display: none;
+                    }
+                
+                }
+            }
+        }
+
+        .footerLegal {
+            display: flex;
+            padding-top: 0rem;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            align-items: center;
+    
+            ul {
+                display: flex;
+                flex-direction: column;
+                padding: 2rem;
+        
+                li {
+                    font-size: 0.8rem;
+                    margin: 0.8rem;
+                }
+            }
+        }
+    }
+}
+
+.animated {
+    animation-name: fadeIn;
+    animation-iteration-count: unset;
+    animation-duration: 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

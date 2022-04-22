@@ -1,144 +1,813 @@
-/* ----- PROPIEDADES GLOBALES  ----- */
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins';
-}
-
-/* ---------------------------------------- */
-
-/* ----- PROPIEDADES LAYOUT  ----- */
-
-body {
-    display: grid;
-    grid-template-areas: "header"
-        "main"
-        "footer";
-}
-
+/* -----  INICIO PROPIEDADES DEL MAIN ----- */
 .mainIndex {
-    display: grid;
-    grid-template-areas: "presentationDescription presentationImage"
-        "featureImage featureDescription"
-        "featureAltDescription featureAltImage"
-        "download download"
-        "blog blog";
-    grid-template-columns: 1fr 1fr;
-}
+  display: grid;
+  grid-template-areas: "presentationDescription presentationImage" "featureImage featureDescription" "featureAltDescription featureAltImage" "download download" "blog blog";
+  grid-template-columns: 1fr 1fr; }
+  .mainIndex .presentationDescription {
+    grid-area: presentationDescription;
+    padding: 10rem 5rem; }
+    .mainIndex .presentationDescription .subtitle {
+      margin-top: 2rem; }
+  .mainIndex .presentationImage {
+    grid-area: presentationImage;
+    background-color: #F9F9FA;
+    padding: 10rem 0rem; }
+    .mainIndex .presentationImage img {
+      border-radius: 0.8rem;
+      width: 24%;
+      margin: 1rem;
+      position: relative;
+      right: 3rem;
+      z-index: 0; }
+  .mainIndex .featureDescription {
+    grid-area: featureDescription;
+    padding: 10rem 5rem; }
+  .mainIndex .featureImage {
+    grid-area: featureImage;
+    padding: 10rem 5rem; }
+    .mainIndex .featureImage img {
+      width: 26rem;
+      border-radius: 1.2rem; }
+  .mainIndex .featureTwoDescription {
+    grid-area: featureTwoDescription;
+    padding: 10rem 5rem; }
+  .mainIndex .featureTwoImage {
+    grid-area: featureTwoImage;
+    padding: 10rem 5rem; }
+    .mainIndex .featureTwoImage img {
+      width: 26rem;
+      border-radius: 1.2rem; }
+  .mainIndex .subtitleSection {
+    margin-top: 2rem; }
+  .mainIndex .featureAltDescription {
+    grid-area: featureAltDescription;
+    padding: 10rem 5rem;
+    background-color: #F9F9FA; }
+  .mainIndex .featureAltImage {
+    grid-area: featureAltImage;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10rem 5rem;
+    background-color: #F9F9FA; }
+    .mainIndex .featureAltImage img {
+      width: 26rem;
+      border-radius: 1.2rem; }
+  .mainIndex .downloadSection {
+    grid-area: download;
+    padding: 5rem; }
+    .mainIndex .downloadSection .downloadContainer {
+      display: flex;
+      background-color: #A171D3;
+      border-radius: 1.2rem;
+      justify-content: space-between;
+      align-items: flex-end;
+      background-image: url("../../assets/images/comienza-tu-aventura.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border: 0.2rem solid #372256; }
+      .mainIndex .downloadSection .downloadContainer .downloadApp {
+        padding: 5rem;
+        width: 60%; }
+        .mainIndex .downloadSection .downloadContainer .downloadApp h3 {
+          color: #FFFFFF;
+          line-height: 1; }
+        .mainIndex .downloadSection .downloadContainer .downloadApp .downloadButton {
+          margin-top: 2rem; }
+  .mainIndex .blogSection {
+    grid-area: blog;
+    padding: 5rem; }
+    .mainIndex .blogSection h3 {
+      margin: 1rem 0rem; }
+    .mainIndex .blogSection h4 {
+      font-weight: 700; }
+    .mainIndex .blogSection .posts {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-between; }
+      .mainIndex .blogSection .posts .post1,
+      .mainIndex .blogSection .posts .post2 {
+        width: 40%; }
+        .mainIndex .blogSection .posts .post1 img,
+        .mainIndex .blogSection .posts .post2 img {
+          width: 100%;
+          border-radius: 1.2rem; }
+        .mainIndex .blogSection .posts .post1 .titlePost,
+        .mainIndex .blogSection .posts .post2 .titlePost {
+          margin: 1rem 0px; }
 
+@media only screen and (max-width: 600px) {
+  /* GRID LAYOUT */
+  .mainIndex {
+    display: grid;
+    grid-template-areas: "presentationDescription" "presentationImage" "featureDescription" "featureImage" "featureAltDescription" "featureAltImage" "download" "blog";
+    grid-template-columns: 1fr;
+    /* USADO EN PAGINA INICIO */ }
+    .mainIndex .presentationDescription {
+      padding: 8rem 3rem;
+      text-align: center; }
+    .mainIndex .presentationImage {
+      display: flex;
+      padding: 0rem;
+      justify-content: center;
+      flex-wrap: wrap; }
+      .mainIndex .presentationImage img {
+        margin: 0.8rem;
+        bottom: 2rem;
+        right: 0rem; }
+      .mainIndex .presentationImage .img-row {
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+    .mainIndex .featureDescription {
+      padding: 4rem 3rem; }
+    .mainIndex .featureImage {
+      align-self: center;
+      padding: 4rem 3rem; }
+      .mainIndex .featureImage img {
+        width: 100%;
+        border-radius: 0.8rem; }
+    .mainIndex .featureTwoDescription {
+      padding: 4rem 3rem; }
+    .mainIndex .featureTwoImage {
+      align-self: center;
+      padding: 4rem 3rem; }
+      .mainIndex .featureTwoImage img {
+        width: 100%;
+        border-radius: 0.8rem; }
+    .mainIndex .featureAltDescription {
+      padding: 4rem 3rem; }
+    .mainIndex .featureAltImage {
+      align-self: center;
+      padding: 4rem 3rem; }
+      .mainIndex .featureAltImage img {
+        width: 100%;
+        border-radius: 0.8rem; }
+    .mainIndex .downloadSection {
+      padding: 4rem 3rem; }
+      .mainIndex .downloadSection .downloadContainer {
+        border-radius: 0.8rem; }
+        .mainIndex .downloadSection .downloadContainer .downloadApp {
+          padding: 4rem;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center; }
+          .mainIndex .downloadSection .downloadContainer .downloadApp h3 {
+            text-align: center; }
+    .mainIndex .blogSection {
+      padding: 4rem 3rem; }
+      .mainIndex .blogSection .posts {
+        flex-direction: column; }
+        .mainIndex .blogSection .posts .post1,
+        .mainIndex .blogSection .posts .post2 {
+          width: 100%;
+          padding: 2rem 0rem; }
+          .mainIndex .blogSection .posts .post1 img,
+          .mainIndex .blogSection .posts .post2 img {
+            border-radius: 0.8rem;
+            min-width: 20rem; } }
+
+/* -----  INICIO PROPIEDADES DEL MAIN ----- */
 .mainBlog {
-    display: grid;
-    grid-template-areas: "presentationPage presentationPage"
-        "lastPostDescription lastPostImage"
-        "blog blog"
-        "morePosts morePosts";
-    grid-template-columns: 1fr 1fr;
-}
-
-.mainApp {
-    display: grid;
-    grid-template-areas: "presentationPage presentationPage"
-        "featureImage featureDescription"
-        "featureAltDescription featureAltImage"
-        "featureTwoImage featureTwoDescription"
-        "moreFeatures moreFeatures"
-        "bienaventurados bienaventurados";
-    grid-template-columns: 1fr 1fr;
-}
-
-.mainInstructions {
-    display: grid;
-    grid-template-areas: "presentationPage presentationPage"
-        ". titleInstructions"
-        "instructionsImage instructionsSteps"
-        "titleInstructionsTwo ."
-        "instructionsStepsTwo instructionsImageTwo"
-        ". titleInstructionsThree"
-        "instructionsImageThree instructionsStepsThree";
-    grid-template-columns: 1fr 1fr;
-}
-
-.mainAbout {
-    display: grid;
-    grid-template-areas: "presentationPage presentationPage"
-        "imgSE descriptionSE"
-        "descriptionStory imgStory"
-        ;
-    grid-template-columns: 1fr 1fr;
-}
-
-/* ---------------------------------------- */
-
-/* ----- INICIO PROPIEDADES GENERALES  ----- */
-
-
-h1 {
-    color: #372256;
-    font-size: 4.4rem;
-    font-weight: 700;
-    line-height: 1;
-}
-
-h2 {
-    color: #372256;
-    font-weight: 400;
-    font-size: 1.6rem;
-}
-
-h3 {
-    color: #372256;
-    font-weight: 700;
-    font-size: 2.6rem;
-    line-height: 1;
-}
-
-h4 {
-    color: #372256;
-    font-weight: 400;
-    font-size: 1.4rem;
-}
-
-h5 {
-    font-size: 0.8rem;
-    font-weight: 700;
-}
-
-h6 {
-    font-size: 0.8rem;
-    font-weight: normal;
-}
-
-.presentationPage {
+  display: grid;
+  grid-template-areas: "presentationPage presentationPage" "lastPostDescription lastPostImage" "blog blog" "morePosts morePosts";
+  grid-template-columns: 1fr 1fr; }
+  .mainBlog .presentationPage {
     grid-area: presentationPage;
     display: flex;
     flex-direction: column;
     padding: 10rem 4rem;
     align-items: center;
+    text-align: center; }
+    .mainBlog .presentationPage .subtitle {
+      width: 60%;
+      margin-top: 2rem;
+      text-align: center; }
+  .mainBlog .lastPostDescription {
+    grid-area: lastPostDescription;
+    padding: 10rem 5rem;
+    background-color: #F9F9FA; }
+  .mainBlog .lastPostImage {
+    grid-area: lastPostImage;
+    padding: 10rem 5rem;
+    background-color: #F9F9FA; }
+    .mainBlog .lastPostImage img {
+      width: 40rem;
+      border-radius: 1.2rem; }
+  .mainBlog .blogSection {
+    grid-area: blog;
+    padding: 5rem; }
+    .mainBlog .blogSection h3 {
+      margin: 1rem 0rem; }
+    .mainBlog .blogSection h4 {
+      font-weight: 700; }
+    .mainBlog .blogSection .posts {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-between; }
+      .mainBlog .blogSection .posts .post1,
+      .mainBlog .blogSection .posts .post2 {
+        width: 40%; }
+        .mainBlog .blogSection .posts .post1 img,
+        .mainBlog .blogSection .posts .post2 img {
+          width: 100%;
+          border-radius: 1.2rem; }
+        .mainBlog .blogSection .posts .post1 .titlePost,
+        .mainBlog .blogSection .posts .post2 .titlePost {
+          margin: 1rem 0px; }
+  .mainBlog .morePosts {
+    grid-area: morePosts;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem; }
+    .mainBlog .morePosts .buttonMorePosts {
+      margin: 1.2rem 20rem;
+      display: flex;
+      justify-content: center;
+      border: 0.2rem solid #372256;
+      border-radius: 20rem;
+      padding: 0.6rem; }
+      .mainBlog .morePosts .buttonMorePosts h4 {
+        font-weight: 700; }
+
+@media only screen and (max-width: 600px) {
+  .mainBlog {
+    display: grid;
+    grid-template-areas: "presentationPage" "lastPostDescription" "lastPostImage" "blog" "morePosts";
+    grid-template-columns: 1fr;
+    /* BLOG */ }
+    .mainBlog .presentationPage {
+      padding: 8rem 3rem; }
+    .mainBlog .lastPostDescription {
+      padding: 4rem 3rem 0rem 3rem; }
+    .mainBlog .lastPostImage {
+      padding: 4rem 3rem; }
+      .mainBlog .lastPostImage img {
+        width: 100%;
+        border-radius: 0.8rem; }
+    .mainBlog .blogSection {
+      padding: 3rem; }
+      .mainBlog .blogSection .posts {
+        flex-direction: column; }
+        .mainBlog .blogSection .posts .post1,
+        .mainBlog .blogSection .posts .post2 {
+          width: 100%;
+          padding: 2rem 0rem; }
+          .mainBlog .blogSection .posts .post1 img,
+          .mainBlog .blogSection .posts .post2 img {
+            border-radius: 0.8rem;
+            min-width: 20rem; }
+    .mainBlog .morePosts {
+      margin-bottom: 4rem; }
+      .mainBlog .morePosts .buttonMorePosts {
+        margin: 1.2rem 0rem;
+        padding: 0.6rem; } }
+
+.mainInstructions {
+  display: grid;
+  grid-template-areas: "presentationPage presentationPage" ". titleInstructions" "instructionsImage instructionsSteps" "titleInstructionsTwo ." "instructionsStepsTwo instructionsImageTwo" ". titleInstructionsThree" "instructionsImageThree instructionsStepsThree";
+  grid-template-columns: 1fr 1fr;
+  /* USADAS EN INSTRUCCIONES */ }
+  .mainInstructions .presentationPage {
+    grid-area: presentationPage;
+    display: flex;
+    flex-direction: column;
+    padding: 10rem 4rem;
+    align-items: center;
+    text-align: center; }
+    .mainInstructions .presentationPage .subtitle {
+      width: 60%;
+      margin-top: 2rem;
+      text-align: center; }
+  .mainInstructions .titleInstructions {
+    grid-area: titleInstructions;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 10rem 5rem; }
+    .mainInstructions .titleInstructions h3 {
+      margin-top: 1rem; }
+    .mainInstructions .titleInstructions h4 {
+      font-weight: 700; }
+  .mainInstructions .titleInstructionsTwo {
+    grid-area: titleInstructionsTwo;
+    display: flex;
+    justify-content: flex-end;
+    margin: 10rem 5rem; }
+    .mainInstructions .titleInstructionsTwo h3 {
+      margin-top: 1rem; }
+    .mainInstructions .titleInstructionsTwo h4 {
+      font-weight: 700; }
+  .mainInstructions .titleInstructionsThree {
+    grid-area: titleInstructionsThree;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 10rem 5rem; }
+    .mainInstructions .titleInstructionsThree h3 {
+      margin-top: 1rem; }
+    .mainInstructions .titleInstructionsThree h4 {
+      font-weight: 700; }
+  .mainInstructions .instructionsSteps {
+    grid-area: instructionsSteps;
+    padding: 0rem 5rem 0rem 5rem; }
+    .mainInstructions .instructionsSteps h4 {
+      font-weight: 700; }
+    .mainInstructions .instructionsSteps ol {
+      padding: 0rem; }
+      .mainInstructions .instructionsSteps ol li {
+        list-style: none;
+        margin-bottom: 1.2rem; }
+  .mainInstructions .instructionsStepsTwo {
+    grid-area: instructionsStepsTwo;
+    padding: 0rem 5rem 0rem 5rem; }
+    .mainInstructions .instructionsStepsTwo ol {
+      padding: 0rem; }
+      .mainInstructions .instructionsStepsTwo ol li {
+        list-style: none;
+        margin-bottom: 1.2rem; }
+    .mainInstructions .instructionsStepsTwo h4 {
+      font-weight: 700; }
+  .mainInstructions .instructionsStepsThree {
+    grid-area: instructionsStepsThree;
+    padding: 0rem 5rem 0rem 5rem; }
+    .mainInstructions .instructionsStepsThree ol {
+      padding: 0rem; }
+      .mainInstructions .instructionsStepsThree ol li {
+        list-style: none;
+        margin-bottom: 1.2rem; }
+    .mainInstructions .instructionsStepsThree h4 {
+      font-weight: 700; }
+  .mainInstructions .instructionsImage {
+    grid-area: instructionsImage;
+    padding: 0rem 0rem 4rem 5rem; }
+    .mainInstructions .instructionsImage img {
+      width: 100%;
+      border-radius: 1.2rem; }
+  .mainInstructions .instructionsImageTwo {
+    grid-area: instructionsImageTwo;
+    padding: 0rem 5rem 4rem 0rem; }
+    .mainInstructions .instructionsImageTwo img {
+      width: 100%;
+      border-radius: 1.2rem; }
+  .mainInstructions .instructionsImageThree {
+    grid-area: instructionsImageThree;
+    padding: 0rem 0rem 4rem 5rem; }
+    .mainInstructions .instructionsImageThree img {
+      width: 100%;
+      border-radius: 1.2rem; }
+
+@media only screen and (max-width: 600px) {
+  .mainInstructions {
+    display: grid;
+    grid-template-areas: "presentationPage" "titleInstructions" "instructionsSteps" "instructionsImage" "titleInstructionsTwo" "instructionsStepsTwo" "instructionsImageTwo" "titleInstructionsThree" "instructionsStepsThree" "instructionsImageThree";
+    grid-template-columns: 1fr; }
+    .mainInstructions .titleInstructions {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin: 4rem 3rem; }
+    .mainInstructions .titleInstructionsTwo {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin: 4rem 3rem; }
+    .mainInstructions .titleInstructionsThree {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin: 4rem 3rem; }
+    .mainInstructions .instructionsImage {
+      padding: 4rem 3rem 4rem 3rem; }
+      .mainInstructions .instructionsImage img {
+        width: 100%;
+        border-radius: 0.8rem; }
+    .mainInstructions .instructionsImageTwo {
+      padding: 4rem 3rem 4rem 3rem; }
+      .mainInstructions .instructionsImageTwo img {
+        width: 100%;
+        border-radius: 0.8rem; }
+    .mainInstructions .instructionsImageThree {
+      padding: 4rem 3rem 4rem 3rem; }
+      .mainInstructions .instructionsImageThree img {
+        width: 100%;
+        border-radius: 0.8rem; }
+    .mainInstructions .instructionsSteps {
+      padding: 0rem 3rem 0rem 3rem; }
+    .mainInstructions .instructionsStepsTwo {
+      padding: 0rem 3rem 0rem 3rem; }
+    .mainInstructions .instructionsStepsThree {
+      padding: 0rem 3rem 0rem 3rem; } }
+
+.mainInstructions {
+  display: grid;
+  grid-template-areas: "presentationPage presentationPage" ". titleInstructions" "instructionsImage instructionsSteps" "titleInstructionsTwo ." "instructionsStepsTwo instructionsImageTwo" ". titleInstructionsThree" "instructionsImageThree instructionsStepsThree";
+  grid-template-columns: 1fr 1fr;
+  /* USADAS EN INSTRUCCIONES */ }
+  .mainInstructions .presentationPage {
+    grid-area: presentationPage;
+    display: flex;
+    flex-direction: column;
+    padding: 10rem 4rem;
+    align-items: center;
+    text-align: center; }
+    .mainInstructions .presentationPage .subtitle {
+      width: 60%;
+      margin-top: 2rem;
+      text-align: center; }
+  .mainInstructions .titleInstructions {
+    grid-area: titleInstructions;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 10rem 5rem; }
+    .mainInstructions .titleInstructions h3 {
+      margin-top: 1rem; }
+    .mainInstructions .titleInstructions h4 {
+      font-weight: 700; }
+  .mainInstructions .titleInstructionsTwo {
+    grid-area: titleInstructionsTwo;
+    display: flex;
+    justify-content: flex-end;
+    margin: 10rem 5rem; }
+    .mainInstructions .titleInstructionsTwo h3 {
+      margin-top: 1rem; }
+    .mainInstructions .titleInstructionsTwo h4 {
+      font-weight: 700; }
+  .mainInstructions .titleInstructionsThree {
+    grid-area: titleInstructionsThree;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 10rem 5rem; }
+    .mainInstructions .titleInstructionsThree h3 {
+      margin-top: 1rem; }
+    .mainInstructions .titleInstructionsThree h4 {
+      font-weight: 700; }
+  .mainInstructions .instructionsSteps {
+    grid-area: instructionsSteps;
+    padding: 0rem 5rem 0rem 5rem; }
+    .mainInstructions .instructionsSteps h4 {
+      font-weight: 700; }
+    .mainInstructions .instructionsSteps ol {
+      padding: 0rem; }
+      .mainInstructions .instructionsSteps ol li {
+        list-style: none;
+        margin-bottom: 1.2rem; }
+  .mainInstructions .instructionsStepsTwo {
+    grid-area: instructionsStepsTwo;
+    padding: 0rem 5rem 0rem 5rem; }
+    .mainInstructions .instructionsStepsTwo ol {
+      padding: 0rem; }
+      .mainInstructions .instructionsStepsTwo ol li {
+        list-style: none;
+        margin-bottom: 1.2rem; }
+    .mainInstructions .instructionsStepsTwo h4 {
+      font-weight: 700; }
+  .mainInstructions .instructionsStepsThree {
+    grid-area: instructionsStepsThree;
+    padding: 0rem 5rem 0rem 5rem; }
+    .mainInstructions .instructionsStepsThree ol {
+      padding: 0rem; }
+      .mainInstructions .instructionsStepsThree ol li {
+        list-style: none;
+        margin-bottom: 1.2rem; }
+    .mainInstructions .instructionsStepsThree h4 {
+      font-weight: 700; }
+  .mainInstructions .instructionsImage {
+    grid-area: instructionsImage;
+    padding: 0rem 0rem 4rem 5rem; }
+    .mainInstructions .instructionsImage img {
+      width: 100%;
+      border-radius: 1.2rem; }
+  .mainInstructions .instructionsImageTwo {
+    grid-area: instructionsImageTwo;
+    padding: 0rem 5rem 4rem 0rem; }
+    .mainInstructions .instructionsImageTwo img {
+      width: 100%;
+      border-radius: 1.2rem; }
+  .mainInstructions .instructionsImageThree {
+    grid-area: instructionsImageThree;
+    padding: 0rem 0rem 4rem 5rem; }
+    .mainInstructions .instructionsImageThree img {
+      width: 100%;
+      border-radius: 1.2rem; }
+
+@media only screen and (max-width: 600px) {
+  .mainInstructions {
+    display: grid;
+    grid-template-areas: "presentationPage" "titleInstructions" "instructionsSteps" "instructionsImage" "titleInstructionsTwo" "instructionsStepsTwo" "instructionsImageTwo" "titleInstructionsThree" "instructionsStepsThree" "instructionsImageThree";
+    grid-template-columns: 1fr; }
+    .mainInstructions .titleInstructions {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin: 4rem 3rem; }
+    .mainInstructions .titleInstructionsTwo {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin: 4rem 3rem; }
+    .mainInstructions .titleInstructionsThree {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin: 4rem 3rem; }
+    .mainInstructions .instructionsImage {
+      padding: 4rem 3rem 4rem 3rem; }
+      .mainInstructions .instructionsImage img {
+        width: 100%;
+        border-radius: 0.8rem; }
+    .mainInstructions .instructionsImageTwo {
+      padding: 4rem 3rem 4rem 3rem; }
+      .mainInstructions .instructionsImageTwo img {
+        width: 100%;
+        border-radius: 0.8rem; }
+    .mainInstructions .instructionsImageThree {
+      padding: 4rem 3rem 4rem 3rem; }
+      .mainInstructions .instructionsImageThree img {
+        width: 100%;
+        border-radius: 0.8rem; }
+    .mainInstructions .instructionsSteps {
+      padding: 0rem 3rem 0rem 3rem; }
+    .mainInstructions .instructionsStepsTwo {
+      padding: 0rem 3rem 0rem 3rem; }
+    .mainInstructions .instructionsStepsThree {
+      padding: 0rem 3rem 0rem 3rem; } }
+
+.mainApp {
+  display: grid;
+  grid-template-areas: "presentationPage presentationPage" "featureImage featureDescription" "featureAltDescription featureAltImage" "featureTwoImage featureTwoDescription" "moreFeatures moreFeatures" "bienaventurados bienaventurados";
+  grid-template-columns: 1fr 1fr;
+  /* USADAS EN NUESTRA APP */ }
+  .mainApp .presentationPage {
+    grid-area: presentationPage;
+    display: flex;
+    flex-direction: column;
+    padding: 10rem 4rem;
+    align-items: center;
+    text-align: center; }
+    .mainApp .presentationPage .subtitle {
+      width: 60%;
+      margin-top: 2rem;
+      text-align: center; }
+  .mainApp .featureDescription {
+    grid-area: featureDescription;
+    padding: 10rem 5rem; }
+  .mainApp .featureImage {
+    grid-area: featureImage;
+    padding: 10rem 5rem; }
+    .mainApp .featureImage img {
+      width: 26rem;
+      border-radius: 1.2rem; }
+  .mainApp .featureTwoDescription {
+    grid-area: featureTwoDescription;
+    padding: 10rem 5rem; }
+  .mainApp .featureTwoImage {
+    grid-area: featureTwoImage;
+    padding: 10rem 5rem; }
+    .mainApp .featureTwoImage img {
+      width: 26rem;
+      border-radius: 1.2rem; }
+  .mainApp .subtitleSection {
+    margin-top: 2rem; }
+  .mainApp .featureAltDescription {
+    grid-area: featureAltDescription;
+    padding: 10rem 5rem;
+    background-color: #F9F9FA; }
+  .mainApp .featureAltImage {
+    grid-area: featureAltImage;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10rem 5rem;
+    background-color: #F9F9FA; }
+    .mainApp .featureAltImage img {
+      width: 26rem;
+      border-radius: 1.2rem; }
+  .mainApp .downloadButton {
+    margin-top: 2rem; }
+    .mainApp .downloadButton img:hover {
+      transform: scale(1.02); }
+  .mainApp .othersSections {
+    grid-area: moreFeatures;
+    background-color: #F9F9FA;
+    padding: 5rem;
+    text-align: center; }
+    .mainApp .othersSections .features {
+      display: flex;
+      justify-content: space-around;
+      padding: 5rem; }
+      .mainApp .othersSections .features .feature {
+        width: 25%; }
+        .mainApp .othersSections .features .feature img {
+          width: 80%;
+          border-radius: 1rem; }
+        .mainApp .othersSections .features .feature .description {
+          margin-top: 2rem; }
+  .mainApp .bienaventuradosSection {
+    grid-area: bienaventurados;
+    display: flex;
+    justify-content: center;
     text-align: center;
+    padding: 10rem; }
+    .mainApp .bienaventuradosSection .containerBienaventuradosSection {
+      width: 40%; }
+      .mainApp .bienaventuradosSection .containerBienaventuradosSection .quote {
+        margin: 2rem; }
+      .mainApp .bienaventuradosSection .containerBienaventuradosSection .isoBienaventurados {
+        height: 10rem;
+        margin-bottom: 4rem; }
 
-}
+/* -----  INICIO PROPIEDADES MEDIA QUERYS -----  */
+@media only screen and (max-width: 600px) {
+  .mainApp {
+    display: grid;
+    grid-template-areas: "presentationPage" "featureDescription" "featureImage" "featureAltDescription" "featureAltImage" "featureTwoDescription" "featureTwoImage" "moreFeatures" "bienaventurados";
+    grid-template-columns: 1fr;
+    /* NUESTRA APP */ }
+    .mainApp .featureDescription {
+      padding: 4rem 3rem; }
+    .mainApp .featureImage {
+      align-self: center;
+      padding: 4rem 3rem; }
+      .mainApp .featureImage img {
+        width: 100%;
+        border-radius: 0.8rem; }
+    .mainApp .featureTwoDescription {
+      padding: 4rem 3rem; }
+    .mainApp .featureTwoImage {
+      align-self: center;
+      padding: 4rem 3rem; }
+      .mainApp .featureTwoImage img {
+        width: 100%;
+        border-radius: 0.8rem; }
+    .mainApp .featureAltDescription {
+      padding: 4rem 3rem; }
+    .mainApp .featureAltImage {
+      align-self: center;
+      padding: 4rem 3rem; }
+      .mainApp .featureAltImage img {
+        width: 100%;
+        border-radius: 0.8rem; }
+    .mainApp .othersSections {
+      padding: 4rem 3rem;
+      text-align: center; }
+      .mainApp .othersSections .features {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4rem 0rem; }
+        .mainApp .othersSections .features .feature {
+          width: 100%; }
+          .mainApp .othersSections .features .feature img {
+            width: 100%;
+            min-width: 10rem;
+            border-radius: 0.8rem; }
+          .mainApp .othersSections .features .feature .description {
+            margin: 2rem; }
+    .mainApp .bienaventuradosSection {
+      grid-area: bienaventurados;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 3rem; }
+      .mainApp .bienaventuradosSection .containerBienaventuradosSection {
+        width: 100%; }
+        .mainApp .bienaventuradosSection .containerBienaventuradosSection .quote {
+          margin: 2rem; }
+        .mainApp .bienaventuradosSection .containerBienaventuradosSection .isoBienaventurados {
+          height: 10rem;
+          margin-bottom: 4rem; } }
 
-.presentationPage .subtitle {
-    width: 60%;
-    margin-top: 2rem;
-    text-align: center;
-}
+/* USADAS EN ACERCA DE */
+.mainAbout {
+  display: grid;
+  grid-template-areas: "presentationPage presentationPage" "imgSE descriptionSE" "descriptionStory imgStory";
+  grid-template-columns: 1fr 1fr; }
+  .mainAbout .presentationPage {
+    grid-area: presentationPage;
+    display: flex;
+    flex-direction: column;
+    padding: 10rem 4rem;
+    align-items: center;
+    text-align: center; }
+    .mainAbout .presentationPage .subtitle {
+      width: 60%;
+      margin-top: 2rem;
+      text-align: center; }
+  .mainAbout .descriptionSE {
+    background-color: #F9F9FA;
+    padding: 140px 60px;
+    grid-area: descriptionSE; }
+    .mainAbout .descriptionSE .tagline {
+      margin: 10px 0px 40px 0px; }
+  .mainAbout .imgSE {
+    grid-area: imgSE;
+    padding: 140px 60px;
+    background-color: #F9F9FA; }
+    .mainAbout .imgSE img {
+      height: 260px; }
+  .mainAbout .descriptionStory {
+    grid-area: descriptionStory;
+    padding: 140px 60px; }
+    .mainAbout .descriptionStory .description {
+      margin-top: 40px; }
+  .mainAbout .imgStory {
+    grid-area: imgStory;
+    padding: 140px 60px; }
+    .mainAbout .imgStory img {
+      width: 600px;
+      border-radius: 20px; }
 
-/* ---------------------------------------- */
+/* -----  INICIO PROPIEDADES MEDIA QUERYS -----  */
+@media only screen and (max-width: 600px) {
+  .mainAbout {
+    display: grid;
+    grid-template-areas: "presentationPage" "imgSE" "descriptionSE" "imgStory" "descriptionStory";
+    grid-template-columns: 1fr;
+    /* ACERCA DE */ }
+    .mainAbout .descriptionSE {
+      background-color: #F9F9FA;
+      padding: 4rem 3rem;
+      grid-area: descriptionSE; }
+      .mainAbout .descriptionSE .tagline {
+        margin: 10px 0px 40px 0px; }
+    .mainAbout .imgSE {
+      grid-area: imgSE;
+      padding: 4rem 3rem 0rem 3rem;
+      background-color: #F9F9FA;
+      display: flex;
+      justify-content: center; }
+      .mainAbout .imgSE img {
+        width: 40%; }
+    .mainAbout .descriptionStory {
+      grid-area: descriptionStory;
+      padding: 4rem 3rem; }
+      .mainAbout .descriptionStory .description {
+        margin-top: 40px; }
+    .mainAbout .imgStory {
+      grid-area: imgStory;
+      padding: 4rem 3rem 0rem 3rem; }
+      .mainAbout .imgStory img {
+        width: 100%;
+        border-radius: 20px; } }
+
+/* ----- PROPIEDADES GENERALES  ----- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins'; }
+
+h1 {
+  color: #372256;
+  font-size: 4.4rem;
+  font-weight: bold;
+  line-height: 1; }
+
+h2 {
+  color: #372256;
+  font-weight: normal;
+  font-size: 1.6rem; }
+
+h3 {
+  color: #372256;
+  font-weight: bold;
+  font-size: 2.6rem;
+  line-height: 1; }
+
+h4 {
+  color: #372256;
+  font-weight: normal;
+  font-size: 1.4rem; }
+
+h5 {
+  font-size: 0.8rem;
+  font-weight: bold; }
+
+h6 {
+  font-size: 0.8rem;
+  font-weight: normal; }
+
+/* ----- INICIO PROPIEDADES DEL BODY  ----- */
+body {
+  display: grid;
+  grid-template-areas: "header" "main" "footer"; }
+  body header {
+    grid-area: header; }
+  body main {
+    grid-area: main; }
+  body footer {
+    grid-area: footer; }
 
 /* ----- INICIO PROPIEDADES DEL HEADER  ----- */
-
 header {
-    grid-area: header;
-}
-
-.menuIcon {
-    display: none;
-}
-
-.navBar {
+  grid-area: header; }
+  header .menuIcon {
+    display: none; }
+  header .navBar {
     display: flex;
     justify-content: space-between;
     position: fixed;
@@ -146,1018 +815,135 @@ header {
     background-color: #FFFFFF;
     padding: 0.8rem 4rem 0.8rem 5rem;
     align-items: center;
-
-    z-index: 1;
-}
-
-.navBar img {
-    height: 3rem;
-}
-
-.navBar a {
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #372256;
-}
-
-.navBar ul {
-    display: flex;
-    list-style: none;
-}
-
-.navBar ul li {
-    margin: 1rem 1rem;
-}
-
-/* ---------------------------------------- */
-
-/* -----  INICIO PROPIEDADES DEL MAIN ----- */
-
-main {
-    grid-area: main;
-}
-
-.presentationDescription {
-    grid-area: presentationDescription;
-    padding: 10rem 5rem;
-}
-
-.presentationDescription .subtitle {
-    margin-top: 2rem;
-}
-
-.presentationImage {
-    grid-area: presentationImage;
-    background-color: #F9F9FA;
-    padding: 10rem 0rem;
-}
-
-.presentationImage img {
-    border-radius: 0.8rem;
-    width: 24%;
-    margin: 1rem;
-    position: relative;
-    right: 3rem;
-    z-index: 0;
-}
-
-.featureDescription {
-    grid-area: featureDescription;
-    padding: 10rem 5rem;
-}
-
-.featureImage {
-    grid-area: featureImage;
-    padding: 10rem 5rem;
-}
-
-.featureImage img {
-    width: 26rem;
-    border-radius: 1.2rem;
-}
-
-.featureTwoDescription {
-    grid-area: featureTwoDescription;
-    padding: 10rem 5rem;
-}
-
-.featureTwoImage {
-    grid-area: featureTwoImage;
-    padding: 10rem 5rem;
-}
-
-.featureTwoImage img {
-    width: 26rem;
-    border-radius: 1.2rem;
-}
-
-
-.subtitleSection {
-    margin-top: 2rem;
-}
-
-.featureAltDescription {
-    grid-area: featureAltDescription;
-    padding: 10rem 5rem;
-    background-color: #F9F9FA;
-}
-
-.featureAltImage {
-    grid-area: featureAltImage;
-    display: flex;
-    justify-content: flex-end;
-    padding: 10rem 5rem;
-    background-color: #F9F9FA;
-}
-
-.featureAltImage img {
-    width: 26rem;
-    border-radius: 1.2rem;
-}
-
-.downloadSection {
-    grid-area: download;
-    padding: 5rem;
-}
-
-.downloadContainer {
-    display: flex;
-    background-color: #A171D3;
-    border-radius: 1.2rem;
-    justify-content: space-between;
-    align-items: flex-end;
-    background-image: url('../../assets/images/comienza-tu-aventura.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border: 0.2rem solid #372256;
-}
-
-.downloadApp {
-    padding: 5rem;
-    width: 60%;
-}
-
-.downloadApp h3 {
-    color: #FFFFFF;
-    line-height: 1;
-}
-
-.downloadButton {
-    margin-top: 2rem;
-}
-
-.posts {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: space-between;
-}
-
-.post1 {
-    width: 40%;
-}
-
-.post2 {
-    width: 40%;
-}
-
-.titlePost {
-    margin: 1rem 0px;
-}
-
-.posts img {
-    width: 100%;
-    border-radius: 1.2rem;
-}
-
-/* USADAS EN BLOG */
-
-.lastPostDescription {
-    grid-area: lastPostDescription;
-    padding: 10rem 5rem;
-    background-color: #F9F9FA;
-}
-
-.lastPostImage {
-    grid-area: lastPostImage;
-    padding: 10rem 5rem;
-    background-color: #F9F9FA;
-}
-
-.lastPostImage img {
-    width: 40rem;
-    border-radius: 1.2rem;
-}
-
-.blogSection {
-    grid-area: blog;
-    padding: 5rem;
-}
-
-.blogSection h4 {
-    font-weight: 700;
-}
-
-.blogSection h3 {
-    margin: 1rem 0rem;
-}
-
-.morePosts {
-    grid-area: morePosts;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 4rem;
-}
-
-.morePosts h4 {
-    font-weight: 700;
-}
-
-.buttonMorePosts {
-    margin: 1.2rem 20rem;
-    display: flex;
-    justify-content: center;
-    border: 0.2rem solid #372256;
-    border-radius: 20rem;
-    padding: 0.6rem;
-}
-
-
-/* USADAS EN INSTRUCCIONES */
-
-.titleInstructions {
-    grid-area: titleInstructions;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin: 10rem 5rem;
-}
-
-.titleInstructions h3 {
-    margin-top: 1rem;
-}
-
-.titleInstructions h4 {
-    font-weight: 700;
-}
-
-.titleInstructionsTwo {
-    grid-area: titleInstructionsTwo;
-    display: flex;
-    justify-content: flex-end;
-    margin: 10rem 5rem;
-}
-
-.titleInstructionsTwo h3 {
-    margin-top: 1rem;
-}
-
-.titleInstructionsTwo h4 {
-    font-weight: 700;
-}
-
-.titleInstructionsThree {
-    grid-area: titleInstructionsThree;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin: 10rem 5rem;
-}
-
-.titleInstructionsThree h3 {
-    margin-top: 1rem;
-}
-
-.titleInstructionsThree h4 {
-    font-weight: 700;
-}
-
-.instructionsSteps h4 {
-    font-weight: 700;
-}
-
-.instructionsImage {
-    grid-area: instructionsImage;
-    padding: 0rem 0rem 4rem 5rem;
-}
-
-.instructionsImage img {
-    width: 100%;
-    border-radius: 1.2rem;
-}
-
-.instructionsSteps {
-    grid-area: instructionsSteps;
-    padding: 0rem 5rem 0rem 5rem;
-}
-
-.instructionsSteps ol li {
-    list-style: none;
-    margin-bottom: 1.2rem;
-}
-
-.instructionsSteps h4 {
-    font-weight: 700;
-}
-
-.instructionsStepsTwo {
-    grid-area: instructionsStepsTwo;
-    padding: 0rem 5rem 0rem 5rem;
-}
-
-.instructionsStepsTwo ol li {
-    list-style: none;
-    margin-bottom: 1.2rem;
-}
-
-.instructionsStepsTwo h4 {
-    font-weight: 700;
-}
-
-.instructionsImageTwo {
-    grid-area: instructionsImageTwo;
-    padding: 0rem 0rem 4rem 5rem;
-}
-
-.instructionsImageTwo img {
-    width: 100%;
-    border-radius: 1.2rem;
-}
-
-.instructionsStepsThree {
-    grid-area: instructionsStepsThree;
-    padding: 0rem 5rem 0rem 5rem;
-}
-
-.instructionsStepsThree ol li {
-    list-style: none;
-    margin-bottom: 1.2rem;
-}
-
-.instructionsStepsThree h4 {
-    font-weight: 700;
-}
-
-.instructionsImageThree {
-    grid-area: instructionsImageThree;
-    padding: 0rem 0rem 4rem 5rem;
-}
-
-.instructionsImageThree img {
-    width: 100%;
-    border-radius: 1.2rem;
-}
-
-
-
-/* USADAS EN NUESTRA APP */
-
-.downloadButton {
-    margin-top: 2rem ;
-}
-
-.downloadButton img:hover {
-    transform: scale(1.02);
-}
-
-.othersSections {
-    grid-area: moreFeatures;
-    background-color: #F9F9FA;
-    padding: 5rem;
-    text-align: center;
-}
-
-.othersSections .features {
-    display: flex;
-    justify-content: space-around;
-    padding: 5rem;
-}
-
-.feature {
-    width: 25%;
-}
-
-.feature .description {
-    margin-top: 2rem;
-}
-
-.feature img {
-    width: 80%;
-    border-radius: 1rem;
-}
-
-.bienaventuradosSection {
-    grid-area: bienaventurados;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding: 10rem;
-}
-
-.containerBienaventuradosSection {
-    width: 40%;
-}
-
-.quote {
-    margin: 2rem;
-}
-
-.isoBienaventurados {
-    height: 10rem;
-    margin-bottom: 4rem;
-}
-
-/* USADAS EN ACERCA DE */
-
-.descriptionSE {
-    background-color: #F9F9FA;
-    padding: 140px 60px;
-    grid-area: descriptionSE;
-}
-.descriptionSE .tagline {
-    margin: 10px 0px 40px 0px;
-}
-
-.imgSE {
-    grid-area: imgSE;
-    padding: 140px 60px;
-    background-color: #F9F9FA;
-}
-.imgSE img {
-    height: 260px;
-}
-.descriptionStory {
-    grid-area: descriptionStory;
-    padding: 140px 60px;
-}
-.descriptionStory .description {
-    margin-top: 40px;
-}
-.imgStory {
-    grid-area: imgStory;
-    padding: 140px 60px;
-}
-.imgStory img {
-    width: 600px;
-    border-radius: 20px;
-}
-
-/* ---------------------------------------- */
-
-/* -----  INICIO PROPIEDADES FOOTER -----  */
-
+    z-index: 1; }
+    header .navBar img {
+      height: 3rem; }
+    header .navBar a {
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #372256; }
+    header .navBar ul {
+      display: flex;
+      list-style: none; }
+      header .navBar ul li {
+        margin: 1rem 1rem; }
+
+/* ----- PROPIEDADES FOOTER -----  */
 footer {
-    grid-area: footer;
-    background-color: #372256;
-    padding: 80px 60px 40px 60px;
-}
-
-footer h5 {
-    color: #FFFFFF;
-}
-
-footer h6 {
-    color: #FFFFFF;
-}
-
-footer a {
+  grid-area: footer;
+  background-color: #372256;
+  padding: 80px 60px 40px 60px; }
+  footer h5,
+  footer h6 {
+    color: #F9F9FA; }
+  footer a {
     text-decoration: none;
     font-size: 0.8rem;
     font-weight: normal;
-    color: #FFFFFF;
-}
-
-footer ul {
+    color: #F9F9FA; }
+    footer a:hover {
+      color: #F9F9FA; }
+  footer ul {
     list-style: none;
-    padding: 0rem;
-}
-
-footer ul li {
-    margin: 12px 0px;
-    padding: 0rem;
-    color: #FFFFFF;
-}
-
-.footerInfo {
+    padding: 0rem; }
+    footer ul li {
+      margin: 12px 0px;
+      padding: 0rem;
+      color: #F9F9FA; }
+  footer .footerInfo {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
-}
-
-.footerLogo img {
-    height: 200px;
-}
-
-.footerLinks {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
-
-}
-
-.footerPages {
-    margin: 0px 40px;
-}
-
-.footerSocial {
-    padding-top: 16px;
-    margin: 0px 40px;
-}
-
-.footerProjects {
-    padding-top: 16px;
-    margin: 0px 40px;
-}
-
-.footerDownload {
-    padding-top: 16px;
-}
-
-.footerDownload img {
-    padding-top: 20px;
-}
-
-.footerLegal {
+    align-items: center; }
+    footer .footerInfo .footerLogo img {
+      height: 200px; }
+    footer .footerInfo .footerLinks {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between; }
+      footer .footerInfo .footerLinks .footerPages {
+        margin: 0px 40px; }
+      footer .footerInfo .footerLinks .footerSocial {
+        padding-top: 16px;
+        margin: 0px 40px; }
+      footer .footerInfo .footerLinks .footerProjects {
+        padding-top: 16px;
+        margin: 0px 40px; }
+      footer .footerInfo .footerLinks .footerDownload {
+        padding-top: 16px; }
+        footer .footerInfo .footerLinks .footerDownload img {
+          padding-top: 20px; }
+  footer .footerLegal {
     display: flex;
     justify-content: space-between;
     padding-top: 40px;
-    align-items: center;
-}
+    align-items: center; }
+    footer .footerLegal ul {
+      display: flex; }
+      footer .footerLegal ul li {
+        font-size: 0.8rem;
+        margin: 0px 0px 0px 20px; }
+        footer .footerLegal ul li:hover {
+          color: #F9F9FA; }
 
-.footerLegal ul {
-    display: flex;
-}
-
-.footerLegal ul li {
-    font-size: 0.8rem;
-    margin: 0px 0px 0px 20px;
-}
-
-/* ---------------------------------------- */
-
-/* -----  INICIO PROPIEDADES MEDIA QUERYS -----  */
+/* ----- MEDIA QUERYS GENERALES ----- */
 @media only screen and (max-width: 600px) {
-
-    /* GRID LAYOUT */
-    .mainIndex {
-        display: grid;
-        grid-template-areas: "presentationDescription"
-            "presentationImage"
-            "featureDescription"
-            "featureImage"
-            "featureAltDescription"
-            "featureAltImage"
-            "download"
-            "blog";
-        grid-template-columns: 1fr;
-    }
-    
-    .mainBlog {
-        display: grid;
-        grid-template-areas: "presentationPage"
-            "lastPostDescription"
-            "lastPostImage"
-            "blog"
-            "morePosts";
-        grid-template-columns: 1fr;
-    }
-
-    .mainInstructions {
-        display: grid;
-        grid-template-areas: "presentationPage"
-            "titleInstructions"
-            "instructionsSteps"
-            "instructionsImage"
-            "titleInstructionsTwo"
-            "instructionsStepsTwo"
-            "instructionsImageTwo"
-            "titleInstructionsThree"
-            "instructionsStepsThree"
-            "instructionsImageThree";
-        grid-template-columns: 1fr;
-    }
-
-    .mainApp {
-        display: grid;
-        grid-template-areas: "presentationPage"
-            "featureDescription"
-            "featureImage"
-            "featureAltDescription" 
-            "featureAltImage"
-            "featureTwoDescription"
-            "featureTwoImage"
-            "moreFeatures"
-            "bienaventurados";
-        grid-template-columns: 1fr;
-    }
-
-    .mainAbout {
-        display: grid;
-        grid-template-areas: "presentationPage"
-            "imgSE"
-            "descriptionSE"
-            "imgStory" 
-            "descriptionStory";
-        grid-template-columns: 1fr;
-    }
-
-    /* No se implementa grid y flex para Página Acerca de */
-
-    /* GENERALES */
-
-    nav {
-        display: none;
-    }
-
-    h1 {
-        font-size: 2.4rem;
-    }
-
-    h2 {
-        font-size: 1.4rem;
-    }
-
-    h3 {
-        font-size: 1.4rem;
-    }
-
-    h4 {
-        font-size: 1rem;
-    }
-
-    h5 {
-        font-size: 0.8rem;
-    }
-
-    h6 {
-        font-size: 0.8rem;
-    }
-
-    .menuIcon {
-        display: inline;
-    }
-
-    .menuIcon img {
-        width: 60%
-    }
-
-    .navBar {
-        padding: 0.8rem 2rem 0.8rem 2rem;
-    }
-
-    .presentationPage .subtitle {
-        width: 100%;
-    }
-
-    /* USADO EN PAGINA INICIO */
-
-    .presentationDescription {
-        padding: 8rem 3rem;
-        text-align: center;
-    }
-
-    .presentationImage {
-        display: flex;
-        padding: 0rem;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .img-row {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .presentationImage img {
-        margin: 0.8rem;
-        bottom: 2rem;
-        right: 0rem;
-    }
-
-    .featureDescription {
-        padding: 4rem 3rem;
-    }
-
-    .featureImage {
-        align-self: center;
-        padding: 4rem 3rem;
-    }
-
-    .featureImage img {
-        width: 100%;
-        border-radius: 0.8rem;
-    }
-
-    .featureTwoDescription {
-        padding: 4rem 3rem;
-    }
-
-    .featureTwoImage {
-        align-self: center;
-        padding: 4rem 3rem;
-    }
-
-    .featureTwoImage img {
-        width: 100%;
-        border-radius: 0.8rem;
-    }
-
-    .featureAltDescription {
-        padding: 4rem 3rem;
-    }
-
-    .featureAltImage {
-        align-self: center;
-        padding: 4rem 3rem;
-    }
-
-    .featureAltImage img {
-        width: 100%;
-        border-radius: 0.8rem;
-    }
-
-    .downloadSection {
-        padding: 4rem 3rem;
-    }
-
-    .downloadContainer {
-        border-radius: 0.8rem;
-    }
-
-    .downloadApp {
-        padding: 4rem;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .downloadApp h3 {
-        text-align: center;
-    }
-
-    .blogSection {
-        padding: 4rem 3rem;
-    }
-
-    .posts {
-        flex-direction: column;
-    }
-
-    .post1 {
-        width: 100%;
-        padding: 2rem 0rem;
-    }
-
-    .post2 {
-        width: 100%;
-        padding: 2rem 0rem;
-    }
-
-    .post1 img,
-    .post2 img {
-        border-radius: 0.8rem;
-        min-width: 20rem;
-    }
-
-    /* BLOG */
-
-    .presentationPage {
-        padding: 8rem 3rem;
-    }
-
-    .lastPostDescription {
-        padding: 4rem 3rem 0rem 3rem;
-    }
-
-    .lastPostImage {
-        padding: 4rem 3rem;
-    }
-
-    .lastPostImage img {
-        width: 100%;
-        min-width: 10rem;
-        border-radius: 0.8rem;
-    }
-
-    .blogSection {
-        padding: 3rem;
-    }
-
-    .morePosts {
-        margin-bottom: 4rem;
-    }
-
-    .buttonMorePosts {
-        margin: 1.2rem 0rem;
-        padding: 0.6rem;
-    }
-
-    /* INSTRUCCIONES */
-
-    .titleInstructions {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        margin: 4rem 3rem;
-    }
-    
-    .titleInstructionsTwo {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        margin: 4rem 3rem;
-    }
-    
-    .titleInstructionsThree {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        margin: 4rem 3rem;
-    }
-    
-    .instructionsImage {
-        padding: 4rem 3rem 4rem 3rem;
-    }
-    
-    .instructionsImage img {
-        width: 100%;
-        border-radius: 0.8rem;
-    }
-    
-    .instructionsSteps {
-        padding: 0rem 3rem 0rem 3rem;
-    }
-    
-    .instructionsStepsTwo {
-        padding: 0rem 3rem 0rem 3rem;
-    }
-    
-    .instructionsImageTwo {
-        padding: 4rem 3rem 4rem 3rem;
-    }
-    
-    .instructionsImageTwo img {
-        width: 100%;
-        border-radius: 0.8rem;
-    }
-    
-    .instructionsStepsThree {
-        padding: 0rem 3rem 0rem 3rem;
-    }
-    
-    .instructionsImageThree {
-        padding: 4rem 3rem 4rem 3rem;
-    }
-    
-    .instructionsImageThree img {
-        width: 100%;
-        border-radius: 0.8rem;
-    }
-
-    /* NUESTRA APP */
-
-    .othersSections {
-        padding: 4rem 3rem;
-        text-align: center;
-    }
-    
-    .othersSections .features {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        padding: 4rem 0rem;
-    }
-    
-    .feature {
-        width: 100%;
-    }
-    
-    .feature .description {
-        margin: 2rem;
-    }
-    
-    .feature img {
-        width: 100%;
-        min-width: 10rem;
-        border-radius: 0.8rem;
-    }
-    
-    .bienaventuradosSection {
-        grid-area: bienaventurados;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        padding: 4rem 3rem;
-    }
-    
-    .containerBienaventuradosSection {
-        width: 100%;
-    }
-    
-    .quote {
-        margin: 2rem;
-    }
-    
-    .isoBienaventurados {
-        height: 10rem;
-        margin-bottom: 4rem;
-    }
-
-    /* ACERCA DE */
-
-    .descriptionSE {
-        background-color: #F9F9FA;
-        padding: 4rem 3rem;
-        grid-area: descriptionSE;
-    }
-    .descriptionSE .tagline {
-        margin: 10px 0px 40px 0px;
-    }
-    
-    .imgSE {
-        grid-area: imgSE;
-        padding: 4rem 3rem 0rem 3rem;
-        background-color: #F9F9FA;
-        display: flex;
-        justify-content: center;
-    }
-    .imgSE img {
-        width: 40%;
-    }
-    .descriptionStory {
-        grid-area: descriptionStory;
-        padding: 4rem 3rem;
-    }
-    .descriptionStory .description {
-        margin-top: 40px;
-    }
-    .imgStory {
-        grid-area: imgStory;
-        padding: 4rem 3rem 0rem 3rem;
-    }
-    .imgStory img {
-        width: 100%;
-        border-radius: 20px;
-    }
-
-    /* FOOTER */
-
-    footer {
-        padding: 4rem 3rem;
-    }
-
+  /* GENERALES */
+  h1 {
+    font-size: 2.4rem; }
+  h2 {
+    font-size: 1.4rem; }
+  h3 {
+    font-size: 1.4rem; }
+  h4 {
+    font-size: 1rem; }
+  h5 {
+    font-size: 0.8rem; }
+  h6 {
+    font-size: 0.8rem; }
+  /* FOOTER */
+  footer {
+    padding: 4rem 3rem; }
     footer ul {
-        list-style: none;
-    }
-
-    .footerLogo img {
-        display: none;
-    }
-
-    .tituloDescarga {
-        display: none;
-    }
-
-    .footerPages {
-        margin: 2rem 2rem;
-    }
-
-    .footerSocial {
-        margin: 2rem 2rem;
-    }
-
-    .footerProjects {
-        margin: 2rem 2rem;
-    }
-
-    .footerDownload {
-        width: 100%;
-        padding: 1rem;
-        display: flex;
-        justify-content: center;
-    }
-
-    .footerLegal {
-        display: flex;
-        padding-top: 0rem;
-        flex-direction: column-reverse;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .footerLegal ul {
+      list-style: none; }
+    footer .footerInfo .footerLogo img {
+      display: none; }
+    footer .footerInfo .footerLinks .footerPages {
+      margin: 2rem 2rem; }
+    footer .footerInfo .footerLinks .footerSocial {
+      margin: 2rem 2rem; }
+    footer .footerInfo .footerLinks .footerProjects {
+      margin: 2rem 2rem; }
+    footer .footerInfo .footerLinks .footerDownload {
+      width: 100%;
+      padding: 1rem;
+      display: flex;
+      justify-content: center; }
+      footer .footerInfo .footerLinks .footerDownload .tituloDescarga {
+        display: none; }
+    footer .footerLegal {
+      display: flex;
+      padding-top: 0rem;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      align-items: center; }
+      footer .footerLegal ul {
         display: flex;
         flex-direction: column;
-        padding: 2rem;
-    }
-
-    .footerLegal ul li {
-        font-size: 0.8rem;
-        margin: 0.8rem;
-    }
-}
-
-@media only screen and (min-width: 1024px) {}
-
-/* ANIMACIONES */
+        padding: 2rem; }
+        footer .footerLegal ul li {
+          font-size: 0.8rem;
+          margin: 0.8rem; } }
 
 .animated {
-    animation-name: fadeIn;
-    animation-iteration-count: unset;
-    animation-duration: 1s;
-}
+  animation-name: fadeIn;
+  animation-iteration-count: unset;
+  animation-duration: 1s; }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }

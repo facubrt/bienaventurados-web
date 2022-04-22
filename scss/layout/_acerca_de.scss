@@ -1,0 +1,128 @@
+@import "../utilities/variables";
+
+/* USADAS EN ACERCA DE */
+
+.mainAbout {
+    display: grid;
+    grid-template-areas: "presentationPage presentationPage"
+        "imgSE descriptionSE"
+        "descriptionStory imgStory"
+    ;
+    grid-template-columns: 1fr 1fr;
+
+    .presentationPage {
+        grid-area: presentationPage;
+        display: flex;
+        flex-direction: column;
+        padding: 10rem 4rem;
+        align-items: center;
+        text-align: center;
+
+        .subtitle {
+            width: 60%;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+    }
+
+    .descriptionSE {
+        background-color: #F9F9FA;
+        padding: 140px 60px;
+        grid-area: descriptionSE;
+
+        .tagline {
+            margin: 10px 0px 40px 0px;
+        }
+    }
+
+    .imgSE {
+        grid-area: imgSE;
+        padding: 140px 60px;
+        background-color: #F9F9FA;
+
+        img {
+            height: 260px;
+        }
+    }
+
+    .descriptionStory {
+        grid-area: descriptionStory;
+        padding: 140px 60px;
+
+        .description {
+            margin-top: 40px;
+        }
+    }
+
+    .imgStory {
+        grid-area: imgStory;
+        padding: 140px 60px;
+
+        img {
+            width: 600px;
+            border-radius: 20px;
+        }
+    }
+
+}
+
+
+/* -----  INICIO PROPIEDADES MEDIA QUERYS -----  */
+
+@media only screen and (max-width: 600px) {
+
+    .mainAbout {
+        display: grid;
+        grid-template-areas: "presentationPage"
+            "imgSE"
+            "descriptionSE"
+            "imgStory"
+            "descriptionStory";
+        grid-template-columns: 1fr;
+
+        /* ACERCA DE */
+
+        .descriptionSE {
+            background-color: #F9F9FA;
+            padding: 4rem 3rem;
+            grid-area: descriptionSE;
+
+            .tagline {
+                margin: 10px 0px 40px 0px;
+            }
+        }
+
+        .imgSE {
+            grid-area: imgSE;
+            padding: 4rem 3rem 0rem 3rem;
+            background-color: #F9F9FA;
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 40%;
+            }
+        }
+
+        .descriptionStory {
+            grid-area: descriptionStory;
+            padding: 4rem 3rem;
+
+            .description {
+                margin-top: 40px;
+            }
+        }
+
+        .imgStory {
+            grid-area: imgStory;
+            padding: 4rem 3rem 0rem 3rem;
+
+            img {
+                width: 100%;
+                border-radius: 20px;
+            }
+        }
+    }
+
+}

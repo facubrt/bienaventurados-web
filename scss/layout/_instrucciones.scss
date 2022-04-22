@@ -1,0 +1,242 @@
+@import "../utilities/variables";
+
+.mainInstructions {
+    display: grid;
+    grid-template-areas: "presentationPage presentationPage"
+        ". titleInstructions"
+        "instructionsImage instructionsSteps"
+        "titleInstructionsTwo ."
+        "instructionsStepsTwo instructionsImageTwo"
+        ". titleInstructionsThree"
+        "instructionsImageThree instructionsStepsThree";
+    grid-template-columns: 1fr 1fr;
+
+    .presentationPage {
+        grid-area: presentationPage;
+        display: flex;
+        flex-direction: column;
+        padding: 10rem 4rem;
+        align-items: center;
+        text-align: center;
+
+        .subtitle {
+            width: 60%;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+    }
+
+    /* USADAS EN INSTRUCCIONES */
+
+    .titleInstructions {
+        grid-area: titleInstructions;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin: 10rem 5rem;
+
+        h3 {
+            margin-top: 1rem;
+        }
+
+        h4 {
+            font-weight: 700;
+        }
+    }
+
+    .titleInstructionsTwo {
+        grid-area: titleInstructionsTwo;
+        display: flex;
+        justify-content: flex-end;
+        margin: 10rem 5rem;
+
+        h3 {
+            margin-top: 1rem;
+        }
+
+        h4 {
+            font-weight: 700;
+        }
+    }
+
+    .titleInstructionsThree {
+        grid-area: titleInstructionsThree;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin: 10rem 5rem;
+
+        h3 {
+            margin-top: 1rem;
+        }
+
+        h4 {
+            font-weight: 700;
+        }
+    }
+
+    .instructionsSteps {
+        grid-area: instructionsSteps;
+        padding: 0rem 5rem 0rem 5rem;
+
+        h4 {
+            font-weight: 700;
+        }
+
+        ol {
+            padding: 0rem;
+
+            li {
+                list-style: none;
+                margin-bottom: 1.2rem;
+            }
+        }
+    }
+
+    .instructionsStepsTwo {
+        grid-area: instructionsStepsTwo;
+        padding: 0rem 5rem 0rem 5rem;
+
+        ol {
+            padding: 0rem;
+
+            li {
+                list-style: none;
+                margin-bottom: 1.2rem;
+            }
+        }
+
+        h4 {
+            font-weight: 700;
+        }
+    }
+
+    .instructionsStepsThree {
+        grid-area: instructionsStepsThree;
+        padding: 0rem 5rem 0rem 5rem;
+
+        ol {
+            padding: 0rem;
+
+            li {
+                list-style: none;
+                margin-bottom: 1.2rem;
+            }
+        }
+
+        h4 {
+            font-weight: 700;
+        }
+    }
+
+    .instructionsImage {
+        grid-area: instructionsImage;
+        padding: 0rem 0rem 4rem 5rem;
+
+        img {
+            width: 100%;
+            border-radius: 1.2rem;
+        }
+    }
+
+    .instructionsImageTwo {
+        grid-area: instructionsImageTwo;
+        padding: 0rem 5rem 4rem 0rem;
+
+        img {
+            width: 100%;
+            border-radius: 1.2rem;
+        }
+    }
+
+    .instructionsImageThree {
+        grid-area: instructionsImageThree;
+        padding: 0rem 0rem 4rem 5rem;
+
+        img {
+            width: 100%;
+            border-radius: 1.2rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .mainInstructions {
+        display: grid;
+        grid-template-areas: "presentationPage"
+            "titleInstructions"
+            "instructionsSteps"
+            "instructionsImage"
+            "titleInstructionsTwo"
+            "instructionsStepsTwo"
+            "instructionsImageTwo"
+            "titleInstructionsThree"
+            "instructionsStepsThree"
+            "instructionsImageThree";
+        grid-template-columns: 1fr;
+
+        .titleInstructions {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin: 4rem 3rem;
+        }
+
+        .titleInstructionsTwo {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin: 4rem 3rem;
+        }
+
+        .titleInstructionsThree {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin: 4rem 3rem;
+        }
+
+        .instructionsImage {
+            padding: 4rem 3rem 4rem 3rem;
+
+            img {
+                width: 100%;
+                border-radius: 0.8rem;
+            }
+        }
+
+        .instructionsImageTwo {
+            padding: 4rem 3rem 4rem 3rem;
+
+            img {
+                width: 100%;
+                border-radius: 0.8rem;
+            }
+        }
+
+        .instructionsImageThree {
+            padding: 4rem 3rem 4rem 3rem;
+
+            img {
+                width: 100%;
+                border-radius: 0.8rem;
+            }
+        }
+
+        .instructionsSteps {
+            padding: 0rem 3rem 0rem 3rem;
+        }
+
+        .instructionsStepsTwo {
+            padding: 0rem 3rem 0rem 3rem;
+        }
+
+        .instructionsStepsThree {
+            padding: 0rem 3rem 0rem 3rem;
+        }
+
+
+    }
+}

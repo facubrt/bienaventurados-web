@@ -22,7 +22,7 @@
 
     .presentationImage {
         grid-area: presentationImage;
-        background-color: $color-claro;
+        background-color: nth($colores, 3);
         padding: 10rem 0rem;
 
         img {
@@ -35,81 +35,28 @@
         }
     }
 
-    .featureDescription {
-        grid-area: featureDescription;
-        padding: 10rem 5rem;
-    }
-
-    .featureImage {
-        grid-area: featureImage;
-        padding: 10rem 5rem;
-
-        img {
-            width: 26rem;
-            border-radius: 1.2rem;
-        }
-    }
-
-    .featureTwoDescription {
-        grid-area: featureTwoDescription;
-        padding: 10rem 5rem;
-    }
-
-    .featureTwoImage {
-        grid-area: featureTwoImage;
-        padding: 10rem 5rem;
-
-        img {
-            width: 26rem;
-            border-radius: 1.2rem;
-        }
-    }
-
-    .subtitleSection {
-        margin-top: 2rem;
-    }
-
-    .featureAltDescription {
-        grid-area: featureAltDescription;
-        padding: 10rem 5rem;
-        background-color: $color-claro;
-    }
-
-    .featureAltImage {
-        grid-area: featureAltImage;
-        display: flex;
-        justify-content: flex-end;
-        padding: 10rem 5rem;
-        background-color: $color-claro;
-
-        img {
-            width: 26rem;
-            border-radius: 1.2rem;
-        }
-    }
-
     .downloadSection {
         grid-area: download;
         padding: 5rem;
 
         .downloadContainer {
             display: flex;
-            background-color: #A171D3;
-            border-radius: 1.2rem;
+            background-color: nth($colores, 2);
+            border-radius: $border-radius;
             justify-content: space-between;
             align-items: flex-end;
             background-image: url('../../assets/images/comienza-tu-aventura.png');
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
-            border: 0.2rem solid $color-principal;
+            border: 0.2rem solid nth($colores, 2);
 
             .downloadApp {
                 padding: 5rem;
                 width: 60%;
 
                 h3 {
-                    color: $color-blanco;
+                    color: nth($colores, 4);
                     line-height: 1;
                 }
 
@@ -119,40 +66,6 @@
             }
         }
     }
-
-    .blogSection {
-        grid-area: blog;
-        padding: 5rem;
-
-        h3 {
-            margin: 1rem 0rem;
-        }
-
-        h4 {
-            font-weight: 700;
-        }
-
-        .posts {
-            margin-top: 2rem;
-            display: flex;
-            justify-content: space-between;
-
-            .post1,
-            .post2 {
-                width: 40%;
-
-                img {
-                    width: 100%;
-                    border-radius: 1.2rem;
-                }
-
-                .titlePost {
-                    margin: 1rem 0px;
-                }
-            }
-        }
-    }
-
 }
 
 @media only screen and (max-width: 600px) {
@@ -196,48 +109,6 @@
             }
         }
 
-        .featureDescription {
-            padding: 4rem 3rem;
-        }
-
-        .featureImage {
-            align-self: center;
-            padding: 4rem 3rem;
-
-            img {
-                width: 100%;
-                border-radius: 0.8rem;
-            }
-        }
-
-        .featureTwoDescription {
-            padding: 4rem 3rem;
-        }
-
-        .featureTwoImage {
-            align-self: center;
-            padding: 4rem 3rem;
-
-            img {
-                width: 100%;
-                border-radius: 0.8rem;
-            }
-        }
-
-        .featureAltDescription {
-            padding: 4rem 3rem;
-        }
-
-        .featureAltImage {
-            align-self: center;
-            padding: 4rem 3rem;
-
-            img {
-                width: 100%;
-                border-radius: 0.8rem;
-            }
-        }
-
         .downloadSection {
             padding: 4rem 3rem;
 
@@ -255,27 +126,6 @@
                         text-align: center;
                     }
                 }
-            }
-        }
-
-        .blogSection {
-            padding: 4rem 3rem;
-
-            .posts {
-                flex-direction: column;
-
-                .post1,
-                .post2 {
-                    width: 100%;
-                    padding: 2rem 0rem;
-
-                    img {
-                        border-radius: 0.8rem;
-                        min-width: 20rem;
-                    }
-
-                }
-
             }
         }
     }

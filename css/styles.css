@@ -19,39 +19,6 @@
       position: relative;
       right: 3rem;
       z-index: 0; }
-  .mainIndex .featureDescription {
-    grid-area: featureDescription;
-    padding: 10rem 5rem; }
-  .mainIndex .featureImage {
-    grid-area: featureImage;
-    padding: 10rem 5rem; }
-    .mainIndex .featureImage img {
-      width: 26rem;
-      border-radius: 1.2rem; }
-  .mainIndex .featureTwoDescription {
-    grid-area: featureTwoDescription;
-    padding: 10rem 5rem; }
-  .mainIndex .featureTwoImage {
-    grid-area: featureTwoImage;
-    padding: 10rem 5rem; }
-    .mainIndex .featureTwoImage img {
-      width: 26rem;
-      border-radius: 1.2rem; }
-  .mainIndex .subtitleSection {
-    margin-top: 2rem; }
-  .mainIndex .featureAltDescription {
-    grid-area: featureAltDescription;
-    padding: 10rem 5rem;
-    background-color: #F9F9FA; }
-  .mainIndex .featureAltImage {
-    grid-area: featureAltImage;
-    display: flex;
-    justify-content: flex-end;
-    padding: 10rem 5rem;
-    background-color: #F9F9FA; }
-    .mainIndex .featureAltImage img {
-      width: 26rem;
-      border-radius: 1.2rem; }
   .mainIndex .downloadSection {
     grid-area: download;
     padding: 5rem; }
@@ -65,7 +32,7 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
-      border: 0.2rem solid #372256; }
+      border: 0.2rem solid #A171D3; }
       .mainIndex .downloadSection .downloadContainer .downloadApp {
         padding: 5rem;
         width: 60%; }
@@ -74,27 +41,6 @@
           line-height: 1; }
         .mainIndex .downloadSection .downloadContainer .downloadApp .downloadButton {
           margin-top: 2rem; }
-  .mainIndex .blogSection {
-    grid-area: blog;
-    padding: 5rem; }
-    .mainIndex .blogSection h3 {
-      margin: 1rem 0rem; }
-    .mainIndex .blogSection h4 {
-      font-weight: 700; }
-    .mainIndex .blogSection .posts {
-      margin-top: 2rem;
-      display: flex;
-      justify-content: space-between; }
-      .mainIndex .blogSection .posts .post1,
-      .mainIndex .blogSection .posts .post2 {
-        width: 40%; }
-        .mainIndex .blogSection .posts .post1 img,
-        .mainIndex .blogSection .posts .post2 img {
-          width: 100%;
-          border-radius: 1.2rem; }
-        .mainIndex .blogSection .posts .post1 .titlePost,
-        .mainIndex .blogSection .posts .post2 .titlePost {
-          margin: 1rem 0px; }
 
 @media only screen and (max-width: 600px) {
   /* GRID LAYOUT */
@@ -119,30 +65,6 @@
         display: flex;
         align-items: center;
         justify-content: center; }
-    .mainIndex .featureDescription {
-      padding: 4rem 3rem; }
-    .mainIndex .featureImage {
-      align-self: center;
-      padding: 4rem 3rem; }
-      .mainIndex .featureImage img {
-        width: 100%;
-        border-radius: 0.8rem; }
-    .mainIndex .featureTwoDescription {
-      padding: 4rem 3rem; }
-    .mainIndex .featureTwoImage {
-      align-self: center;
-      padding: 4rem 3rem; }
-      .mainIndex .featureTwoImage img {
-        width: 100%;
-        border-radius: 0.8rem; }
-    .mainIndex .featureAltDescription {
-      padding: 4rem 3rem; }
-    .mainIndex .featureAltImage {
-      align-self: center;
-      padding: 4rem 3rem; }
-      .mainIndex .featureAltImage img {
-        width: 100%;
-        border-radius: 0.8rem; }
     .mainIndex .downloadSection {
       padding: 4rem 3rem; }
       .mainIndex .downloadSection .downloadContainer {
@@ -154,36 +76,13 @@
           flex-direction: column;
           align-items: center; }
           .mainIndex .downloadSection .downloadContainer .downloadApp h3 {
-            text-align: center; }
-    .mainIndex .blogSection {
-      padding: 4rem 3rem; }
-      .mainIndex .blogSection .posts {
-        flex-direction: column; }
-        .mainIndex .blogSection .posts .post1,
-        .mainIndex .blogSection .posts .post2 {
-          width: 100%;
-          padding: 2rem 0rem; }
-          .mainIndex .blogSection .posts .post1 img,
-          .mainIndex .blogSection .posts .post2 img {
-            border-radius: 0.8rem;
-            min-width: 20rem; } }
+            text-align: center; } }
 
 /* -----  INICIO PROPIEDADES DEL MAIN ----- */
 .mainBlog {
   display: grid;
   grid-template-areas: "presentationPage presentationPage" "lastPostDescription lastPostImage" "blog blog" "morePosts morePosts";
   grid-template-columns: 1fr 1fr; }
-  .mainBlog .presentationPage {
-    grid-area: presentationPage;
-    display: flex;
-    flex-direction: column;
-    padding: 10rem 4rem;
-    align-items: center;
-    text-align: center; }
-    .mainBlog .presentationPage .subtitle {
-      width: 60%;
-      margin-top: 2rem;
-      text-align: center; }
   .mainBlog .lastPostDescription {
     grid-area: lastPostDescription;
     padding: 10rem 5rem;
@@ -195,27 +94,6 @@
     .mainBlog .lastPostImage img {
       width: 40rem;
       border-radius: 1.2rem; }
-  .mainBlog .blogSection {
-    grid-area: blog;
-    padding: 5rem; }
-    .mainBlog .blogSection h3 {
-      margin: 1rem 0rem; }
-    .mainBlog .blogSection h4 {
-      font-weight: 700; }
-    .mainBlog .blogSection .posts {
-      margin-top: 2rem;
-      display: flex;
-      justify-content: space-between; }
-      .mainBlog .blogSection .posts .post1,
-      .mainBlog .blogSection .posts .post2 {
-        width: 40%; }
-        .mainBlog .blogSection .posts .post1 img,
-        .mainBlog .blogSection .posts .post2 img {
-          width: 100%;
-          border-radius: 1.2rem; }
-        .mainBlog .blogSection .posts .post1 .titlePost,
-        .mainBlog .blogSection .posts .post2 .titlePost {
-          margin: 1rem 0px; }
   .mainBlog .morePosts {
     grid-area: morePosts;
     display: flex;
@@ -229,7 +107,7 @@
       border-radius: 20rem;
       padding: 0.6rem; }
       .mainBlog .morePosts .buttonMorePosts h4 {
-        font-weight: 700; }
+        font-weight: bold; }
 
 @media only screen and (max-width: 600px) {
   .mainBlog {
@@ -237,8 +115,6 @@
     grid-template-areas: "presentationPage" "lastPostDescription" "lastPostImage" "blog" "morePosts";
     grid-template-columns: 1fr;
     /* BLOG */ }
-    .mainBlog .presentationPage {
-      padding: 8rem 3rem; }
     .mainBlog .lastPostDescription {
       padding: 4rem 3rem 0rem 3rem; }
     .mainBlog .lastPostImage {
@@ -246,18 +122,6 @@
       .mainBlog .lastPostImage img {
         width: 100%;
         border-radius: 0.8rem; }
-    .mainBlog .blogSection {
-      padding: 3rem; }
-      .mainBlog .blogSection .posts {
-        flex-direction: column; }
-        .mainBlog .blogSection .posts .post1,
-        .mainBlog .blogSection .posts .post2 {
-          width: 100%;
-          padding: 2rem 0rem; }
-          .mainBlog .blogSection .posts .post1 img,
-          .mainBlog .blogSection .posts .post2 img {
-            border-radius: 0.8rem;
-            min-width: 20rem; }
     .mainBlog .morePosts {
       margin-bottom: 4rem; }
       .mainBlog .morePosts .buttonMorePosts {
@@ -269,17 +133,6 @@
   grid-template-areas: "presentationPage presentationPage" ". titleInstructions" "instructionsImage instructionsSteps" "titleInstructionsTwo ." "instructionsStepsTwo instructionsImageTwo" ". titleInstructionsThree" "instructionsImageThree instructionsStepsThree";
   grid-template-columns: 1fr 1fr;
   /* USADAS EN INSTRUCCIONES */ }
-  .mainInstructions .presentationPage {
-    grid-area: presentationPage;
-    display: flex;
-    flex-direction: column;
-    padding: 10rem 4rem;
-    align-items: center;
-    text-align: center; }
-    .mainInstructions .presentationPage .subtitle {
-      width: 60%;
-      margin-top: 2rem;
-      text-align: center; }
   .mainInstructions .titleInstructions {
     grid-area: titleInstructions;
     display: flex;
@@ -289,7 +142,7 @@
     .mainInstructions .titleInstructions h3 {
       margin-top: 1rem; }
     .mainInstructions .titleInstructions h4 {
-      font-weight: 700; }
+      font-weight: bold; }
   .mainInstructions .titleInstructionsTwo {
     grid-area: titleInstructionsTwo;
     display: flex;
@@ -298,7 +151,7 @@
     .mainInstructions .titleInstructionsTwo h3 {
       margin-top: 1rem; }
     .mainInstructions .titleInstructionsTwo h4 {
-      font-weight: 700; }
+      font-weight: bold; }
   .mainInstructions .titleInstructionsThree {
     grid-area: titleInstructionsThree;
     display: flex;
@@ -308,12 +161,12 @@
     .mainInstructions .titleInstructionsThree h3 {
       margin-top: 1rem; }
     .mainInstructions .titleInstructionsThree h4 {
-      font-weight: 700; }
+      font-weight: bold; }
   .mainInstructions .instructionsSteps {
     grid-area: instructionsSteps;
     padding: 0rem 5rem 0rem 5rem; }
     .mainInstructions .instructionsSteps h4 {
-      font-weight: 700; }
+      font-weight: bold; }
     .mainInstructions .instructionsSteps ol {
       padding: 0rem; }
       .mainInstructions .instructionsSteps ol li {
@@ -328,7 +181,7 @@
         list-style: none;
         margin-bottom: 1.2rem; }
     .mainInstructions .instructionsStepsTwo h4 {
-      font-weight: 700; }
+      font-weight: bold; }
   .mainInstructions .instructionsStepsThree {
     grid-area: instructionsStepsThree;
     padding: 0rem 5rem 0rem 5rem; }
@@ -338,7 +191,7 @@
         list-style: none;
         margin-bottom: 1.2rem; }
     .mainInstructions .instructionsStepsThree h4 {
-      font-weight: 700; }
+      font-weight: bold; }
   .mainInstructions .instructionsImage {
     grid-area: instructionsImage;
     padding: 0rem 0rem 4rem 5rem; }
@@ -405,17 +258,6 @@
   grid-template-areas: "presentationPage presentationPage" ". titleInstructions" "instructionsImage instructionsSteps" "titleInstructionsTwo ." "instructionsStepsTwo instructionsImageTwo" ". titleInstructionsThree" "instructionsImageThree instructionsStepsThree";
   grid-template-columns: 1fr 1fr;
   /* USADAS EN INSTRUCCIONES */ }
-  .mainInstructions .presentationPage {
-    grid-area: presentationPage;
-    display: flex;
-    flex-direction: column;
-    padding: 10rem 4rem;
-    align-items: center;
-    text-align: center; }
-    .mainInstructions .presentationPage .subtitle {
-      width: 60%;
-      margin-top: 2rem;
-      text-align: center; }
   .mainInstructions .titleInstructions {
     grid-area: titleInstructions;
     display: flex;
@@ -425,7 +267,7 @@
     .mainInstructions .titleInstructions h3 {
       margin-top: 1rem; }
     .mainInstructions .titleInstructions h4 {
-      font-weight: 700; }
+      font-weight: bold; }
   .mainInstructions .titleInstructionsTwo {
     grid-area: titleInstructionsTwo;
     display: flex;
@@ -434,7 +276,7 @@
     .mainInstructions .titleInstructionsTwo h3 {
       margin-top: 1rem; }
     .mainInstructions .titleInstructionsTwo h4 {
-      font-weight: 700; }
+      font-weight: bold; }
   .mainInstructions .titleInstructionsThree {
     grid-area: titleInstructionsThree;
     display: flex;
@@ -444,12 +286,12 @@
     .mainInstructions .titleInstructionsThree h3 {
       margin-top: 1rem; }
     .mainInstructions .titleInstructionsThree h4 {
-      font-weight: 700; }
+      font-weight: bold; }
   .mainInstructions .instructionsSteps {
     grid-area: instructionsSteps;
     padding: 0rem 5rem 0rem 5rem; }
     .mainInstructions .instructionsSteps h4 {
-      font-weight: 700; }
+      font-weight: bold; }
     .mainInstructions .instructionsSteps ol {
       padding: 0rem; }
       .mainInstructions .instructionsSteps ol li {
@@ -464,7 +306,7 @@
         list-style: none;
         margin-bottom: 1.2rem; }
     .mainInstructions .instructionsStepsTwo h4 {
-      font-weight: 700; }
+      font-weight: bold; }
   .mainInstructions .instructionsStepsThree {
     grid-area: instructionsStepsThree;
     padding: 0rem 5rem 0rem 5rem; }
@@ -474,7 +316,7 @@
         list-style: none;
         margin-bottom: 1.2rem; }
     .mainInstructions .instructionsStepsThree h4 {
-      font-weight: 700; }
+      font-weight: bold; }
   .mainInstructions .instructionsImage {
     grid-area: instructionsImage;
     padding: 0rem 0rem 4rem 5rem; }
@@ -541,50 +383,6 @@
   grid-template-areas: "presentationPage presentationPage" "featureImage featureDescription" "featureAltDescription featureAltImage" "featureTwoImage featureTwoDescription" "moreFeatures moreFeatures" "bienaventurados bienaventurados";
   grid-template-columns: 1fr 1fr;
   /* USADAS EN NUESTRA APP */ }
-  .mainApp .presentationPage {
-    grid-area: presentationPage;
-    display: flex;
-    flex-direction: column;
-    padding: 10rem 4rem;
-    align-items: center;
-    text-align: center; }
-    .mainApp .presentationPage .subtitle {
-      width: 60%;
-      margin-top: 2rem;
-      text-align: center; }
-  .mainApp .featureDescription {
-    grid-area: featureDescription;
-    padding: 10rem 5rem; }
-  .mainApp .featureImage {
-    grid-area: featureImage;
-    padding: 10rem 5rem; }
-    .mainApp .featureImage img {
-      width: 26rem;
-      border-radius: 1.2rem; }
-  .mainApp .featureTwoDescription {
-    grid-area: featureTwoDescription;
-    padding: 10rem 5rem; }
-  .mainApp .featureTwoImage {
-    grid-area: featureTwoImage;
-    padding: 10rem 5rem; }
-    .mainApp .featureTwoImage img {
-      width: 26rem;
-      border-radius: 1.2rem; }
-  .mainApp .subtitleSection {
-    margin-top: 2rem; }
-  .mainApp .featureAltDescription {
-    grid-area: featureAltDescription;
-    padding: 10rem 5rem;
-    background-color: #F9F9FA; }
-  .mainApp .featureAltImage {
-    grid-area: featureAltImage;
-    display: flex;
-    justify-content: flex-end;
-    padding: 10rem 5rem;
-    background-color: #F9F9FA; }
-    .mainApp .featureAltImage img {
-      width: 26rem;
-      border-radius: 1.2rem; }
   .mainApp .downloadButton {
     margin-top: 2rem; }
     .mainApp .downloadButton img:hover {
@@ -602,7 +400,7 @@
         width: 25%; }
         .mainApp .othersSections .features .feature img {
           width: 80%;
-          border-radius: 1rem; }
+          border-radius: 1.2rem; }
         .mainApp .othersSections .features .feature .description {
           margin-top: 2rem; }
   .mainApp .bienaventuradosSection {
@@ -626,30 +424,6 @@
     grid-template-areas: "presentationPage" "featureDescription" "featureImage" "featureAltDescription" "featureAltImage" "featureTwoDescription" "featureTwoImage" "moreFeatures" "bienaventurados";
     grid-template-columns: 1fr;
     /* NUESTRA APP */ }
-    .mainApp .featureDescription {
-      padding: 4rem 3rem; }
-    .mainApp .featureImage {
-      align-self: center;
-      padding: 4rem 3rem; }
-      .mainApp .featureImage img {
-        width: 100%;
-        border-radius: 0.8rem; }
-    .mainApp .featureTwoDescription {
-      padding: 4rem 3rem; }
-    .mainApp .featureTwoImage {
-      align-self: center;
-      padding: 4rem 3rem; }
-      .mainApp .featureTwoImage img {
-        width: 100%;
-        border-radius: 0.8rem; }
-    .mainApp .featureAltDescription {
-      padding: 4rem 3rem; }
-    .mainApp .featureAltImage {
-      align-self: center;
-      padding: 4rem 3rem; }
-      .mainApp .featureAltImage img {
-        width: 100%;
-        border-radius: 0.8rem; }
     .mainApp .othersSections {
       padding: 4rem 3rem;
       text-align: center; }
@@ -686,17 +460,6 @@
   display: grid;
   grid-template-areas: "presentationPage presentationPage" "imgSE descriptionSE" "descriptionStory imgStory";
   grid-template-columns: 1fr 1fr; }
-  .mainAbout .presentationPage {
-    grid-area: presentationPage;
-    display: flex;
-    flex-direction: column;
-    padding: 10rem 4rem;
-    align-items: center;
-    text-align: center; }
-    .mainAbout .presentationPage .subtitle {
-      width: 60%;
-      margin-top: 2rem;
-      text-align: center; }
   .mainAbout .descriptionSE {
     background-color: #F9F9FA;
     padding: 140px 60px;
@@ -719,7 +482,7 @@
     padding: 140px 60px; }
     .mainAbout .imgStory img {
       width: 600px;
-      border-radius: 20px; }
+      border-radius: 1.2rem; }
 
 /* -----  INICIO PROPIEDADES MEDIA QUERYS -----  */
 @media only screen and (max-width: 600px) {
@@ -752,7 +515,7 @@
       padding: 4rem 3rem 0rem 3rem; }
       .mainAbout .imgStory img {
         width: 100%;
-        border-radius: 20px; } }
+        border-radius: border-radius-m; } }
 
 /* ----- PROPIEDADES GENERALES  ----- */
 * {
@@ -829,6 +592,84 @@ header {
       header .navBar ul li {
         margin: 1rem 1rem; }
 
+/* ----- PROPIEDADES MAIN ----- */
+/* PRESENTACION DE PAGINA */
+.presentationPage {
+  grid-area: presentationPage;
+  display: flex;
+  flex-direction: column;
+  padding: 10rem 4rem;
+  align-items: center;
+  text-align: center; }
+  .presentationPage .subtitle {
+    width: 60%;
+    margin-top: 2rem;
+    text-align: center; }
+
+/* CARACTERISTICAS (COMPARTIDO EN INDEX - NUESTRA APP - INSTRUCCIONES) */
+.featureDescription {
+  grid-area: featureDescription;
+  padding: 10rem 5rem; }
+
+.featureImage {
+  grid-area: featureImage;
+  padding: 10rem 5rem; }
+  .featureImage img {
+    width: 26rem;
+    border-radius: 1.2rem; }
+
+.featureTwoDescription {
+  grid-area: featureTwoDescription;
+  padding: 10rem 5rem; }
+
+.featureTwoImage {
+  grid-area: featureTwoImage;
+  padding: 10rem 5rem; }
+  .featureTwoImage img {
+    width: 26rem;
+    border-radius: 1.2rem; }
+
+.subtitleSection {
+  margin-top: 2rem; }
+
+.featureAltDescription {
+  grid-area: featureAltDescription;
+  padding: 10rem 5rem;
+  background-color: #F9F9FA; }
+
+.featureAltImage {
+  grid-area: featureAltImage;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10rem 5rem;
+  background-color: #F9F9FA; }
+  .featureAltImage img {
+    width: 26rem;
+    border-radius: 1.2rem; }
+
+/* BLOG SECTION (COMPARTIDO EN INDEX - BLOG) */
+.blogSection {
+  grid-area: blog;
+  padding: 5rem; }
+  .blogSection h3 {
+    margin: 1rem 0rem; }
+  .blogSection h4 {
+    font-weight: bold; }
+  .blogSection .posts {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between; }
+    .blogSection .posts .post1,
+    .blogSection .posts .post2 {
+      width: 40%; }
+      .blogSection .posts .post1 img,
+      .blogSection .posts .post2 img {
+        width: 100%;
+        border-radius: 1.2rem; }
+      .blogSection .posts .post1 .titlePost,
+      .blogSection .posts .post2 .titlePost {
+        margin: 1rem 0px; }
+
 /* ----- PROPIEDADES FOOTER -----  */
 footer {
   grid-area: footer;
@@ -903,6 +744,47 @@ footer {
     font-size: 0.8rem; }
   h6 {
     font-size: 0.8rem; }
+  /* PRESENTACION DE PAGINA */
+  .presentationPage {
+    padding: 8rem 3rem; }
+  /* CARACTERISTICAS */
+  .featureDescription {
+    padding: 4rem 3rem; }
+  .featureImage {
+    align-self: center;
+    padding: 4rem 3rem; }
+    .featureImage img {
+      width: 100%;
+      border-radius: 0.8rem; }
+  .featureTwoDescription {
+    padding: 4rem 3rem; }
+  .featureTwoImage {
+    align-self: center;
+    padding: 4rem 3rem; }
+    .featureTwoImage img {
+      width: 100%;
+      border-radius: 0.8rem; }
+  .featureAltDescription {
+    padding: 4rem 3rem; }
+  .featureAltImage {
+    align-self: center;
+    padding: 4rem 3rem; }
+    .featureAltImage img {
+      width: 100%;
+      border-radius: 0.8rem; }
+  /* BLOG SECTION */
+  .blogSection {
+    padding: 4rem 3rem; }
+    .blogSection .posts {
+      flex-direction: column; }
+      .blogSection .posts .post1,
+      .blogSection .posts .post2 {
+        width: 100%;
+        padding: 2rem 0rem; }
+        .blogSection .posts .post1 img,
+        .blogSection .posts .post2 img {
+          border-radius: 0.8rem;
+          min-width: 20rem; }
   /* FOOTER */
   footer {
     padding: 4rem 3rem; }

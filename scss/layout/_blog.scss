@@ -10,69 +10,20 @@
         "morePosts morePosts";
     grid-template-columns: 1fr 1fr;
 
-    .presentationPage {
-        grid-area: presentationPage;
-        display: flex;
-        flex-direction: column;
-        padding: 10rem 4rem;
-        align-items: center;
-        text-align: center;
-
-        .subtitle {
-            width: 60%;
-            margin-top: 2rem;
-            text-align: center;
-        }
-
-    }
-
     .lastPostDescription {
         grid-area: lastPostDescription;
         padding: 10rem 5rem;
-        background-color: #F9F9FA;
+        background-color: nth($colores, 3);
     }
 
     .lastPostImage {
         grid-area: lastPostImage;
         padding: 10rem 5rem;
-        background-color: #F9F9FA;
+        background-color: nth($colores, 3);
 
         img {
             width: 40rem;
-            border-radius: 1.2rem;
-        }
-    }
-
-    .blogSection {
-        grid-area: blog;
-        padding: 5rem;
-
-        h3 {
-            margin: 1rem 0rem;
-        }
-
-        h4 {
-            font-weight: 700;
-        }
-
-        .posts {
-            margin-top: 2rem;
-            display: flex;
-            justify-content: space-between;
-
-            .post1,
-            .post2 {
-                width: 40%;
-
-                img {
-                    width: 100%;
-                    border-radius: 1.2rem;
-                }
-
-                .titlePost {
-                    margin: 1rem 0px;
-                }
-            }
+            border-radius: $border-radius;
         }
     }
 
@@ -86,12 +37,12 @@
             margin: 1.2rem 20rem;
             display: flex;
             justify-content: center;
-            border: 0.2rem solid #372256;
+            border: 0.2rem solid nth($colores, 1);
             border-radius: 20rem;
             padding: 0.6rem;
 
             h4 {
-                font-weight: 700;
+                font-weight: bold;
             }
         }
     }
@@ -109,10 +60,6 @@
 
         /* BLOG */
 
-        .presentationPage {
-            padding: 8rem 3rem;
-        }
-
         .lastPostDescription {
             padding: 4rem 3rem 0rem 3rem;
         }
@@ -122,28 +69,7 @@
 
             img {
                 width: 100%;
-                border-radius: 0.8rem;
-            }
-        }
-
-        .blogSection {
-            padding: 3rem;
-
-            .posts {
-                flex-direction: column;
-
-                .post1,
-                .post2 {
-                    width: 100%;
-                    padding: 2rem 0rem;
-
-                    img {
-                        border-radius: 0.8rem;
-                        min-width: 20rem;
-                    }
-
-                }
-
+                border-radius: $border-radius-m;
             }
         }
 

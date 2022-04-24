@@ -10,24 +10,8 @@
     ;
     grid-template-columns: 1fr 1fr;
 
-    .presentationPage {
-        grid-area: presentationPage;
-        display: flex;
-        flex-direction: column;
-        padding: 10rem 4rem;
-        align-items: center;
-        text-align: center;
-
-        .subtitle {
-            width: 60%;
-            margin-top: 2rem;
-            text-align: center;
-        }
-
-    }
-
     .descriptionSE {
-        background-color: #F9F9FA;
+        background-color: nth($colores, 3);
         padding: 140px 60px;
         grid-area: descriptionSE;
 
@@ -39,7 +23,7 @@
     .imgSE {
         grid-area: imgSE;
         padding: 140px 60px;
-        background-color: #F9F9FA;
+        background-color: nth($colores, 3);
 
         img {
             height: 260px;
@@ -61,7 +45,7 @@
 
         img {
             width: 600px;
-            border-radius: 20px;
+            border-radius: $border-radius;
         }
     }
 
@@ -84,7 +68,7 @@
         /* ACERCA DE */
 
         .descriptionSE {
-            background-color: #F9F9FA;
+            background-color: nth($colores, 3);
             padding: 4rem 3rem;
             grid-area: descriptionSE;
 
@@ -96,7 +80,7 @@
         .imgSE {
             grid-area: imgSE;
             padding: 4rem 3rem 0rem 3rem;
-            background-color: #F9F9FA;
+            background-color: nth($colores, 3);
             display: flex;
             justify-content: center;
 
@@ -120,7 +104,7 @@
 
             img {
                 width: 100%;
-                border-radius: 20px;
+                border-radius: border-radius-m;
             }
         }
     }

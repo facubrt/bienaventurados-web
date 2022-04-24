@@ -11,22 +11,6 @@
         "instructionsImageThree instructionsStepsThree";
     grid-template-columns: 1fr 1fr;
 
-    .presentationPage {
-        grid-area: presentationPage;
-        display: flex;
-        flex-direction: column;
-        padding: 10rem 4rem;
-        align-items: center;
-        text-align: center;
-
-        .subtitle {
-            width: 60%;
-            margin-top: 2rem;
-            text-align: center;
-        }
-
-    }
-
     /* USADAS EN INSTRUCCIONES */
 
     .titleInstructions {
@@ -41,7 +25,7 @@
         }
 
         h4 {
-            font-weight: 700;
+            font-weight: bold;
         }
     }
 
@@ -56,7 +40,7 @@
         }
 
         h4 {
-            font-weight: 700;
+            font-weight: bold;
         }
     }
 
@@ -72,7 +56,7 @@
         }
 
         h4 {
-            font-weight: 700;
+            font-weight: bold;
         }
     }
 
@@ -81,7 +65,7 @@
         padding: 0rem 5rem 0rem 5rem;
 
         h4 {
-            font-weight: 700;
+            font-weight: bold;
         }
 
         ol {
@@ -108,7 +92,7 @@
         }
 
         h4 {
-            font-weight: 700;
+            font-weight: bold;
         }
     }
 
@@ -126,7 +110,7 @@
         }
 
         h4 {
-            font-weight: 700;
+            font-weight: bold;
         }
     }
 
@@ -136,7 +120,7 @@
 
         img {
             width: 100%;
-            border-radius: 1.2rem;
+            border-radius: $border-radius;
         }
     }
 
@@ -146,7 +130,7 @@
 
         img {
             width: 100%;
-            border-radius: 1.2rem;
+            border-radius: $border-radius;
         }
     }
 
@@ -156,7 +140,7 @@
 
         img {
             width: 100%;
-            border-radius: 1.2rem;
+            border-radius: $border-radius;
         }
     }
 }
@@ -203,7 +187,7 @@
 
             img {
                 width: 100%;
-                border-radius: 0.8rem;
+                border-radius: $border-radius-m;
             }
         }
 
@@ -212,7 +196,7 @@
 
             img {
                 width: 100%;
-                border-radius: 0.8rem;
+                border-radius: $border-radius-m;
             }
         }
 
@@ -221,7 +205,7 @@
 
             img {
                 width: 100%;
-                border-radius: 0.8rem;
+                border-radius: $border-radius-m;
             }
         }
 
@@ -236,7 +220,5 @@
         .instructionsStepsThree {
             padding: 0rem 3rem 0rem 3rem;
         }
-
-
     }
 }

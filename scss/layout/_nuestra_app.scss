@@ -10,76 +10,7 @@
         "bienaventurados bienaventurados";
     grid-template-columns: 1fr 1fr;
 
-    .presentationPage {
-        grid-area: presentationPage;
-        display: flex;
-        flex-direction: column;
-        padding: 10rem 4rem;
-        align-items: center;
-        text-align: center;
-
-        .subtitle {
-            width: 60%;
-            margin-top: 2rem;
-            text-align: center;
-        }
-
-    }
-
     /* USADAS EN NUESTRA APP */
-
-    .featureDescription {
-        grid-area: featureDescription;
-        padding: 10rem 5rem;
-    }
-
-    .featureImage {
-        grid-area: featureImage;
-        padding: 10rem 5rem;
-
-        img {
-            width: 26rem;
-            border-radius: 1.2rem;
-        }
-    }
-
-    .featureTwoDescription {
-        grid-area: featureTwoDescription;
-        padding: 10rem 5rem;
-    }
-
-    .featureTwoImage {
-        grid-area: featureTwoImage;
-        padding: 10rem 5rem;
-
-        img {
-            width: 26rem;
-            border-radius: 1.2rem;
-        }
-    }
-
-    .subtitleSection {
-        margin-top: 2rem;
-    }
-
-    .featureAltDescription {
-        grid-area: featureAltDescription;
-        padding: 10rem 5rem;
-        background-color: $color-claro;
-    }
-
-    .featureAltImage {
-        grid-area: featureAltImage;
-        display: flex;
-        justify-content: flex-end;
-        padding: 10rem 5rem;
-        background-color: $color-claro;
-
-        img {
-            width: 26rem;
-            border-radius: 1.2rem;
-        }
-    }
 
     .downloadButton {
         margin-top: 2rem;
@@ -93,7 +24,7 @@
 
     .othersSections {
         grid-area: moreFeatures;
-        background-color: #F9F9FA;
+        background-color: nth($colores, 3);
         padding: 5rem;
         text-align: center;
 
@@ -107,7 +38,7 @@
 
                 img {
                     width: 80%;
-                    border-radius: 1rem;
+                    border-radius: $border-radius;
                 }
 
                 .description {
@@ -159,48 +90,6 @@
 
         /* NUESTRA APP */
 
-        .featureDescription {
-            padding: 4rem 3rem;
-        }
-
-        .featureImage {
-            align-self: center;
-            padding: 4rem 3rem;
-
-            img {
-                width: 100%;
-                border-radius: 0.8rem;
-            }
-        }
-
-        .featureTwoDescription {
-            padding: 4rem 3rem;
-        }
-
-        .featureTwoImage {
-            align-self: center;
-            padding: 4rem 3rem;
-
-            img {
-                width: 100%;
-                border-radius: 0.8rem;
-            }
-        }
-
-        .featureAltDescription {
-            padding: 4rem 3rem;
-        }
-
-        .featureAltImage {
-            align-self: center;
-            padding: 4rem 3rem;
-
-            img {
-                width: 100%;
-                border-radius: 0.8rem;
-            }
-        }
-
         .othersSections {
             padding: 4rem 3rem;
             text-align: center;
@@ -218,7 +107,7 @@
                     img {
                         width: 100%;
                         min-width: 10rem;
-                        border-radius: 0.8rem;
+                        border-radius: $border-radius-m;
                     }
 
                     .description {

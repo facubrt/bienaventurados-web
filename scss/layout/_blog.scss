@@ -11,14 +11,14 @@
     grid-template-columns: 1fr 1fr;
 
     .lastPostDescription {
+        @include paddingHeader;
         grid-area: lastPostDescription;
-        padding: 10rem 5rem;
         background-color: nth($colores, 3);
     }
 
     .lastPostImage {
+        @include basePadding;
         grid-area: lastPostImage;
-        padding: 10rem 5rem;
         background-color: nth($colores, 3);
 
         img {
@@ -65,7 +65,7 @@
         }
 
         .lastPostImage {
-            padding: 4rem 3rem;
+            @include basePadding-m;
 
             img {
                 width: 100%;

@@ -11,8 +11,8 @@
     grid-template-columns: 1fr 1fr;
 
     .descriptionSE {
+        @include basePadding;
         background-color: nth($colores, 3);
-        padding: 140px 60px;
         grid-area: descriptionSE;
 
         .tagline {
@@ -21,8 +21,8 @@
     }
 
     .imgSE {
+        @include basePadding;
         grid-area: imgSE;
-        padding: 140px 60px;
         background-color: nth($colores, 3);
 
         img {
@@ -31,8 +31,8 @@
     }
 
     .descriptionStory {
+        @include basePadding;
         grid-area: descriptionStory;
-        padding: 140px 60px;
 
         .description {
             margin-top: 40px;
@@ -40,8 +40,8 @@
     }
 
     .imgStory {
+        @include basePadding;
         grid-area: imgStory;
-        padding: 140px 60px;
 
         img {
             width: 600px;
@@ -68,8 +68,8 @@
         /* ACERCA DE */
 
         .descriptionSE {
+            @include basePadding-m;
             background-color: nth($colores, 3);
-            padding: 4rem 3rem;
             grid-area: descriptionSE;
 
             .tagline {
@@ -90,8 +90,8 @@
         }
 
         .descriptionStory {
+            @include basePadding-m;
             grid-area: descriptionStory;
-            padding: 4rem 3rem;
 
             .description {
                 margin-top: 40px;

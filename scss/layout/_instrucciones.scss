@@ -14,11 +14,11 @@
     /* USADAS EN INSTRUCCIONES */
 
     .titleInstructions {
+        @include basePadding;
         grid-area: titleInstructions;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        margin: 10rem 5rem;
 
         h3 {
             margin-top: 1rem;
@@ -30,10 +30,10 @@
     }
 
     .titleInstructionsTwo {
+        @include basePadding;
         grid-area: titleInstructionsTwo;
         display: flex;
         justify-content: flex-end;
-        margin: 10rem 5rem;
 
         h3 {
             margin-top: 1rem;
@@ -45,11 +45,11 @@
     }
 
     .titleInstructionsThree {
+        @include basePadding;
         grid-area: titleInstructionsThree;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        margin: 10rem 5rem;
 
         h3 {
             margin-top: 1rem;
@@ -62,7 +62,7 @@
 
     .instructionsSteps {
         grid-area: instructionsSteps;
-        padding: 0rem 5rem 0rem 5rem;
+        padding: 0rem 5rem;
 
         h4 {
             font-weight: bold;
@@ -80,7 +80,7 @@
 
     .instructionsStepsTwo {
         grid-area: instructionsStepsTwo;
-        padding: 0rem 5rem 0rem 5rem;
+        padding: 0rem 5rem;
 
         ol {
             padding: 0rem;
@@ -98,7 +98,7 @@
 
     .instructionsStepsThree {
         grid-area: instructionsStepsThree;
-        padding: 0rem 5rem 0rem 5rem;
+        padding: 0rem 5rem;
 
         ol {
             padding: 0rem;
@@ -162,28 +162,28 @@
         grid-template-columns: 1fr;
 
         .titleInstructions {
+            @include basePadding-m;
             display: flex;
             justify-content: center;
             text-align: center;
-            margin: 4rem 3rem;
         }
 
         .titleInstructionsTwo {
+            @include basePadding-m;
             display: flex;
             justify-content: center;
             text-align: center;
-            margin: 4rem 3rem;
         }
 
         .titleInstructionsThree {
+            @include basePadding-m;
             display: flex;
             justify-content: center;
             text-align: center;
-            margin: 4rem 3rem;
         }
 
         .instructionsImage {
-            padding: 4rem 3rem 4rem 3rem;
+            @include basePadding-m;
 
             img {
                 width: 100%;
@@ -192,7 +192,7 @@
         }
 
         .instructionsImageTwo {
-            padding: 4rem 3rem 4rem 3rem;
+            @include basePadding-m;
 
             img {
                 width: 100%;
@@ -201,7 +201,7 @@
         }
 
         .instructionsImageThree {
-            padding: 4rem 3rem 4rem 3rem;
+            @include basePadding-m;
 
             img {
                 width: 100%;
@@ -210,15 +210,15 @@
         }
 
         .instructionsSteps {
-            padding: 0rem 3rem 0rem 3rem;
+            padding: 0rem 3rem;
         }
 
         .instructionsStepsTwo {
-            padding: 0rem 3rem 0rem 3rem;
+            padding: 0rem 3rem;
         }
 
         .instructionsStepsThree {
-            padding: 0rem 3rem 0rem 3rem;
+            padding: 0rem 3rem;
         }
     }
 }

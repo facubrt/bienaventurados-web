@@ -19,3 +19,40 @@ $size-h3-m: 1.4rem;
 $size-h4-m: 1rem;
 $size-h5-m: 0.8rem;
 $size-h6-m: 0.8rem;
+
+// MIXIN
+@mixin basePadding {
+    padding: 8rem 5rem;
+}
+
+@mixin basePadding-m {
+    padding: 4rem 3rem;
+}
+
+@mixin paddingHeader {
+    padding: 10rem 5rem;
+}
+
+@mixin paddingHeader-m {
+    padding: 8rem 3rem;
+}
+
+// EXTENDS
+%boldStyle {
+    color: nth($colores, 1);
+    line-height: 1;
+    font-weight: bold;
+}
+
+%normalStyle {
+    color: nth($colores, 1);
+    font-weight: normal;
+}
+
+// MAPAS
+
+$standard: (
+    color-standard: nth($colores, 2),
+    radius-standard: $border-radius,
+    image-standard: url('../../assets/images/comienza-tu-aventura.png'),
+);

@@ -1,4 +1,5 @@
 @import "utilities/variables";
+@import "utilities/globals";
 @import "layout/index";
 @import "layout/blog";
 @import "layout/instrucciones";
@@ -6,50 +7,6 @@
 @import "layout/nuestra_app";
 @import "layout/acerca_de";
 
-/* ----- PROPIEDADES GENERALES  ----- */
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins';
-}
-
-h1 {
-    color: nth($colores, 1);
-    font-size: $size-h1;
-    font-weight: bold;
-    line-height: 1;
-}
-
-h2 {
-    color: nth($colores, 1);
-    font-weight: normal;
-    font-size: $size-h2;
-}
-
-h3 {
-    color: nth($colores, 1);
-    font-weight: bold;
-    font-size: $size-h3;
-    line-height: 1;
-}
-
-h4 {
-    color: nth($colores, 1);
-    font-weight: normal;
-    font-size: $size-h4;
-}
-
-h5 {
-    font-size: $size-h5;
-    font-weight: bold;
-}
-
-h6 {
-    font-size: $size-h6;
-    font-weight: normal;
-}
 
 /* ----- INICIO PROPIEDADES DEL BODY  ----- */
 
@@ -137,13 +94,13 @@ header {
 /* CARACTERISTICAS (COMPARTIDO EN INDEX - NUESTRA APP - INSTRUCCIONES) */
 
 .featureDescription {
+    @include basePadding;
     grid-area: featureDescription;
-    padding: 10rem 5rem;
 }
 
 .featureImage {
     grid-area: featureImage;
-    padding: 10rem 5rem;
+    @include basePadding;
 
     img {
         width: 26rem;
@@ -152,13 +109,13 @@ header {
 }
 
 .featureTwoDescription {
+    @include basePadding;
     grid-area: featureTwoDescription;
-    padding: 10rem 5rem;
 }
 
 .featureTwoImage {
+    @include basePadding;
     grid-area: featureTwoImage;
-    padding: 10rem 5rem;
 
     img {
         width: 26rem;
@@ -171,16 +128,16 @@ header {
 }
 
 .featureAltDescription {
+    @include basePadding;
     grid-area: featureAltDescription;
-    padding: 10rem 5rem;
     background-color: nth($colores, 3);
 }
 
 .featureAltImage {
+    @include basePadding;
     grid-area: featureAltImage;
     display: flex;
     justify-content: flex-end;
-    padding: 10rem 5rem;
     background-color: nth($colores, 3);
 
     img {
@@ -192,8 +149,8 @@ header {
 /* BLOG SECTION (COMPARTIDO EN INDEX - BLOG) */
 
 .blogSection {
+    @include basePadding;
     grid-area: blog;
-    padding: 5rem;
 
     h3 {
         margin: 1rem 0rem;
@@ -229,7 +186,7 @@ header {
 footer {
     grid-area: footer;
     background-color: nth($colores, 1);
-    padding: 80px 60px 40px 60px;
+    padding: 6rem 5rem 2rem 5rem;
 
     h5,
     h6 {
@@ -325,48 +282,22 @@ footer {
 
 @media only screen and (max-width: 600px) {
 
-    /* GENERALES */
-
-    h1 {
-        font-size: $size-h1-m;
-    }
-
-    h2 {
-        font-size: $size-h2-m;
-    }
-
-    h3 {
-        font-size: $size-h3-m;
-    }
-
-    h4 {
-        font-size: $size-h4-m;
-    }
-
-    h5 {
-        font-size: $size-h5-m;
-    }
-
-    h6 {
-        font-size: $size-h6-m;
-    }
-
     /* PRESENTACION DE PAGINA */
 
     .presentationPage {
-        padding: 8rem 3rem;
+        @include paddingHeader-m;
     }
 
     /* CARACTERISTICAS */
 
 
     .featureDescription {
-        padding: 4rem 3rem;
+        @include basePadding-m;
     }
 
     .featureImage {
         align-self: center;
-        padding: 4rem 3rem;
+        @include basePadding-m;
 
         img {
             width: 100%;
@@ -375,12 +306,12 @@ footer {
     }
 
     .featureTwoDescription {
-        padding: 4rem 3rem;
+        @include basePadding-m;
     }
 
     .featureTwoImage {
+        @include basePadding-m;
         align-self: center;
-        padding: 4rem 3rem;
 
         img {
             width: 100%;
@@ -389,12 +320,12 @@ footer {
     }
 
     .featureAltDescription {
-        padding: 4rem 3rem;
+        @include basePadding-m;
     }
 
     .featureAltImage {
+        @include basePadding-m;
         align-self: center;
-        padding: 4rem 3rem;
 
         img {
             width: 100%;
@@ -404,7 +335,7 @@ footer {
 
     /* BLOG SECTION */
     .blogSection {
-        padding: 4rem 3rem;
+        @include basePadding-m;
 
         .posts {
             flex-direction: column;
@@ -427,7 +358,7 @@ footer {
     /* FOOTER */
 
     footer {
-        padding: 4rem 3rem;
+        @include basePadding-m;
 
         ul {
             list-style: none;

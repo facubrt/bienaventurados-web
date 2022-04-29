@@ -12,8 +12,8 @@
     grid-template-columns: 1fr 1fr;
 
     .presentationDescription {
+        @include paddingHeader;
         grid-area: presentationDescription;
-        padding: 10rem 5rem;
 
         .subtitle {
             margin-top: 2rem;
@@ -26,8 +26,8 @@
         padding: 10rem 0rem;
 
         img {
-            border-radius: 0.8rem;
             width: 24%;
+            border-radius: 0.8rem;
             margin: 1rem;
             position: relative;
             right: 3rem;
@@ -37,15 +37,15 @@
 
     .downloadSection {
         grid-area: download;
-        padding: 5rem;
+        @include basePadding;
 
         .downloadContainer {
             display: flex;
-            background-color: nth($colores, 2);
-            border-radius: $border-radius;
             justify-content: space-between;
             align-items: flex-end;
-            background-image: url('../../assets/images/comienza-tu-aventura.png');
+            background-color: map-get($map: $standard, $key: color-standard);
+            border-radius: map-get($map: $standard, $key: radius-standard);
+            background-image: map-get($map: $standard, $key: image-standard);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -62,6 +62,12 @@
 
                 .downloadButton {
                     margin-top: 2rem;
+
+                    img {
+                        &:hover {
+                            transform: scale(1.02);
+                        }
+                    }
                 }
             }
         }
@@ -86,7 +92,7 @@
         /* USADO EN PAGINA INICIO */
 
         .presentationDescription {
-            padding: 8rem 3rem;
+            @include paddingHeader-m;
             text-align: center;
         }
 
@@ -110,7 +116,7 @@
         }
 
         .downloadSection {
-            padding: 4rem 3rem;
+            @include basePadding-m;
 
             .downloadContainer {
                 border-radius: 0.8rem;

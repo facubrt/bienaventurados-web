@@ -23,15 +23,15 @@
     }
 
     .othersSections {
+        @include basePadding;
         grid-area: moreFeatures;
         background-color: nth($colores, 3);
-        padding: 5rem;
         text-align: center;
 
         .features {
             display: flex;
             justify-content: space-around;
-            padding: 5rem;
+            padding: 4rem 0rem;
 
             .feature {
                 width: 25%;
@@ -49,11 +49,11 @@
     }
 
     .bienaventuradosSection {
+        @include basePadding;
         grid-area: bienaventurados;
         display: flex;
         justify-content: center;
         text-align: center;
-        padding: 10rem;
 
         .containerBienaventuradosSection {
             width: 40%;
@@ -63,7 +63,7 @@
             }
 
             .isoBienaventurados {
-                height: 10rem;
+                width: 20%;
                 margin-bottom: 4rem;
             }
         }
@@ -91,7 +91,7 @@
         /* NUESTRA APP */
 
         .othersSections {
-            padding: 4rem 3rem;
+            @include basePadding-m;
             text-align: center;
 
             .features {
@@ -102,10 +102,11 @@
                 padding: 4rem 0rem;
 
                 .feature {
-                    width: 100%;
+                    width: 50%;
+                    margin: 2rem 0rem;
 
                     img {
-                        width: 100%;
+                        width: 25%;
                         min-width: 10rem;
                         border-radius: $border-radius-m;
                     }
@@ -118,11 +119,11 @@
         }
 
         .bienaventuradosSection {
+            @include basePadding-m;
             grid-area: bienaventurados;
             display: flex;
             justify-content: center;
             text-align: center;
-            padding: 4rem 3rem;
 
             .containerBienaventuradosSection {
                 width: 100%;
@@ -132,7 +133,7 @@
                 }
 
                 .isoBienaventurados {
-                    height: 10rem;
+                    width: 20%;
                     margin-bottom: 4rem;
                 }
             }

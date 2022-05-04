@@ -74,7 +74,61 @@
 
 /* -----  INICIO PROPIEDADES MEDIA QUERYS -----  */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
+    .mainApp {
+        /* NUESTRA APP */
+
+        .othersSections {
+            @include basePadding-t;
+
+            .features {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+
+                .feature {
+                    width: 50%;
+                    margin: 2rem 0rem;
+
+                    img {
+                        width: 25%;
+                        min-width: 10rem;
+                        border-radius: $border-radius-m;
+                    }
+
+                    .description {
+                        margin: 2rem;
+                    }
+                }
+            }
+        }
+
+        .bienaventuradosSection {
+            @include basePadding-m;
+            grid-area: bienaventurados;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+
+            .containerBienaventuradosSection {
+                width: 100%;
+
+                .quote {
+                    margin: 2rem;
+                }
+
+                .isoBienaventurados {
+                    width: 20%;
+                    margin-bottom: 4rem;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 680px) {
     .mainApp {
         display: grid;
         grid-template-areas: "presentationPage"

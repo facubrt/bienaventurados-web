@@ -39,7 +39,37 @@ h6 {
     font-weight: normal;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
+
+    /* GENERALES */
+
+    h1 {
+        font-size: $size-h1-t;
+    }
+
+    h2 {
+        font-size: $size-h2-t;
+    }
+
+    h3 {
+        font-size: $size-h3-t;
+    }
+
+    h4 {
+        font-size: $size-h4-t;
+    }
+
+    h5 {
+        font-size: $size-h5-t;
+    }
+
+    h6 {
+        font-size: $size-h6-t;
+    }
+
+}
+
+@media only screen and (max-width: 680px) {
 
     /* GENERALES */
 

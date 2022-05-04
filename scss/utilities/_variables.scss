@@ -6,15 +6,22 @@ $border-radius: 1.2rem;
 $border-radius-m: 0.8rem;
 
 // TAMAÑO DE TXT
-$size-h1: 4.4rem;
-$size-h2: 1.6rem;
-$size-h3: 2.6rem;
-$size-h4: 1.4rem;
+$size-h1: 3.4rem;
+$size-h2: 1.4rem;
+$size-h3: 2rem;
+$size-h4: 1rem;
 $size-h5: 0.8rem;
 $size-h6: 0.8rem;
 
-$size-h1-m: 2.4rem;
-$size-h2-m: 1.4rem;
+$size-h1-t: 3.2rem;
+$size-h2-t: 1.2rem;
+$size-h3-t: 1.8rem;
+$size-h4-t: 1rem;
+$size-h5-t: 0.8rem;
+$size-h6-t: 0.8rem;
+
+$size-h1-m: 2.2rem;
+$size-h2-m: 1.2rem;
 $size-h3-m: 1.4rem;
 $size-h4-m: 1rem;
 $size-h5-m: 0.8rem;
@@ -25,12 +32,20 @@ $size-h6-m: 0.8rem;
     padding: 8rem 5rem;
 }
 
+@mixin basePadding-t {
+    padding: 6rem 5rem;
+}
+
 @mixin basePadding-m {
     padding: 4rem 3rem;
 }
 
 @mixin paddingHeader {
     padding: 10rem 5rem;
+}
+
+@mixin paddingHeader-t {
+    padding: 8rem 5rem;
 }
 
 @mixin paddingHeader-m {

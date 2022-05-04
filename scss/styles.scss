@@ -103,7 +103,7 @@ header {
     @include basePadding;
 
     img {
-        width: 26rem;
+        width: 20rem;
         border-radius: $border-radius;
     }
 }
@@ -118,7 +118,7 @@ header {
     grid-area: featureTwoImage;
 
     img {
-        width: 26rem;
+        width: 20rem;
         border-radius: $border-radius;
     }
 }
@@ -141,7 +141,7 @@ header {
     background-color: nth($colores, 3);
 
     img {
-        width: 26rem;
+        width: 20rem;
         border-radius: $border-radius;
     }
 }
@@ -169,6 +169,10 @@ header {
         .post2 {
             width: 40%;
 
+            p {
+                font-size: $size-h5;
+            }
+
             img {
                 width: 100%;
                 border-radius: $border-radius;
@@ -195,7 +199,7 @@ footer {
 
     a {
         text-decoration: none;
-        font-size: 0.8rem;
+        font-size: $size-h5;
         font-weight: normal;
         color: nth($colores, 3);
 
@@ -209,6 +213,7 @@ footer {
         padding: 0rem;
 
         li {
+            font-size: $size-h5;
             margin: 12px 0px;
             padding: 0rem;
             color: nth($colores, 3);
@@ -280,7 +285,113 @@ footer {
 
 /* ----- MEDIA QUERYS GENERALES ----- */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
+
+    /* PRESENTACION DE PAGINA */
+
+    .presentationPage {
+        @include paddingHeader-t;
+    }
+
+    /* CARACTERISTICAS */
+
+
+    .featureDescription {
+        @include basePadding-t;
+    }
+
+    .featureImage {
+        align-self: center;
+
+        img {
+            width: 100%;
+            border-radius: 0.8rem;
+        }
+    }
+
+    .featureTwoDescription {
+        @include basePadding-t;
+    }
+
+    .featureTwoImage {
+
+        img {
+            width: 100%;
+            border-radius: 0.8rem;
+        }
+    }
+
+    .featureAltImage {
+        align-self: center;
+
+        img {
+            width: 100%;
+            border-radius: 0.8rem;
+        }
+    }
+
+    /* BLOG SECTION */
+    .blogSection {
+        @include basePadding-t;
+    }
+
+    footer {
+        padding: 6rem 5rem 2rem 5rem;
+
+        a {
+            font-size: $size-h5-t;
+        }
+
+        ul {
+            li {
+                font-size: $size-h5-t;
+            }
+        }
+
+        .footerInfo {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+
+            .footerLogo {
+                img {
+                    display: none;
+                }
+            }
+
+            .footerLinks {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                width: 100%;
+    
+                .footerPages {
+                    margin: 0px 40px 0px 0px;
+                }
+    
+                .footerSocial {
+                    padding-top: 16px;
+                    margin: 0px 40px 0px 0px;
+                }
+    
+                .footerProjects {
+                    padding-top: 16px;
+                    margin: 0px 40px 0px 0px;
+                }
+    
+                .footerDownload {
+                    padding-top: 16px;
+    
+                    img {
+                        padding-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 680px) {
 
     /* PRESENTACION DE PAGINA */
 
@@ -360,8 +471,14 @@ footer {
     footer {
         @include basePadding-m;
 
+        a {
+            font-size: $size-h5-m;
+        }
+
         ul {
-            list-style: none;
+            li {
+                font-size: $size-h5-t;
+            }
         }
 
         .footerInfo {
@@ -372,6 +489,10 @@ footer {
             }
 
             .footerLinks {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                width: 100%;
 
                 .footerPages {
                     margin: 2rem 2rem;

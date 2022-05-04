@@ -11,7 +11,7 @@
     grid-template-columns: 1fr 1fr;
 
     .lastPostDescription {
-        @include paddingHeader;
+        @include basePadding;
         grid-area: lastPostDescription;
         background-color: nth($colores, 3);
     }
@@ -22,7 +22,8 @@
         background-color: nth($colores, 3);
 
         img {
-            width: 40rem;
+            width: 100%;
+            min-width: 20rem;
             border-radius: $border-radius;
         }
     }
@@ -32,6 +33,21 @@
         display: flex;
         justify-content: center;
         margin-bottom: 4rem;
+
+        .btn {
+            border: 2px solid nth($colores, 1);
+            border-radius: $border-radius;
+        }
+
+        .btn-primary {
+            background-color: nth($colores, 4);
+            color: nth($colores, 1);
+
+            &:hover {
+                background-color: nth($colores, 1);
+                color: nth($colores, 4);
+            }
+        }
 
         .buttonMorePosts {
             margin: 1.2rem 20rem;
@@ -48,7 +64,27 @@
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
+
+    /* GRID LAYOUT */
+    .mainBlog {
+        .lastPostDescription {
+            @include paddingHeader-t;
+        }
+    
+        .lastPostImage {
+            @include basePadding-t;
+    
+            img {
+                width: 100%;
+                border-radius: $border-radius;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 680px) {
     .mainBlog {
         display: grid;
         grid-template-areas: "presentationPage"

@@ -24,16 +24,16 @@ h2, h4 {
   font-family: 'Poppins'; }
 
 h1 {
-  font-size: 4.4rem; }
+  font-size: 3.4rem; }
 
 h2 {
-  font-size: 1.6rem; }
+  font-size: 1.4rem; }
 
 h3 {
-  font-size: 2.6rem; }
+  font-size: 2rem; }
 
 h4 {
-  font-size: 1.4rem; }
+  font-size: 1rem; }
 
 h5 {
   font-size: 0.8rem;
@@ -43,12 +43,27 @@ h6 {
   font-size: 0.8rem;
   font-weight: normal; }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
   /* GENERALES */
   h1 {
-    font-size: 2.4rem; }
+    font-size: 3.2rem; }
   h2 {
-    font-size: 1.4rem; }
+    font-size: 1.2rem; }
+  h3 {
+    font-size: 1.8rem; }
+  h4 {
+    font-size: 1rem; }
+  h5 {
+    font-size: 0.8rem; }
+  h6 {
+    font-size: 0.8rem; } }
+
+@media only screen and (max-width: 680px) {
+  /* GENERALES */
+  h1 {
+    font-size: 2.2rem; }
+  h2 {
+    font-size: 1.2rem; }
   h3 {
     font-size: 1.4rem; }
   h4 {
@@ -82,7 +97,7 @@ h2, h4 {
     background-color: #F9F9FA;
     padding: 10rem 0rem; }
     .mainIndex .presentationImage img {
-      width: 24%;
+      width: 20%;
       border-radius: 0.8rem;
       margin: 1rem;
       position: relative;
@@ -113,7 +128,19 @@ h2, h4 {
           .mainIndex .downloadSection .downloadContainer .downloadApp .downloadButton img:hover {
             transform: scale(1.02); }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
+  /* GRID LAYOUT */
+  .mainIndex {
+    /* USADO EN PAGINA INICIO */ }
+    .mainIndex .presentationDescription {
+      padding: 8rem 5rem; }
+    .mainIndex .presentationImage {
+      padding: 8rem 5rem;
+      padding: 8rem 0rem; }
+    .mainIndex .downloadSection {
+      padding: 6rem 5rem; } }
+
+@media only screen and (max-width: 680px) {
   /* GRID LAYOUT */
   .mainIndex {
     display: grid;
@@ -164,7 +191,7 @@ h2, h4 {
   grid-template-areas: "presentationPage presentationPage" "lastPostDescription lastPostImage" "blog blog" "morePosts morePosts";
   grid-template-columns: 1fr 1fr; }
   .mainBlog .lastPostDescription {
-    padding: 10rem 5rem;
+    padding: 8rem 5rem;
     grid-area: lastPostDescription;
     background-color: #F9F9FA; }
   .mainBlog .lastPostImage {
@@ -172,13 +199,23 @@ h2, h4 {
     grid-area: lastPostImage;
     background-color: #F9F9FA; }
     .mainBlog .lastPostImage img {
-      width: 40rem;
+      width: 100%;
+      min-width: 20rem;
       border-radius: 1.2rem; }
   .mainBlog .morePosts {
     grid-area: morePosts;
     display: flex;
     justify-content: center;
     margin-bottom: 4rem; }
+    .mainBlog .morePosts .btn {
+      border: 2px solid #372256;
+      border-radius: 1.2rem; }
+    .mainBlog .morePosts .btn-primary {
+      background-color: #FFFFFF;
+      color: #372256; }
+      .mainBlog .morePosts .btn-primary:hover {
+        background-color: #372256;
+        color: #FFFFFF; }
     .mainBlog .morePosts .buttonMorePosts {
       margin: 1.2rem 20rem;
       display: flex;
@@ -189,7 +226,17 @@ h2, h4 {
       .mainBlog .morePosts .buttonMorePosts h4 {
         font-weight: bold; }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
+  /* GRID LAYOUT */
+  .mainBlog .lastPostDescription {
+    padding: 8rem 5rem; }
+  .mainBlog .lastPostImage {
+    padding: 6rem 5rem; }
+    .mainBlog .lastPostImage img {
+      width: 100%;
+      border-radius: 1.2rem; } }
+
+@media only screen and (max-width: 680px) {
   .mainBlog {
     display: grid;
     grid-template-areas: "presentationPage" "lastPostDescription" "lastPostImage" "blog" "morePosts";
@@ -300,7 +347,36 @@ h2, h4 {
       width: 100%;
       border-radius: 1.2rem; }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
+  .mainInstructions .titleInstructions {
+    padding: 6rem 5rem; }
+  .mainInstructions .titleInstructionsTwo {
+    padding: 6rem 5rem; }
+  .mainInstructions .titleInstructionsThree {
+    padding: 6rem 5rem; }
+  .mainInstructions .instructionsImage {
+    padding: 6rem 5rem; }
+    .mainInstructions .instructionsImage img {
+      width: 100%;
+      border-radius: 0.8rem; }
+  .mainInstructions .instructionsImageTwo {
+    padding: 6rem 5rem; }
+    .mainInstructions .instructionsImageTwo img {
+      width: 100%;
+      border-radius: 0.8rem; }
+  .mainInstructions .instructionsImageThree {
+    padding: 6rem 5rem; }
+    .mainInstructions .instructionsImageThree img {
+      width: 100%;
+      border-radius: 0.8rem; }
+  .mainInstructions .instructionsSteps {
+    padding: 0rem 5rem; }
+  .mainInstructions .instructionsStepsTwo {
+    padding: 0rem 5rem; }
+  .mainInstructions .instructionsStepsThree {
+    padding: 0rem 5rem 6rem 0rem; } }
+
+@media only screen and (max-width: 680px) {
   .mainInstructions {
     display: grid;
     grid-template-areas: "presentationPage" "titleInstructions" "instructionsSteps" "instructionsImage" "titleInstructionsTwo" "instructionsStepsTwo" "instructionsImageTwo" "titleInstructionsThree" "instructionsStepsThree" "instructionsImageThree";
@@ -434,7 +510,36 @@ h2, h4 {
       width: 100%;
       border-radius: 1.2rem; }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
+  .mainInstructions .titleInstructions {
+    padding: 6rem 5rem; }
+  .mainInstructions .titleInstructionsTwo {
+    padding: 6rem 5rem; }
+  .mainInstructions .titleInstructionsThree {
+    padding: 6rem 5rem; }
+  .mainInstructions .instructionsImage {
+    padding: 6rem 5rem; }
+    .mainInstructions .instructionsImage img {
+      width: 100%;
+      border-radius: 0.8rem; }
+  .mainInstructions .instructionsImageTwo {
+    padding: 6rem 5rem; }
+    .mainInstructions .instructionsImageTwo img {
+      width: 100%;
+      border-radius: 0.8rem; }
+  .mainInstructions .instructionsImageThree {
+    padding: 6rem 5rem; }
+    .mainInstructions .instructionsImageThree img {
+      width: 100%;
+      border-radius: 0.8rem; }
+  .mainInstructions .instructionsSteps {
+    padding: 0rem 5rem; }
+  .mainInstructions .instructionsStepsTwo {
+    padding: 0rem 5rem; }
+  .mainInstructions .instructionsStepsThree {
+    padding: 0rem 5rem 6rem 0rem; } }
+
+@media only screen and (max-width: 680px) {
   .mainInstructions {
     display: grid;
     grid-template-areas: "presentationPage" "titleInstructions" "instructionsSteps" "instructionsImage" "titleInstructionsTwo" "instructionsStepsTwo" "instructionsImageTwo" "titleInstructionsThree" "instructionsStepsThree" "instructionsImageThree";
@@ -525,7 +630,40 @@ h2, h4 {
         margin-bottom: 4rem; }
 
 /* -----  INICIO PROPIEDADES MEDIA QUERYS -----  */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
+  .mainApp {
+    /* NUESTRA APP */ }
+    .mainApp .othersSections {
+      padding: 6rem 5rem; }
+      .mainApp .othersSections .features {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between; }
+        .mainApp .othersSections .features .feature {
+          width: 50%;
+          margin: 2rem 0rem; }
+          .mainApp .othersSections .features .feature img {
+            width: 25%;
+            min-width: 10rem;
+            border-radius: 0.8rem; }
+          .mainApp .othersSections .features .feature .description {
+            margin: 2rem; }
+    .mainApp .bienaventuradosSection {
+      padding: 4rem 3rem;
+      grid-area: bienaventurados;
+      display: flex;
+      justify-content: center;
+      text-align: center; }
+      .mainApp .bienaventuradosSection .containerBienaventuradosSection {
+        width: 100%; }
+        .mainApp .bienaventuradosSection .containerBienaventuradosSection .quote {
+          margin: 2rem; }
+        .mainApp .bienaventuradosSection .containerBienaventuradosSection .isoBienaventurados {
+          width: 20%;
+          margin-bottom: 4rem; } }
+
+@media only screen and (max-width: 680px) {
   .mainApp {
     display: grid;
     grid-template-areas: "presentationPage" "featureDescription" "featureImage" "featureAltDescription" "featureAltImage" "featureTwoDescription" "featureTwoImage" "moreFeatures" "bienaventurados";
@@ -588,7 +726,7 @@ h2, h4 {
     grid-area: imgSE;
     background-color: #F9F9FA; }
     .mainAbout .imgSE img {
-      height: 260px; }
+      width: 60%; }
   .mainAbout .descriptionStory {
     padding: 8rem 5rem;
     grid-area: descriptionStory; }
@@ -598,11 +736,32 @@ h2, h4 {
     padding: 8rem 5rem;
     grid-area: imgStory; }
     .mainAbout .imgStory img {
-      width: 600px;
+      width: 100%;
       border-radius: 1.2rem; }
 
 /* -----  INICIO PROPIEDADES MEDIA QUERYS -----  */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
+  .mainAbout .descriptionSE {
+    padding: 6rem 5rem; }
+  .mainAbout .imgSE {
+    padding: 6rem 5rem;
+    display: flex;
+    justify-content: center; }
+    .mainAbout .imgSE img {
+      width: 60%; }
+  .mainAbout .descriptionStory {
+    padding: 6rem 5rem;
+    grid-area: descriptionStory; }
+    .mainAbout .descriptionStory .description {
+      margin-top: 40px; }
+  .mainAbout .imgStory {
+    grid-area: imgStory;
+    padding: 4rem 3rem 0rem 3rem; }
+    .mainAbout .imgStory img {
+      width: 100%;
+      border-radius: border-radius-m; } }
+
+@media only screen and (max-width: 680px) {
   .mainAbout {
     display: grid;
     grid-template-areas: "presentationPage" "imgSE" "descriptionSE" "imgStory" "descriptionStory";
@@ -615,9 +774,7 @@ h2, h4 {
       .mainAbout .descriptionSE .tagline {
         margin: 10px 0px 40px 0px; }
     .mainAbout .imgSE {
-      grid-area: imgSE;
       padding: 4rem 3rem 0rem 3rem;
-      background-color: #F9F9FA;
       display: flex;
       justify-content: center; }
       .mainAbout .imgSE img {
@@ -695,7 +852,7 @@ header {
   grid-area: featureImage;
   padding: 8rem 5rem; }
   .featureImage img {
-    width: 26rem;
+    width: 20rem;
     border-radius: 1.2rem; }
 
 .featureTwoDescription {
@@ -706,7 +863,7 @@ header {
   padding: 8rem 5rem;
   grid-area: featureTwoImage; }
   .featureTwoImage img {
-    width: 26rem;
+    width: 20rem;
     border-radius: 1.2rem; }
 
 .subtitleSection {
@@ -724,7 +881,7 @@ header {
   justify-content: flex-end;
   background-color: #F9F9FA; }
   .featureAltImage img {
-    width: 26rem;
+    width: 20rem;
     border-radius: 1.2rem; }
 
 /* BLOG SECTION (COMPARTIDO EN INDEX - BLOG) */
@@ -742,6 +899,9 @@ header {
     .blogSection .posts .post1,
     .blogSection .posts .post2 {
       width: 40%; }
+      .blogSection .posts .post1 p,
+      .blogSection .posts .post2 p {
+        font-size: 0.8rem; }
       .blogSection .posts .post1 img,
       .blogSection .posts .post2 img {
         width: 100%;
@@ -769,6 +929,7 @@ footer {
     list-style: none;
     padding: 0rem; }
     footer ul li {
+      font-size: 0.8rem;
       margin: 12px 0px;
       padding: 0rem;
       color: #F9F9FA; }
@@ -810,7 +971,62 @@ footer {
           color: #F9F9FA; }
 
 /* ----- MEDIA QUERYS GENERALES ----- */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
+  /* PRESENTACION DE PAGINA */
+  .presentationPage {
+    padding: 8rem 5rem; }
+  /* CARACTERISTICAS */
+  .featureDescription {
+    padding: 6rem 5rem; }
+  .featureImage {
+    align-self: center; }
+    .featureImage img {
+      width: 100%;
+      border-radius: 0.8rem; }
+  .featureTwoDescription {
+    padding: 6rem 5rem; }
+  .featureTwoImage img {
+    width: 100%;
+    border-radius: 0.8rem; }
+  .featureAltImage {
+    align-self: center; }
+    .featureAltImage img {
+      width: 100%;
+      border-radius: 0.8rem; }
+  /* BLOG SECTION */
+  .blogSection {
+    padding: 6rem 5rem; }
+  footer {
+    padding: 6rem 5rem 2rem 5rem; }
+    footer a {
+      font-size: 0.8rem; }
+    footer ul li {
+      font-size: 0.8rem; }
+    footer .footerInfo {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center; }
+      footer .footerInfo .footerLogo img {
+        display: none; }
+      footer .footerInfo .footerLinks {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 100%; }
+        footer .footerInfo .footerLinks .footerPages {
+          margin: 0px 40px 0px 0px; }
+        footer .footerInfo .footerLinks .footerSocial {
+          padding-top: 16px;
+          margin: 0px 40px 0px 0px; }
+        footer .footerInfo .footerLinks .footerProjects {
+          padding-top: 16px;
+          margin: 0px 40px 0px 0px; }
+        footer .footerInfo .footerLinks .footerDownload {
+          padding-top: 16px; }
+          footer .footerInfo .footerLinks .footerDownload img {
+            padding-top: 20px; } }
+
+@media only screen and (max-width: 680px) {
   /* PRESENTACION DE PAGINA */
   .presentationPage {
     padding: 8rem 3rem; }
@@ -855,23 +1071,30 @@ footer {
   /* FOOTER */
   footer {
     padding: 4rem 3rem; }
-    footer ul {
-      list-style: none; }
+    footer a {
+      font-size: 0.8rem; }
+    footer ul li {
+      font-size: 0.8rem; }
     footer .footerInfo .footerLogo img {
       display: none; }
-    footer .footerInfo .footerLinks .footerPages {
-      margin: 2rem 2rem; }
-    footer .footerInfo .footerLinks .footerSocial {
-      margin: 2rem 2rem; }
-    footer .footerInfo .footerLinks .footerProjects {
-      margin: 2rem 2rem; }
-    footer .footerInfo .footerLinks .footerDownload {
-      width: 100%;
-      padding: 1rem;
+    footer .footerInfo .footerLinks {
       display: flex;
-      justify-content: center; }
-      footer .footerInfo .footerLinks .footerDownload .tituloDescarga {
-        display: none; }
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%; }
+      footer .footerInfo .footerLinks .footerPages {
+        margin: 2rem 2rem; }
+      footer .footerInfo .footerLinks .footerSocial {
+        margin: 2rem 2rem; }
+      footer .footerInfo .footerLinks .footerProjects {
+        margin: 2rem 2rem; }
+      footer .footerInfo .footerLinks .footerDownload {
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        justify-content: center; }
+        footer .footerInfo .footerLinks .footerDownload .tituloDescarga {
+          display: none; }
     footer .footerLegal {
       display: flex;
       padding-top: 0rem;

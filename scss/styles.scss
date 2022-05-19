@@ -1,11 +1,52 @@
 @import "utilities/variables";
-@import "utilities/globals";
+@import "layout/media";
+@import "layout/animaciones";
+
 @import "layout/index";
 @import "layout/blog";
 @import "layout/instrucciones";
 @import "layout/instrucciones";
 @import "layout/nuestra_app";
 @import "layout/acerca_de";
+
+/* ----- PROPIEDADES GENERALES  ----- */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+h1 {
+    @extend %boldStyle;
+    font-size: $size-h1;
+}
+
+h2 {
+    @extend %normalStyle;
+    font-size: $size-h2;
+}
+
+h3 {
+    @extend %boldStyle;
+    font-size: $size-h3;
+}
+
+h4 {
+    @extend %normalStyle;
+    font-size: $size-h4;
+}
+
+h5 {
+    font-size: $size-h5;
+    font-weight: bold;
+}
+
+h6 {
+    font-size: $size-h6;
+    font-weight: normal;
+}
 
 
 /* ----- INICIO PROPIEDADES DEL BODY  ----- */
@@ -162,12 +203,13 @@ header {
 
     .posts {
         margin-top: 2rem;
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         justify-content: space-between;
+        gap: 4rem;
 
-        .post1,
-        .post2 {
-            width: 40%;
+        .post {
+            padding: 1rem;
 
             p {
                 font-size: $size-h5;
@@ -180,6 +222,11 @@ header {
 
             .titlePost {
                 margin: 1rem 0px;
+            }
+
+            &:hover {
+                border-radius: $border-radius;
+                box-shadow: 0 0 11px rgba(33,33,33,.2);
             }
         }
     }
@@ -283,9 +330,35 @@ footer {
     }
 }
 
-/* ----- MEDIA QUERYS GENERALES ----- */
+/* -----  INICIO PROPIEDADES MEDIA QUERYS -----  */
 
 @media only screen and (max-width: 1024px) {
+
+    /* GENERALES */
+
+    h1 {
+        font-size: $size-h1-t;
+    }
+
+    h2 {
+        font-size: $size-h2-t;
+    }
+
+    h3 {
+        font-size: $size-h3-t;
+    }
+
+    h4 {
+        font-size: $size-h4-t;
+    }
+
+    h5 {
+        font-size: $size-h5-t;
+    }
+
+    h6 {
+        font-size: $size-h6-t;
+    }
 
     /* PRESENTACION DE PAGINA */
 
@@ -305,7 +378,7 @@ footer {
 
         img {
             width: 100%;
-            border-radius: 0.8rem;
+            border-radius: $border-radius-m;
         }
     }
 
@@ -333,6 +406,11 @@ footer {
     /* BLOG SECTION */
     .blogSection {
         @include basePadding-t;
+    
+        .posts {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
     }
 
     footer {
@@ -364,24 +442,24 @@ footer {
                 flex-wrap: nowrap;
                 justify-content: space-between;
                 width: 100%;
-    
+
                 .footerPages {
                     margin: 0px 40px 0px 0px;
                 }
-    
+
                 .footerSocial {
                     padding-top: 16px;
                     margin: 0px 40px 0px 0px;
                 }
-    
+
                 .footerProjects {
                     padding-top: 16px;
                     margin: 0px 40px 0px 0px;
                 }
-    
+
                 .footerDownload {
                     padding-top: 16px;
-    
+
                     img {
                         padding-top: 20px;
                     }
@@ -389,9 +467,222 @@ footer {
             }
         }
     }
+
+    /* INDEX */
+
+    .mainIndex {
+
+        /* USADO EN PAGINA INICIO */
+        .presentationDescription {
+            @include paddingHeader-t;
+
+        }
+
+        .presentationImage {
+            @include paddingHeader-t;
+            padding: 8rem 0rem;
+        }
+
+        .downloadSection {
+            @include basePadding-t;
+        }
+    }
+
+    /* BLOG */
+
+    .mainBlog {
+        .lastPostDescription {
+            @include paddingHeader-t;
+        }
+
+        .lastPostImage {
+            @include basePadding-t;
+
+            img {
+                width: 100%;
+                border-radius: $border-radius;
+            }
+        }
+    }
+
+    /* INSTRUCCIONES */
+
+    .mainInstructions {
+        .titleInstructions {
+            @include basePadding-t;
+        }
+
+        .titleInstructionsTwo {
+            @include basePadding-t;
+        }
+
+        .titleInstructionsThree {
+            @include basePadding-t;
+        }
+
+        .instructionsImage {
+            @include basePadding-t;
+
+            img {
+                width: 100%;
+                border-radius: $border-radius-m;
+            }
+        }
+
+        .instructionsImageTwo {
+            @include basePadding-t;
+
+            img {
+                width: 100%;
+                border-radius: $border-radius-m;
+            }
+        }
+
+        .instructionsImageThree {
+            @include basePadding-t;
+
+            img {
+                width: 100%;
+                border-radius: $border-radius-m;
+            }
+        }
+
+        .instructionsSteps {
+            padding: 0rem 5rem;
+        }
+
+        .instructionsStepsTwo {
+            padding: 0rem 5rem;
+        }
+
+        .instructionsStepsThree {
+            padding: 0rem 5rem 6rem 0rem;
+        }
+    }
+
+    /* NUESTRA APP */
+
+    .mainApp {
+        /* NUESTRA APP */
+
+        .othersSections {
+            @include basePadding-t;
+
+            .features {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+
+                .feature {
+                    width: 50%;
+                    margin: 2rem 0rem;
+
+                    img {
+                        width: 60%;
+                        min-width: 10rem;
+                        border-radius: $border-radius-m;
+                    }
+
+                    .description {
+                        margin: 2rem;
+                    }
+                }
+            }
+        }
+
+        .bienaventuradosSection {
+            @include basePadding-m;
+            grid-area: bienaventurados;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+
+            .containerBienaventuradosSection {
+                width: 100%;
+
+                .quote {
+                    margin: 2rem;
+                }
+
+                .isoBienaventurados {
+                    width: 20%;
+                    margin-bottom: 4rem;
+                }
+            }
+        }
+    }
+
+    /* ACERCA DE */
+
+    .mainAbout {
+        .descriptionSE {
+            @include basePadding-t;
+        }
+
+        .imgSE {
+            @include basePadding-t;
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 60%;
+            }
+        }
+
+        .descriptionStory {
+            @include basePadding-t;
+            grid-area: descriptionStory;
+
+            .description {
+                margin-top: 40px;
+            }
+        }
+
+        .imgStory {
+            grid-area: imgStory;
+            padding: 4rem 3rem 0rem 3rem;
+
+            img {
+                width: 100%;
+                border-radius: border-radius-m;
+            }
+        }
+
+    }
+
 }
 
+/* MEDIA QUERY PARA MOBILE */
+
 @media only screen and (max-width: 680px) {
+
+    /* GENERALES */
+
+
+    h1 {
+        font-size: $size-h1-m;
+    }
+
+    h2 {
+        font-size: $size-h2-m;
+    }
+
+    h3 {
+        font-size: $size-h3-m;
+    }
+
+    h4 {
+        font-size: $size-h4-m;
+    }
+
+    h5 {
+        font-size: $size-h5-m;
+    }
+
+    h6 {
+        font-size: $size-h6-m;
+    }
 
     /* PRESENTACION DE PAGINA */
 
@@ -451,10 +742,9 @@ footer {
         .posts {
             flex-direction: column;
 
-            .post1,
-            .post2 {
+            .post {
                 width: 100%;
-                padding: 2rem 0rem;
+                padding: 1rem;
 
                 img {
                     border-radius: 0.8rem;
@@ -539,20 +829,298 @@ footer {
             }
         }
     }
-}
 
-.animated {
-    animation-name: fadeIn;
-    animation-iteration-count: unset;
-    animation-duration: 1s;
-}
+    /* INDEX */
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+    /* GRID LAYOUT */
+    .mainIndex {
+        display: grid;
+        grid-template-areas: "presentationDescription"
+            "presentationImage"
+            "featureDescription"
+            "featureImage"
+            "featureAltDescription"
+            "featureAltImage"
+            "download"
+            "blog";
+        grid-template-columns: 1fr;
+
+        /* USADO EN PAGINA INICIO */
+
+        .presentationDescription {
+            @include paddingHeader-m;
+            text-align: center;
+        }
+
+        .presentationImage {
+            display: flex;
+            padding: 0rem;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            img {
+                margin: 0.8rem;
+                bottom: 2rem;
+                right: 0rem;
+            }
+
+            .img-row {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        .downloadSection {
+            @include basePadding-m;
+
+            .downloadContainer {
+                border-radius: 0.8rem;
+
+                .downloadApp {
+                    padding: 4rem;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    h3 {
+                        text-align: center;
+                    }
+                }
+            }
+        }
     }
 
-    to {
-        opacity: 1;
+    /* BLOG */
+
+    .mainBlog {
+        display: grid;
+        grid-template-areas: "presentationPage"
+            "lastPostDescription"
+            "lastPostImage"
+            "blog"
+            "morePosts";
+        grid-template-columns: 1fr;
+
+        /* BLOG */
+
+        .lastPostDescription {
+            padding: 4rem 3rem 0rem 3rem;
+        }
+
+        .lastPostImage {
+            @include basePadding-m;
+
+            img {
+                width: 100%;
+                border-radius: $border-radius-m;
+            }
+        }
+
+        .morePosts {
+            margin-bottom: 4rem;
+
+            .buttonMorePosts {
+                margin: 1.2rem 0rem;
+                padding: 0.6rem;
+            }
+        }
     }
+
+    /* INSTRUCCIONES */
+
+    .mainInstructions {
+        display: grid;
+        grid-template-areas: "presentationPage"
+            "titleInstructions"
+            "instructionsSteps"
+            "instructionsImage"
+            "titleInstructionsTwo"
+            "instructionsStepsTwo"
+            "instructionsImageTwo"
+            "titleInstructionsThree"
+            "instructionsStepsThree"
+            "instructionsImageThree";
+        grid-template-columns: 1fr;
+
+        .titleInstructions {
+            @include basePadding-m;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .titleInstructionsTwo {
+            @include basePadding-m;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .titleInstructionsThree {
+            @include basePadding-m;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .instructionsImage {
+            @include basePadding-m;
+
+            img {
+                width: 100%;
+                border-radius: $border-radius-m;
+            }
+        }
+
+        .instructionsImageTwo {
+            @include basePadding-m;
+
+            img {
+                width: 100%;
+                border-radius: $border-radius-m;
+            }
+        }
+
+        .instructionsImageThree {
+            @include basePadding-m;
+
+            img {
+                width: 100%;
+                border-radius: $border-radius-m;
+            }
+        }
+
+        .instructionsSteps {
+            padding: 0rem 3rem;
+        }
+
+        .instructionsStepsTwo {
+            padding: 0rem 3rem;
+        }
+
+        .instructionsStepsThree {
+            padding: 0rem 3rem;
+        }
+    }
+
+    /* NUESTRA APP */
+
+    .mainApp {
+        display: grid;
+        grid-template-areas: "presentationPage"
+            "featureDescription"
+            "featureImage"
+            "featureAltDescription"
+            "featureAltImage"
+            "featureTwoDescription"
+            "featureTwoImage"
+            "moreFeatures"
+            "bienaventurados";
+        grid-template-columns: 1fr;
+
+        /* NUESTRA APP */
+
+        .othersSections {
+            @include basePadding-m;
+            text-align: center;
+
+            .features {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                padding: 4rem 0rem;
+
+                .feature {
+                    width: 50%;
+                    margin: 2rem 0rem;
+
+                    img {
+                        width: 80%;
+                        min-width: 10rem;
+                        border-radius: $border-radius-m;
+                    }
+
+                    .description {
+                        margin: 2rem;
+                    }
+                }
+            }
+        }
+
+        .bienaventuradosSection {
+            @include basePadding-m;
+            grid-area: bienaventurados;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+
+            .containerBienaventuradosSection {
+                width: 100%;
+
+                .quote {
+                    margin: 2rem;
+                }
+
+                .isoBienaventurados {
+                    width: 20%;
+                    margin-bottom: 4rem;
+                }
+            }
+        }
+    }
+
+    /* ACERCA DE */
+
+    .mainAbout {
+        display: grid;
+        grid-template-areas: "presentationPage"
+            "imgSE"
+            "descriptionSE"
+            "imgStory"
+            "descriptionStory";
+        grid-template-columns: 1fr;
+
+        .descriptionSE {
+            @include basePadding-m;
+            background-color: nth($colores, 3);
+            grid-area: descriptionSE;
+
+            .tagline {
+                margin: 10px 0px 40px 0px;
+            }
+        }
+
+        .imgSE {
+            padding: 4rem 3rem 0rem 3rem;
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 40%;
+            }
+        }
+
+        .descriptionStory {
+            @include basePadding-m;
+            grid-area: descriptionStory;
+
+            .description {
+                margin-top: 40px;
+            }
+        }
+
+        .imgStory {
+            grid-area: imgStory;
+            padding: 4rem 3rem 0rem 3rem;
+
+            img {
+                width: 100%;
+                border-radius: border-radius-m;
+            }
+        }
+    }
+
 }

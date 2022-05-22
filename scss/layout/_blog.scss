@@ -14,10 +14,28 @@
         @include basePadding;
         grid-area: lastPostDescription;
         background-color: nth($colores, 3);
+
+        .subtitlePost {
+            margin-top: 1rem;
+        }
+
+        .boton-leer {
+            margin-top: 2rem;
+            a {
+                text-decoration: none;
+            }
+
+            h4 {
+                font-weight: bold;
+                color: nth($colores, 1);
+            }
+        }
     }
 
     .lastPostImage {
-        @include basePadding;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
         grid-area: lastPostImage;
         background-color: nth($colores, 3);
 
@@ -32,7 +50,7 @@
         grid-area: morePosts;
         display: flex;
         justify-content: center;
-        margin-bottom: 4rem;
+        margin-top: 2rem;
 
         .btn {
             border: 2px solid nth($colores, 1);

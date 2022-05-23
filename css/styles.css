@@ -988,15 +988,14 @@ footer {
       text-align: center; }
       .mainApp .othersSections .features {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         align-items: center;
         justify-content: space-between;
         padding: 4rem 0rem; }
         .mainApp .othersSections .features .feature {
-          width: 50%;
-          margin: 2rem 0rem; }
+          width: 100%; }
           .mainApp .othersSections .features .feature img {
-            width: 80%;
+            width: 100%;
             min-width: 10rem;
             border-radius: 0.8rem; }
           .mainApp .othersSections .features .feature .description {

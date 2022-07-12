@@ -1,5 +1,4 @@
-# Proyecto Final - Página web de Ser Eucaristía
-### Carrera de desarrollo Frontend React
-#### CODERHOUSE
+# Página web de Ser Eucaristía
+## Proyecto Desarrollo Web
 
 Proyecto Final del curso Desarrollo Web realizado como parte de la carrera Desarrollo Front End React - CODERHOUSE
